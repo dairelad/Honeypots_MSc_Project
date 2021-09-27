@@ -1,2 +1,3 @@
 # SD_Project
-Code used in for my MSC in Software Development Project at the University of Glasgow
+MSC in Software Development Project at the University of Glasgow 2021. 
+GUID: 2591168o
