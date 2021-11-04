@@ -1,0 +1,30 @@
+
+
+body{
+    background-color: #192444;
+    margin: 5%;
+}
+
+#header{
+align-items: center;
+}
+
+.flex-display{
+    display: flex;
+}
+
+#mainContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+#title{
+    text-align: center;
+}
+
+#title1{
+    text-align: center;
+}
+
+
+
