@@ -1,0 +1,10 @@
+import geoip2.database
+reader = geoip2.database.Reader('/Users/admin/git/SD_Project/frontend/myCode/SD_Project/GeoLite2-City_20211102/GeoLite2-City.mmdb')
+response = reader.city('68.183.180.46')
+print(response.country.iso_code)
+print(response.country.name)
+print(response.postal.code)
+print(response.subdivisions.most_specific.name)
+print(response.city.name)
+print(response.location.latitude)
+print(response.location.longitude)
