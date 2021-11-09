@@ -58,7 +58,7 @@ for line in myfile:
 		passwords.append(var4[1].replace(" ",""))
 		credentials_count += 1
 
-	elif "New URL detected" in line:
+	elif "URL detected" in line:
 #		print(line.split(": "))
 		var = line.split(": ")
 		urls.append(var[-1])

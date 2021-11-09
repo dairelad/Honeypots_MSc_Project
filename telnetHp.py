@@ -38,6 +38,6 @@ class TelnetFactory(protocol.Factory):
     def buildProtocol(self, addr):
         return Telnet()
 
-print("Listening...")
+print("[*] Telnet honeypot is listening on port 8023...")
 endpoints.serverFromString(reactor, "tcp:8023").listen(TelnetFactory())
 reactor.run()
