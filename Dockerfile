@@ -3,15 +3,21 @@ FROM python:3
 #Select working directory in container
 WORKDIR /usr/src/app
 
+#Make directories for honeypots
+RUN mkdir ssh
+RUN mkdir telnet
+RUN mkdir http
+RUN mkdir https
+
 #Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 #Add file to docker
-COPY sshHp.py /usr/src/app
-COPY telnetHp.py /usr/src/app
-COPY httpHp.py /usr/src/app
-COPY httpsHp.py /usr/src/app
+COPY /ssh/sshHp.py /usr/src/app/ssh
+COPY /telnet/telnetHp.py /usr/src/app/telnet
+COPY /http/httpHp.py /usr/src/app/http
+COPY /https/httpsHp.py /usr/src/app/https
 COPY run.sh /usr/src/app
 
 #Install dependencies
@@ -26,4 +32,5 @@ RUN pip3 install -r requirements.txt
 #contained by your image, along with any arguments.
 CMD ["./run.sh"]
 
+#Copy all contents from host working directory to docker working directory
 COPY . .

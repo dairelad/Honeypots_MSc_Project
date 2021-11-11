@@ -21,11 +21,19 @@ RIGHT_KEY = '\x1b[C'.encode()
 LEFT_KEY = '\x1b[D'.encode()
 BACK_KEY = '\x7f'.encode()
 
+day = datetime.today().weekday()+1 # saves current day (monday=0 & sunday=6)+1
+
+#Create folders for seperate days
+path = os.getcwd()
+if not os.path.exists('Day1'):
+    for i in range(7):
+        os.mkdir(f'Day{i+1}')
+
 #code is used for logging information about the attack
 logging.basicConfig(
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     level=logging.INFO,
-    filename='ssh_honeypot.log')
+    filename=f'{path}/Day{day}/sshD{day}.log')
 
 def detect_url(command, client_ip):
     regex = r"(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))"
@@ -34,14 +42,14 @@ def detect_url(command, client_ip):
         for ar in result:
             for url in ar:
                 if url != '':
-                    logging.info('New URL detected ({}): {}'.format(client_ip, url))
+                    logging.info('New URL detected from {}: {}'.format(client_ip, url))
 
     ip_regex = r"([0-9]+(?:\.[0-9]+){3}\/\S*)"
     ip_result = re.findall(ip_regex, command)
     if ip_result:
         for ip_url in ip_result:
             if ip_url != '':
-                logging.info('New IP-based URL detected ({}): {}'.format(client_ip, ip_url))
+                logging.info('New IP-based URL detected from {}: {}'.format(client_ip, ip_url))
 
 #code handles basic/common terminal commands
 def handle_cmd(cmd, chan, ip):
@@ -182,7 +190,7 @@ def handle_connection(client, addr):
                 
                 chan.send("\r\n")
                 command = command.rstrip()
-                logging.info('Command received ({}): {}'.format(client_ip, command))
+                logging.info('New command from from {}: {}'.format(client_ip, command))
 
                 if command == "exit":
                     logging.info('Connection closed (via exit command): {}'.format(client_ip))

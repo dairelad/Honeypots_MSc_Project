@@ -1,0 +1,24 @@
+HTTPS: 11/09/2021 12:54:13 PM INFO: Honeypot connection from 138.246.253.24:57932
+HTTP: 11/09/2021 12:56:35 PM INFO: Honeypot connection from 86.6.128.47:50380
+HTTPS: 11/09/2021 12:57:04 PM INFO: Honeypot connection from 86.6.128.47:50385
+TELNET: 11/09/2021 12:57:41 PM INFO: 86.6.128.47 b'hi guys'
+TELNET: 11/09/2021 12:57:50 PM INFO: 86.6.128.47 b'^]'
+SSH: 2021-11-09 12:58:48,475 - root - INFO - New connection from: 172.17.0.1
+SSH: 2021-11-09 12:58:48,478 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.1)
+SSH: 2021-11-09 12:58:51,103 - paramiko.transport - INFO - Auth rejected (none).
+SSH: 2021-11-09 12:58:51,104 - root - INFO - client called get_allowed_auths (172.17.0.1) with username ubuntu
+SSH: 2021-11-09 12:58:56,247 - root - INFO - new client credentials (172.17.0.1): username: ubuntu, password: helloguys
+SSH: 2021-11-09 12:58:56,247 - paramiko.transport - INFO - Auth granted (password).
+SSH: 2021-11-09 12:58:56,282 - root - INFO - client called check_channel_request (172.17.0.1): session
+SSH: 2021-11-09 12:58:56,283 - root - INFO - Client mac (172.17.0.1): hmac-sha2-256-etm@openssh.com
+SSH: 2021-11-09 12:58:56,283 - root - INFO - Client compression (172.17.0.1): none
+SSH: 2021-11-09 12:58:56,283 - root - INFO - Client SSH version (172.17.0.1): SSH-2.0-OpenSSH_8.1
+SSH: 2021-11-09 12:58:56,283 - root - INFO - Client SSH cipher (172.17.0.1): aes128-ctr
+SSH: 2021-11-09 12:59:01,406 - root - INFO - Command received (172.17.0.1): id
+SSH: 2021-11-09 12:59:05,066 - root - INFO - Command received (172.17.0.1): uname -a
+SSH: 2021-11-09 12:59:05,066 - root - INFO - Response from honeypot (172.17.0.1): 
+SSH: 2021-11-09 12:59:08,598 - root - INFO - Command received (172.17.0.1): ls
+SSH: 2021-11-09 12:59:08,598 - root - INFO - Response from honeypot (172.17.0.1): 
+SSH: 2021-11-09 12:59:16,617 - root - INFO - Command received (172.17.0.1): exit
+SSH: 2021-11-09 12:59:16,617 - root - INFO - Connection closed (via exit command): 172.17.0.1
+SSH: 2021-11-09 12:59:16,652 - paramiko.transport - INFO - Disconnect (code 11): disconnected by user

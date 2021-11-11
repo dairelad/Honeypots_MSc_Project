@@ -1,2 +1,6 @@
 paramiko
 twisted
+pandas
+dash
+geoip2
+# geoip2.database

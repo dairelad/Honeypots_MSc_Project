@@ -1,5 +1,5 @@
 import geoip2.database
-reader = geoip2.database.Reader('/Users/admin/git/SD_Project/frontend/myCode/SD_Project/GeoLite2-City_20211102/GeoLite2-City.mmdb')
+reader = geoip2.database.Reader('/Users/admin/git/MSc_Project/SD_Project/GeoLite2-City_20211102/GeoLite2-City.mmdb')
 response = reader.city('68.183.180.46')
 print(response.country.iso_code)
 print(response.country.name)

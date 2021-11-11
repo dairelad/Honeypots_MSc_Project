@@ -1,0 +1,39 @@
+11/10/2021 03:25:39 PM INFO: New connection from: 86.6.128.47
+11/10/2021 03:25:50 PM INFO: New command detected from 86.6.128.47: b'hi boys\x1b[D\x1b[D\x1b[C'
+11/10/2021 03:25:54 PM INFO: New command detected from 86.6.128.47: b'uname -a'
+11/10/2021 03:25:59 PM INFO: New command detected from 86.6.128.47: b'id'
+11/10/2021 03:26:12 PM INFO: New command detected from 86.6.128.47: b'uname'
+11/10/2021 03:26:18 PM INFO: New connection from: 185.53.90.110
+11/10/2021 03:44:56 PM INFO: New connection from: 185.53.90.110
+11/10/2021 04:08:12 PM INFO: New connection from: 86.6.128.47
+11/10/2021 04:08:19 PM INFO: New command detected from 86.6.128.47: b'uname -a'
+11/10/2021 04:08:21 PM INFO: New command detected from 86.6.128.47: b'uname'
+11/10/2021 04:12:26 PM INFO: New command detected from 86.6.128.47: b'-'
+11/10/2021 04:31:17 PM INFO: New command detected from 86.6.128.47: b'.'
+11/10/2021 04:31:21 PM INFO: New command detected from 86.6.128.47: b'power'
+11/10/2021 04:31:54 PM INFO: New command detected from 86.6.128.47: b'exit'
+11/10/2021 04:31:57 PM INFO: New command detected from 86.6.128.47: b'exit'
+11/10/2021 04:32:00 PM INFO: New command detected from 86.6.128.47: b'^]'
+11/10/2021 04:38:58 PM INFO: New connection from: 185.53.90.110
+11/10/2021 04:54:29 PM INFO: New connection from: 61.216.175.58
+11/10/2021 04:54:29 PM INFO: New command detected from 61.216.175.58: b'root'
+11/10/2021 04:54:29 PM INFO: New command detected from 61.216.175.58: b''
+11/10/2021 04:54:30 PM INFO: New command detected from 61.216.175.58: b'default'
+11/10/2021 04:54:30 PM INFO: New command detected from 61.216.175.58: b'enable'
+11/10/2021 04:54:30 PM INFO: New command detected from 61.216.175.58: b'system'
+11/10/2021 04:54:30 PM INFO: New command detected from 61.216.175.58: b'shell'
+11/10/2021 04:54:31 PM INFO: New command detected from 61.216.175.58: b'sh'
+11/10/2021 04:54:31 PM INFO: New command detected from 61.216.175.58: b'bin/busybox MIRAI'
+11/10/2021 05:00:27 PM INFO: New connection from: 185.53.90.110
+2021-11-10 19:09:18,321 INFO: New connection from: 86.6.128.47
+2021-11-10 19:09:33,063 INFO: New command detected from 86.6.128.47: b'www.thisIsATest.com\x1b[D\x1b[D'
+2021-11-10 19:09:33,066 INFO: New URL detected (86.6.128.47): www.thisIsATest.com[D[D
+2021-11-10 19:14:07,946 INFO: New connection from: 86.6.128.47
+2021-11-10 19:14:12,606 INFO: New command detected from 86.6.128.47: b'hello'
+2021-11-10 19:14:14,947 INFO: New command detected from 86.6.128.47: b'this'
+2021-11-10 19:45:24,380 INFO: New connection from: 82.205.95.207
+2021-11-10 19:45:24,385 INFO: New connection from: 82.205.95.207
+2021-11-10 19:45:24,507 INFO: New command from 82.205.95.207: b'enable\r\nsystem\r\nshell\r\nsh'
+2021-11-10 19:45:24,513 INFO: New command from 82.205.95.207: b'enable\r\nsystem\r\nshell\r\nsh'
+2021-11-10 19:45:24,633 INFO: New command from 82.205.95.207: b'cat /proc/mounts; /bin/busybox XAPEH'
+2021-11-10 19:45:24,639 INFO: New command from 82.205.95.207: b'cat /proc/mounts; /bin/busybox CADPM'
