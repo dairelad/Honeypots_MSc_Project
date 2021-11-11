@@ -35,7 +35,7 @@ class Telnet(protocol.Protocol):
     logging.basicConfig(
         filename=f'{path}/Day{day}/telnetD{day}.log',    #D1 is a placeholder for day variable
         level=logging.DEBUG,
-        format='%(asctime)s %(levelname)s: %(message)s',)
+        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',)
 
     PROMPT = ("/ # ").encode('utf-8')
     def dataReceived(self, data):

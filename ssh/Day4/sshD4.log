@@ -1,0 +1,15 @@
+2021-11-11 14:23:43,637 - root - INFO - New connection from: 172.17.0.1
+2021-11-11 14:23:43,638 - paramiko.transport - INFO - Connected (version 2.0, client OpenSSH_8.1)
+2021-11-11 14:23:43,817 - paramiko.transport - INFO - Auth rejected (none).
+2021-11-11 14:23:43,818 - root - INFO - client called get_allowed_auths (172.17.0.1) with username Admin
+2021-11-11 14:23:50,715 - root - INFO - new client credentials (172.17.0.1): username: Admin, password: hi
+2021-11-11 14:23:50,715 - paramiko.transport - INFO - Auth granted (password).
+2021-11-11 14:23:50,749 - root - INFO - client called check_channel_request (172.17.0.1): session
+2021-11-11 14:23:50,749 - root - INFO - Client mac (172.17.0.1): hmac-sha2-256-etm@openssh.com
+2021-11-11 14:23:50,749 - root - INFO - Client compression (172.17.0.1): none
+2021-11-11 14:23:50,749 - root - INFO - Client SSH version (172.17.0.1): SSH-2.0-OpenSSH_8.1
+2021-11-11 14:23:50,749 - root - INFO - Client SSH cipher (172.17.0.1): aes128-ctr
+2021-11-11 14:23:58,879 - root - INFO - New command from 172.17.0.1: wget www.funky.com
+2021-11-11 14:23:58,881 - root - INFO - New URL detected from 172.17.0.1: www.funky.com
+2021-11-11 14:24:12,765 - root - INFO - New command from 172.17.0.1: wget 11.12.4.5:90/to.txt
+2021-11-11 14:24:22,909 - paramiko.transport - INFO - Disconnect (code 11): disconnected by user

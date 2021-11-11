@@ -1,0 +1,9 @@
+2021-11-11 14:21:16,877 - root - INFO - New connection from: 209.141.62.127
+2021-11-11 14:22:08,676 - root - INFO - New connection from: 86.6.128.47
+2021-11-11 14:22:11,702 - root - INFO - New command from 86.6.128.47: b'hello'
+2021-11-11 14:22:35,562 - root - INFO - New connection from: 86.6.128.47
+2021-11-11 14:22:42,797 - root - INFO - New command from 86.6.128.47: b'wget www.funky.com'
+2021-11-11 14:22:42,797 - root - INFO - New URL detected from 86.6.128.47: www.funky.com
+2021-11-11 14:22:58,453 - root - INFO - New connection from: 86.6.128.47
+2021-11-11 14:23:08,930 - root - INFO - New command from 86.6.128.47: b'1.2.3.4:90/ht'
+2021-11-11 14:23:12,367 - root - INFO - New command from 86.6.128.47: b'\x1b[A\x1b[B'

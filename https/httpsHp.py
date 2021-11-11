@@ -20,7 +20,7 @@ if not os.path.exists('Day1'):
 log.basicConfig(
     filename=f'{path}/Day{day}/httpsD{day}.log',
     level=log.DEBUG,
-    format='%(asctime)s %(levelname)s: %(message)s',)
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',)
 
 # Socket timeout in seconds
 TIMEOUT = 0.00001

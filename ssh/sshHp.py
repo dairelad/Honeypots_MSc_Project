@@ -121,7 +121,7 @@ class BasicSshHoneypot(paramiko.ServerInterface):
     def check_channel_exec_request(self, channel, command):
         command_text = str(command.decode("utf-8"))
         handle_cmd(command_text, channel, self.client_ip)
-        logging.info('client sent command via check_channel_exec_request ({}): {}'.format(
+        logging.info('New command from {}: {}'.format(
                     self.client_ip, command))
         return True
 
@@ -133,11 +133,18 @@ def handle_connection(client, addr):
 
     try:
         transport = paramiko.Transport(client)
+        print("this is a test1")
         transport.add_server_key(HOST_KEY)
+        print("this is a test2")
         transport.local_version = SSH_BANNER # Change banner to appear more convincing
+        print("this is a test3")
         server = BasicSshHoneypot(client_ip)
+        print("this is a test4")
         try:
             transport.start_server(server=server)
+            print("this is a test5")
+            transport.banner_timeout = 200
+            print("this is a test6")
 
         except paramiko.SSHException:
             print('*** SSH negotiation failed.')
@@ -237,13 +244,14 @@ def start_server(port, bind):
         except Exception as err:
             print('*** Listen/accept failed: {}'.format(err))
             traceback.print_exc()
+
         new_thread = threading.Thread(target=handle_connection, args=(client, addr))
         new_thread.start()
         threads.append(new_thread)
 
-    # creates a new thread for each connection to the honeypot
-    for thread in threads:
-        thread.join()
+        # creates a new thread for each connection to the honeypot
+        for thread in threads:
+            thread.join()
 
 #code used to pass in parameters when invoking python script
 if __name__ == "__main__":

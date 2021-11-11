@@ -1,0 +1,5 @@
+ip,timestamp,url,commands,country,province,city,long,lat
+209.141.62.127,2021-11-11 14:21:16.877,www.funky.com,b'hello',United States,Nevada,Las Vegas,36.102,-115.1447
+86.6.128.47,2021-11-11 14:22:08.676,,b'wget www.funky.com',United Kingdom,Glasgow City,Glasgow,55.8892,-4.2351
+86.6.128.47,2021-11-11 14:22:35.562,,b'1.2.3.4:90/ht',United Kingdom,Glasgow City,Glasgow,55.8892,-4.2351
+86.6.128.47,2021-11-11 14:22:58.453,,b'\x1b[A\x1b[B',United Kingdom,Glasgow City,Glasgow,55.8892,-4.2351
