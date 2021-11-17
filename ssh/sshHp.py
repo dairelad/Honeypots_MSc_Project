@@ -21,13 +21,13 @@ RIGHT_KEY = '\x1b[C'.encode()
 LEFT_KEY = '\x1b[D'.encode()
 BACK_KEY = '\x7f'.encode()
 
-day = datetime.today().weekday()+1 # saves current day (monday=0 & sunday=6)+1
-
 #Create folders for seperate days
 path = os.getcwd()
 if not os.path.exists('Day1'):
     for i in range(7):
         os.mkdir(f'Day{i+1}')
+
+day = datetime.today().weekday()+1 # saves current day (monday=0 & sunday=6)+1
 
 #code is used for logging information about the attack
 logging.basicConfig(
@@ -75,7 +75,7 @@ def handle_cmd(cmd, chan, ip):
         response = "no crontab for root"
 
     if response != '':
-        logging.info('Response from honeypot ({}): '.format(ip, response))
+        #logging.info('Response from honeypot ({}): '.format(ip, response))
         response = response + "\r\n"
     chan.send(response)
 
@@ -89,25 +89,25 @@ class BasicSshHoneypot(paramiko.ServerInterface):
         self.event = threading.Event()
 
     def check_channel_request(self, kind, chanid):
-        logging.info('client called check_channel_request ({}): {}'.format(
-                    self.client_ip, kind))
+        # logging.info('client called check_channel_request ({}): {}'.format(
+        #             self.client_ip, kind))
         if kind == 'session':
             return paramiko.OPEN_SUCCEEDED
 
     def get_allowed_auths(self, username):
-        logging.info('client called get_allowed_auths ({}) with username {}'.format(
-                    self.client_ip, username))
+        # logging.info('client called get_allowed_auths ({}) with username {}'.format(
+        #             self.client_ip, username))
         return "publickey,password"
 
     def check_auth_publickey(self, username, key):
         fingerprint = u(hexlify(key.get_fingerprint()))
-        logging.info('client public key ({}): username: {}, key name: {}, md5 fingerprint: {}, base64: {}, bits: {}'.format(
-                    self.client_ip, username, key.get_name(), fingerprint, key.get_base64(), key.get_bits()))
+        # logging.info('client public key ({}): username: {}, key name: {}, md5 fingerprint: {}, base64: {}, bits: {}'.format(
+        #             self.client_ip, username, key.get_name(), fingerprint, key.get_base64(), key.get_bits()))
         return paramiko.AUTH_PARTIALLY_SUCCESSFUL        
 
     def check_auth_password(self, username, password):
         # Accept all passwords as valid by default
-        logging.info('new client credentials ({}): username: {}, password: {}'.format(
+        logging.info('New client credentials from {}: username: {}, password: {}'.format(
                     self.client_ip, username, password))
         return paramiko.AUTH_SUCCESSFUL
 
@@ -133,18 +133,13 @@ def handle_connection(client, addr):
 
     try:
         transport = paramiko.Transport(client)
-        print("this is a test1")
         transport.add_server_key(HOST_KEY)
-        print("this is a test2")
         transport.local_version = SSH_BANNER # Change banner to appear more convincing
-        print("this is a test3")
         server = BasicSshHoneypot(client_ip)
-        print("this is a test4")
+
         try:
             transport.start_server(server=server)
-            print("this is a test5")
             transport.banner_timeout = 200
-            print("this is a test6")
 
         except paramiko.SSHException:
             print('*** SSH negotiation failed.')
@@ -158,21 +153,21 @@ def handle_connection(client, addr):
         
         chan.settimeout(10)
 
-        if transport.remote_mac != '':
-            logging.info('Client mac ({}): {}'.format(client_ip, transport.remote_mac))
-
-        if transport.remote_compression != '':
-            logging.info('Client compression ({}): {}'.format(client_ip, transport.remote_compression))
-
-        if transport.remote_version != '':
-            logging.info('Client SSH version ({}): {}'.format(client_ip, transport.remote_version))
-            
-        if transport.remote_cipher != '':
-            logging.info('Client SSH cipher ({}): {}'.format(client_ip, transport.remote_cipher))
+        # if transport.remote_mac != '':
+        #     logging.info('Client mac ({}): {}'.format(client_ip, transport.remote_mac))
+        #
+        # if transport.remote_compression != '':
+        #     logging.info('Client compression ({}): {}'.format(client_ip, transport.remote_compression))
+        #
+        # if transport.remote_version != '':
+        #     logging.info('Client SSH version ({}): {}'.format(client_ip, transport.remote_version))
+        #
+        # if transport.remote_cipher != '':
+        #     logging.info('Client SSH cipher ({}): {}'.format(client_ip, transport.remote_cipher))
 
         server.event.wait(10)
         if not server.event.is_set():
-            logging.info('** Client ({}): never asked for a shell'.format(client_ip))
+            #logging.info('** Client ({}): never asked for a shell'.format(client_ip))
             raise Exception("No shell request")
      
         try:
@@ -200,7 +195,7 @@ def handle_connection(client, addr):
                 logging.info('New command from from {}: {}'.format(client_ip, command))
 
                 if command == "exit":
-                    logging.info('Connection closed (via exit command): {}'.format(client_ip))
+                    #logging.info('Connection closed (via exit command): {}'.format(client_ip))
                     run = False
 
                 else:

@@ -1,8 +1,17 @@
 
 
-body{
-    background-color: #192444;
-    margin: 5%;
+body {
+  background-color: #192444;
+  margin: 5%;
+}
+
+.card_container {
+  border-radius: 5px;
+  background-color: #1f2c56;
+  margin: 16px;
+  padding: 15px;
+  position: relative;
+  box-shadow: 2px 2px 2px #1f2c56;
 }
 
 .create_container {
@@ -14,10 +23,10 @@ body{
   box-shadow: 2px 2px 2px #1f2c56;
 }
 
-.card_container {
+.create_container1 {
   border-radius: 5px;
   background-color: #1f2c56;
-  margin: 16px;
+  margin: 10px;
   padding: 15px;
   position: relative;
   box-shadow: 2px 2px 2px #1f2c56;
@@ -38,25 +47,54 @@ font-size: 20px;
   width: calc(100%-40px);
 }
 
-#header{
-align-items: center;
+.flex-display {
+  display: flex;
 }
 
-.flex-display{
-    display: flex;
+.container-display {
+  display: flex;
 }
 
-#mainContainer{
-    display: flex;
-    flex-direction: column;
+#header {
+  align-items: center;
 }
 
-#title{
-    text-align: center;
+#refresh-data {
+  text-align: center;
+  height: 100%;
+  padding: 0 20px;
+  text-transform: none;
+  font-size: 20px;
+  float: right;
+  margin-right: 10px;
+  margin-top: 30px;
 }
 
-#title1{
-    text-align: center;
+#title {
+  text-align: center;
+}
+
+#title1 {
+  text-align: center;
+}
+
+#mainContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.Select-control, .Select-menu-outer, .Select-multi-value-wrapper, .select-up, .is-open .Select-control {
+  background-color: #1f2c56;
+  color: white;
+
+}
+
+.Select-control{
+  border: 0.5px solid green;
+}
+
+.has-value.Select--single>.Select-control .Select-value .Select-value-label, .has-value.is-pseudo-focused.Select--single>.Select-control .Select-value .Select-value-label {
+  color: white;
 }
 
 /* width */
@@ -81,5 +119,3 @@ align-items: center;
 ::-webkit-scrollbar-thumb:hover {
   background: white !important;
 }
-
-
