@@ -1,0 +1,125 @@
+timestamp,ip,url,commands,country,province,city,long,lat
+2021-11-11 14:21:16.877,209.141.62.127,,b'hello',United States,Nevada,Las Vegas,-115.1447,36.102
+2021-11-11 14:22:08.676,86.6.128.47,,b'wget www.funky.com',United Kingdom,Glasgow City,Glasgow,-4.2351,55.8892
+2021-11-11 14:22:11.702,86.6.128.47,www.funky.com,,United Kingdom,Glasgow City,Glasgow,-4.2351,55.8892
+2021-11-11 14:22:35.562,86.6.128.47,,b'1.2.3.4:90/ht',United Kingdom,Glasgow City,Glasgow,-4.2351,55.8892
+2021-11-11 14:22:42.797,86.6.128.47,,b'\x1b[A\x1b[B',United Kingdom,Glasgow City,Glasgow,-4.2351,55.8892
+2021-11-11 14:22:42.797,86.6.128.47,,b'ZG\x00\x00\x00\x05\x00+\x0e\x01\x00',United Kingdom,Glasgow City,Glasgow,-4.2351,55.8892
+2021-11-11 14:22:58.453,86.6.128.47,,b'',United Kingdom,Glasgow City,Glasgow,-4.2351,55.8892
+2021-11-11 14:23:08.930,86.6.128.47,,b'enable\r\nsystem\r\nshell\r\nsh',United Kingdom,Glasgow City,Glasgow,-4.2351,55.8892
+2021-11-11 14:23:12.367,86.6.128.47,,b'cat /proc/mounts; /bin/busybox QQYXF',United Kingdom,Glasgow City,Glasgow,-4.2351,55.8892
+2021-11-11 16:35:05.090,45.61.184.103,,b'board',United States,Florida,Miami,-80.1826,25.7806
+2021-11-11 16:49:43.841,205.185.124.100,,b'cruise',United States,Nevada,Las Vegas,-115.1447,36.102
+2021-11-11 17:00:50.248,167.94.138.41,,b'^]',United States,,,-97.822,37.751
+2021-11-11 17:01:05.554,167.94.138.41,,b'ZG\x00\x00\x00\x05\x00+\x0e\x01\x00',United States,,,-97.822,37.751
+2021-11-11 17:01:05.746,167.94.138.41,,b'\xff\xfd\x03\xff\xfd\x01',United States,,,-97.822,37.751
+2021-11-11 17:01:05.756,167.94.138.41,,b'enable\r\nsystem\r\nshell\r\nsh',United States,,,-97.822,37.751
+2021-11-11 17:10:33.846,45.61.185.62,,b'cat /proc/mounts; /bin/busybox AFKQJ',United States,Florida,Miami,-80.1826,25.7806
+2021-11-11 17:10:33.959,45.61.185.62,,b'GET / HTTP/1.1',United States,Florida,Miami,-80.1826,25.7806
+2021-11-11 17:28:48.964,209.141.50.127,,b'',United States,Nevada,Las Vegas,-115.1447,36.102
+2021-11-11 18:05:18.907,118.40.26.11,,b'enable\r\nsystem\r\nshell\r\nsh',South Korea,Gwangju,Gwangju,126.9156,35.1496
+2021-11-11 18:05:19.193,118.40.26.11,,b'cat /proc/mounts; /bin/busybox BFJMS',South Korea,Gwangju,Gwangju,126.9156,35.1496
+2021-11-11 18:05:19.486,118.40.26.11,,b'enable\r\nsystem\r\nshell\r\nsh',South Korea,Gwangju,Gwangju,126.9156,35.1496
+2021-11-11 18:23:34.169,209.141.62.127,,b'cat /proc/mounts; /bin/busybox YMPAJ',United States,Nevada,Las Vegas,-115.1447,36.102
+2021-11-11 18:24:55.388,66.30.16.92,,b'enable\r\nsystem\r\nshell\r\nsh',United States,Massachusetts,Wakefield,-71.0715,42.4945
+2021-11-11 18:25:10.643,66.30.16.92,,b'cat /proc/mounts; /bin/busybox PIOWE',United States,Massachusetts,Wakefield,-71.0715,42.4945
+2021-11-11 19:48:23.992,86.6.128.47,,b'enable\r\nsystem\r\nshell\r\nsh',United Kingdom,Glasgow City,Glasgow,-4.2351,55.8892
+2021-11-11 19:48:29.397,86.6.128.47,,b'cat /proc/mounts; /bin/busybox AXXPW',United Kingdom,Glasgow City,Glasgow,-4.2351,55.8892
+2021-11-11 19:48:32.486,86.6.128.47,,,United Kingdom,Glasgow City,Glasgow,-4.2351,55.8892
+2021-11-11 19:48:36.041,86.6.128.47,,,United Kingdom,Glasgow City,Glasgow,-4.2351,55.8892
+2021-11-11 20:47:26.189,167.248.133.43,,,United States,,,-97.822,37.751
+2021-11-11 20:47:41.408,167.248.133.43,,,United States,,,-97.822,37.751
+2021-11-11 20:47:41.615,167.248.133.43,,,United States,,,-97.822,37.751
+2021-11-11 20:47:41.615,167.248.133.43,,,United States,,,-97.822,37.751
+2021-11-11 21:07:58.541,18.237.6.218,,,United States,Oregon,Boardman,-119.7257,45.8234
+2021-11-11 21:07:58.541,18.237.6.218,,,United States,Oregon,Boardman,-119.7257,45.8234
+2021-11-11 21:48:37.174,91.137.233.73,,,Hungary,Bács-Kiskun,Kecskemét,19.6958,46.905
+2021-11-11 21:48:37.235,91.137.233.73,,,Hungary,Bács-Kiskun,Kecskemét,19.6958,46.905
+2021-11-11 21:48:37.291,91.137.233.73,,,Hungary,Bács-Kiskun,Kecskemét,19.6958,46.905
+2021-11-11 21:52:22.375,2.132.47.10,,,Kazakhstan,Almaty,Almaty,76.9293,43.2638
+2021-11-11 21:52:37.638,2.132.47.10,,,Kazakhstan,Almaty,Almaty,76.9293,43.2638
+2021-11-11 21:52:52.893,2.132.47.10,,,Kazakhstan,Almaty,Almaty,76.9293,43.2638
+2021-11-11 21:53:08.287,2.132.47.10,,,Kazakhstan,Almaty,Almaty,76.9293,43.2638
+2021-11-11 21:53:23.543,2.132.47.10,,,Kazakhstan,Almaty,Almaty,76.9293,43.2638
+2021-11-11 21:53:38.811,2.132.47.10,,,Kazakhstan,Almaty,Almaty,76.9293,43.2638
+2021-11-11 21:53:54.069,2.132.47.10,,,Kazakhstan,Almaty,Almaty,76.9293,43.2638
+2021-11-11 21:54:09.379,2.132.47.10,,,Kazakhstan,Almaty,Almaty,76.9293,43.2638
+2021-11-11 21:54:24.633,2.132.47.10,,,Kazakhstan,Almaty,Almaty,76.9293,43.2638
+2021-11-11 21:54:39.885,2.132.47.10,,,Kazakhstan,Almaty,Almaty,76.9293,43.2638
+2021-11-11 22:13:10.213,58.34.242.230,,,China,Shanghai,Changning,121.4168,31.2277
+2021-11-11 22:13:25.669,58.34.242.230,,,China,Shanghai,Changning,121.4168,31.2277
+2021-11-11 22:13:41.103,58.34.242.230,,,China,Shanghai,Changning,121.4168,31.2277
+2021-11-11 22:13:56.561,58.34.242.230,,,China,Shanghai,Changning,121.4168,31.2277
+2021-11-11 22:14:12.021,58.34.242.230,,,China,Shanghai,Changning,121.4168,31.2277
+2021-11-11 22:14:27.508,58.34.242.230,,,China,Shanghai,Changning,121.4168,31.2277
+2021-11-11 22:14:42.970,58.34.242.230,,,China,Shanghai,Changning,121.4168,31.2277
+2021-11-11 22:14:58.456,58.34.242.230,,,China,Shanghai,Changning,121.4168,31.2277
+2021-11-11 22:15:13.924,58.34.242.230,,,China,Shanghai,Changning,121.4168,31.2277
+2021-11-11 22:15:29.394,58.34.242.230,,,China,Shanghai,Changning,121.4168,31.2277
+2021-11-11 22:41:52.057,205.185.114.157,,,United States,Nevada,Las Vegas,-115.1447,36.102
+2021-11-11 22:49:46.589,209.141.62.127,,,United States,Nevada,Las Vegas,-115.1447,36.102
+2021-11-11 23:39:29.820,201.156.105.12,,,Mexico,Nuevo León,San Pedro,-100.4082,25.8264
+2021-11-11 23:53:10.558,95.56.131.209,,,Kazakhstan,Almaty,Almaty,76.9293,43.2638
+2021-11-11 23:53:25.823,95.56.131.209,,,Kazakhstan,Almaty,Almaty,76.9293,43.2638
+2021-11-11 23:53:41.079,95.56.131.209,,,Kazakhstan,Almaty,Almaty,76.9293,43.2638
+2021-11-11 23:53:56.330,95.56.131.209,,,Kazakhstan,Almaty,Almaty,76.9293,43.2638
+2021-11-11 23:54:11.583,95.56.131.209,,,Kazakhstan,Almaty,Almaty,76.9293,43.2638
+2021-11-11 23:54:26.836,95.56.131.209,,,Kazakhstan,Almaty,Almaty,76.9293,43.2638
+2021-11-11 23:54:42.092,95.56.131.209,,,Kazakhstan,Almaty,Almaty,76.9293,43.2638
+2021-11-11 23:54:57.343,95.56.131.209,,,Kazakhstan,Almaty,Almaty,76.9293,43.2638
+2021-11-11 23:55:12.601,95.56.131.209,,,Kazakhstan,Almaty,Almaty,76.9293,43.2638
+2021-11-11 23:55:27.853,95.56.131.209,,,Kazakhstan,Almaty,Almaty,76.9293,43.2638
+2021-11-12 00:59:53.991,184.105.247.195,,,United States,California,San Jose,-121.866,37.4025
+2021-11-12 01:25:15.095,154.38.98.3,,,United States,,,-97.822,37.751
+2021-11-12 01:25:15.265,154.38.98.3,,,United States,,,-97.822,37.751
+2021-11-12 01:33:35.017,69.75.109.62,,,United States,California,Garden Grove,-117.9231,33.7873
+2021-11-12 01:33:50.351,69.75.109.62,,,United States,California,Garden Grove,-117.9231,33.7873
+2021-11-12 01:34:05.697,69.75.109.62,,,United States,California,Garden Grove,-117.9231,33.7873
+2021-11-12 01:34:21.033,69.75.109.62,,,United States,California,Garden Grove,-117.9231,33.7873
+2021-11-12 01:34:36.371,69.75.109.62,,,United States,California,Garden Grove,-117.9231,33.7873
+2021-11-12 01:34:51.727,69.75.109.62,,,United States,California,Garden Grove,-117.9231,33.7873
+2021-11-12 01:35:07.054,69.75.109.62,,,United States,California,Garden Grove,-117.9231,33.7873
+2021-11-12 01:35:22.397,69.75.109.62,,,United States,California,Garden Grove,-117.9231,33.7873
+2021-11-12 01:35:37.747,69.75.109.62,,,United States,California,Garden Grove,-117.9231,33.7873
+2021-11-12 01:35:53.101,69.75.109.62,,,United States,California,Garden Grove,-117.9231,33.7873
+2021-11-12 02:05:20.454,209.141.43.151,,,United States,Nevada,Las Vegas,-115.1447,36.102
+2021-11-12 02:05:20.602,209.141.43.151,,,United States,Nevada,Las Vegas,-115.1447,36.102
+2021-11-12 03:01:37.976,209.141.62.127,,,United States,Nevada,Las Vegas,-115.1447,36.102
+2021-11-12 03:51:38.564,95.56.72.102,,,Kazakhstan,Almaty,Almaty,76.9293,43.2638
+2021-11-12 03:51:53.818,95.56.72.102,,,Kazakhstan,Almaty,Almaty,76.9293,43.2638
+2021-11-12 03:52:09.071,95.56.72.102,,,Kazakhstan,Almaty,Almaty,76.9293,43.2638
+2021-11-12 03:52:24.327,95.56.72.102,,,Kazakhstan,Almaty,Almaty,76.9293,43.2638
+2021-11-12 03:52:39.580,95.56.72.102,,,Kazakhstan,Almaty,Almaty,76.9293,43.2638
+2021-11-12 03:52:54.838,95.56.72.102,,,Kazakhstan,Almaty,Almaty,76.9293,43.2638
+2021-11-12 03:53:10.096,95.56.72.102,,,Kazakhstan,Almaty,Almaty,76.9293,43.2638
+2021-11-12 03:53:25.464,95.56.72.102,,,Kazakhstan,Almaty,Almaty,76.9293,43.2638
+2021-11-12 03:53:40.719,95.56.72.102,,,Kazakhstan,Almaty,Almaty,76.9293,43.2638
+2021-11-12 03:53:55.974,95.56.72.102,,,Kazakhstan,Almaty,Almaty,76.9293,43.2638
+2021-11-12 04:19:28.544,24.123.10.93,,,United States,Ohio,Columbus,-83.0118,40.0946
+2021-11-12 04:19:28.656,24.123.10.93,,,United States,Ohio,Columbus,-83.0118,40.0946
+2021-11-12 04:19:28.768,24.123.10.93,,,United States,Ohio,Columbus,-83.0118,40.0946
+2021-11-12 04:21:27.528,58.186.48.234,,,Vietnam,Hanoi,Hanoi,105.8516,21.0313
+2021-11-12 04:21:43.037,58.186.48.234,,,Vietnam,Hanoi,Hanoi,105.8516,21.0313
+2021-11-12 04:21:58.538,58.186.48.234,,,Vietnam,Hanoi,Hanoi,105.8516,21.0313
+2021-11-12 04:22:14.143,58.186.48.234,,,Vietnam,Hanoi,Hanoi,105.8516,21.0313
+2021-11-12 04:22:29.571,58.186.48.234,,,Vietnam,Hanoi,Hanoi,105.8516,21.0313
+2021-11-12 04:22:45.080,58.186.48.234,,,Vietnam,Hanoi,Hanoi,105.8516,21.0313
+2021-11-12 04:23:00.516,58.186.48.234,,,Vietnam,Hanoi,Hanoi,105.8516,21.0313
+2021-11-12 04:23:16.023,58.186.48.234,,,Vietnam,Hanoi,Hanoi,105.8516,21.0313
+2021-11-12 04:23:31.531,58.186.48.234,,,Vietnam,Hanoi,Hanoi,105.8516,21.0313
+2021-11-12 04:23:46.947,58.186.48.234,,,Vietnam,Hanoi,Hanoi,105.8516,21.0313
+2021-11-12 05:32:57.031,131.196.101.50,,,Brazil,Espirito Santo,Serra,-40.3022,-20.1088
+2021-11-12 06:15:20.189,131.196.101.50,,,Brazil,Espirito Santo,Serra,-40.3022,-20.1088
+2021-11-12 06:19:44.256,222.116.200.177,,,South Korea,North Chungcheong,Cheongju-si,127.4702,36.6387
+2021-11-12 06:19:44.537,222.116.200.177,,,South Korea,North Chungcheong,Cheongju-si,127.4702,36.6387
+2021-11-12 06:19:44.817,222.116.200.177,,,South Korea,North Chungcheong,Cheongju-si,127.4702,36.6387
+2021-11-12 07:08:07.183,47.210.89.219,,,United States,Louisiana,Bossier City,-93.7011,32.5434
+2021-11-12 07:08:07.320,47.210.89.219,,,United States,Louisiana,Bossier City,-93.7011,32.5434
+2021-11-12 07:08:07.455,47.210.89.219,,,United States,Louisiana,Bossier City,-93.7011,32.5434
+2021-11-12 07:14:01.723,170.79.32.214,,,Brazil,Pernambuco,Petrolina,-40.5024,-9.4046
+2021-11-12 07:36:50.962,131.196.101.50,,,Brazil,Espirito Santo,Serra,-40.3022,-20.1088
+2021-11-12 07:51:43.604,212.193.30.89,,,Czechia,,,14.411,50.0853
+2021-11-12 09:10:31.888,45.95.169.116,,,Croatia,Sisak-Moslavina,Sisak,16.3868,45.4675
+2021-11-12 09:15:55.074,218.161.91.98,,,Taiwan,Hsinchu,Hsinchu,120.9706,24.8065
+2021-11-12 09:15:55.362,218.161.91.98,,,Taiwan,Hsinchu,Hsinchu,120.9706,24.8065
+2021-11-12 09:15:55.650,218.161.91.98,,,Taiwan,Hsinchu,Hsinchu,120.9706,24.8065

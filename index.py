@@ -9,21 +9,23 @@ from wordcloud import WordCloud
 import base64
 from io import BytesIO
 from collections import Counter
+from profanity_filter import ProfanityFilter
+import spacy
 
 # Read in csv files
-ssh_data = pd.read_csv("/Users/admin/git/MSc_Project/SD_Project/csv/Aggregate/sshAgg.csv")
-telnet_data = pd.read_csv("/Users/admin/git/MSc_Project/SD_Project/csv/Aggregate/telnetAgg.csv")
-http_data = pd.read_csv("/Users/admin/git/MSc_Project/SD_Project/csv/Aggregate/httpAgg.csv")
-https_data = pd.read_csv("/Users/admin/git/MSc_Project/SD_Project/csv/Aggregate/httpsAgg.csv")
+ssh_data = pd.read_csv("/home/ubuntu/frontend/csv/Aggregate/sshAgg.csv")
+telnet_data = pd.read_csv("/home/ubuntu/frontend/csv/Aggregate/telnetAgg.csv")
+http_data = pd.read_csv("/home/ubuntu/frontend/csv/Aggregate/httpAgg.csv")
+https_data = pd.read_csv("/home/ubuntu/frontend/csv/Aggregate/httpsAgg.csv")
 
-ssh_sum = pd.read_csv("/Users/admin/git/MSc_Project/SD_Project/csv/Summary/sshSum.csv")
-telnet_sum = pd.read_csv("/Users/admin/git/MSc_Project/SD_Project/csv/Summary/telnetSum.csv")
-http_sum = pd.read_csv("/Users/admin/git/MSc_Project/SD_Project/csv/Summary/httpSum.csv")
-https_sum = pd.read_csv("/Users/admin/git/MSc_Project/SD_Project/csv/Summary/httpsSum.csv")
+ssh_sum = pd.read_csv("/home/ubuntu/frontend/csv/Summary/sshSum.csv")
+telnet_sum = pd.read_csv("/home/ubuntu/frontend/csv/Summary/telnetSum.csv")
+http_sum = pd.read_csv("/home/ubuntu/frontend/csv/Summary/httpSum.csv")
+https_sum = pd.read_csv("/home/ubuntu/frontend/csv/Summary/httpsSum.csv")
 
 # data required for creating nice graphs
-blank = pd.read_csv("/Users/admin/git/MSc_Project/SD_Project/csv/blank.csv")
-blank2 = pd.read_csv("/Users/admin/git/MSc_Project/SD_Project/csv/blank2.csv")
+blank = pd.read_csv("/home/ubuntu/frontend/csv/blank.csv")
+blank2 = pd.read_csv("/home/ubuntu/frontend/csv/blank2.csv")
 honeypots =['SSH', 'Telnet', 'HTTP', 'HTTPS', 'SSH_secure', 'Telnet_secure', 'HTTP_secure', 'HTTPS_secure']
 # fill nan values with 'Not available'
 ssh_data['province'] = ssh_data['province'].fillna('Not available')
@@ -36,12 +38,21 @@ weekdays = ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun']
 # Wordcloud pre-processing
 dfm = ssh_data['usernames'].append(ssh_data['passwords'])
 dfm=dfm.dropna()
-dfm = Counter(dfm)
+dfm=dfm.values.tolist()
+# pf = ProfanityFilter()
+# spacy.load('en')
+# dfm_filtered = []
+# for value in dfm:
+#     filtered = pf.censor(value)
+#     dfm_filtered.append(filtered)
+
+dm = Counter(dfm)
 data = {
     "word": list(dfm.keys()),
     "count": list(dfm.values())
 }
 wordFreq = pd.DataFrame(data)
+wordFreq = wordFreq.sort_values(by=['count'], ascending=False)
 
 app = dash.Dash(__name__, )
 
@@ -85,7 +96,7 @@ app.layout = html.Div([
             html.H6(children='Total SSH connections:',
                     style={'textAlign': 'center',
                     'color': 'white'}),
-            html.P(f"{ssh_sum['# connections'].loc[0]: .0f}",  #paragraph
+            html.P(f"{ssh_sum['# connections'].sum(): .0f}",  #paragraph
                    style={'textAlign': 'center',
                     'color': '#dd1e35',
                           'fontSize': 30}
@@ -98,7 +109,7 @@ html.Div([
             html.H6(children='Total Telnet connections:',
                     style={'textAlign': 'center',
                     'color': 'white'}),
-            html.P(f"{telnet_sum['# connections'].loc[0]}", #paragraph
+            html.P(f"{telnet_sum['# connections'].sum()}", #paragraph
                    style={'textAlign': 'center',
                     'color': 'orange',
                           'fontSize': 30}
@@ -111,7 +122,7 @@ html.Div([
             html.H6(children='Total HTTP connections:',
                     style={'textAlign': 'center',
                     'color': 'white'}),
-            html.P(f"{http_sum['# connections'].loc[0]}", #paragraph
+            html.P(f"{http_sum['# connections'].sum()}", #paragraph
                    style={'textAlign': 'center',
                     'color': 'yellow',
                           'fontSize': 30}
@@ -124,7 +135,7 @@ html.Div([
             html.H6(children='Total HTTPS connections:',
                     style={'textAlign': 'center',
                     'color': 'white'}),
-            html.P(f"{https_sum['# connections'].loc[0]}", #paragraph
+            html.P(f"{https_sum['# connections'].sum()}", #paragraph
                    style={'textAlign': 'center',
                     'color': '#66ff66',
                           'fontSize': 30}
@@ -196,6 +207,13 @@ html.Div([
     className='card_container three columns')
 
     ], className='row flex display'),
+
+# Fourth row of the dashboard app
+html.Div([
+        html.Div([
+            html.H5('Select honeypot type to display data', style={'margin-bottom': '0px', 'color': '#99CCFF'})
+        ])
+    ], className='two-third column'),
 
 #Sixth row
     html.Div([
@@ -350,7 +368,7 @@ def update_graph(honeypot):
         )],
 
         'layout': go.Layout(
-            title={'text': 'Last 7 days connections to ' + honeypot_type + ' honeypot : ',
+            title={'text': 'Connections per day to ' + honeypot_type + ' honeypot : ',
                    'y': 0.93,
                    'x': 0.5,
                    'xanchor': 'center',
@@ -477,4 +495,4 @@ def update_graph(honeypot):
 
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True, host='0.0.0.0')

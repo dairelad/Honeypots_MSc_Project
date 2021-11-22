@@ -9,6 +9,7 @@ import re
 import logging
 import paramiko
 from datetime import datetime
+import datetime as dt
 from binascii import hexlify
 from paramiko.py3compat import b, u, decodebytes
 
@@ -27,13 +28,25 @@ if not os.path.exists('Day1'):
     for i in range(7):
         os.mkdir(f'Day{i+1}')
 
-day = datetime.today().weekday()+1 # saves current day (monday=0 & sunday=6)+1
+# Code to run segment at a particular time of day
+start = dt.time(0, 0, 0)
+end = dt.time(0, 1, 0)
 
-#code is used for logging information about the attack
-logging.basicConfig(
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
-    level=logging.INFO,
-    filename=f'{path}/Day{day}/sshD{day}.log')
+def time_in_range(start, end, x):
+	"""Return true if x is in the range [start, end]"""
+	if start <= end:
+		return start <= x <= end
+	else:
+		return start <= x or x <= end
+
+def check_day(self):
+    now = dt.datetime.now()
+    hr = int(now.strftime("%H"))
+    min = int(now.strftime("%M"))
+    sec = int(now.strftime("%S"))
+    now = dt.time(hr, min, sec)
+    if time_in_range(start, end, now):
+        self.day = datetime.today().weekday() + 1  # saves current day (monday=0 & sunday=6)+1
 
 def detect_url(command, client_ip):
     regex = r"(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))"
@@ -81,6 +94,12 @@ def handle_cmd(cmd, chan, ip):
 
 #class accepts any credentials and logs every username, password and ip address
 class BasicSshHoneypot(paramiko.ServerInterface):
+    day = datetime.today().weekday() + 1  # saves current day (monday=0 & sunday=6)+1
+    # code is used for logging information about the attack
+    logging.basicConfig(
+        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+        level=logging.INFO,
+        filename=f'{path}/Day{day}/sshD{day}.log')
 
     client_ip = None
 
@@ -251,4 +270,3 @@ def start_server(port, bind):
 #code used to pass in parameters when invoking python script
 if __name__ == "__main__":
     start_server(2222, "")
-

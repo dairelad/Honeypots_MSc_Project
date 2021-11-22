@@ -1,0 +1,7 @@
+2021-11-22 16:26:25,211 - root - INFO - New connection from: 127.0.0.1
+2021-11-22 16:26:30,572 - root - INFO - New command from 127.0.0.1: b'h'
+2021-11-22 16:26:34,817 - root - INFO - New command from 127.0.0.1: b'exit'
+2021-11-22 16:26:38,493 - root - INFO - New command from 127.0.0.1: b'^]'
+2021-11-22 16:27:53,847 - root - INFO - New connection from: 127.0.0.1
+2021-11-22 16:27:55,758 - root - INFO - New command from 127.0.0.1: b'h'
+2021-11-22 16:27:59,537 - root - INFO - New command from 127.0.0.1: b'^]'

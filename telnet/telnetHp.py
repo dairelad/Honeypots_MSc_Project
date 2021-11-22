@@ -5,6 +5,20 @@ import random
 import os
 import re
 
+day = datetime.today().weekday()+1 # saves current day (monday=0 & sunday=6)+1
+
+#Create folders for seperate days
+path = os.getcwd()
+if not os.path.exists('Day1'):
+    for i in range(7):
+        os.mkdir(f'Day{i+1}')
+
+#code used for logging information about the attack
+logging.basicConfig(
+    filename=f'{path}/Day{day}/telnetD{day}.log',    #D1 is a placeholder for day variable
+    level=logging.DEBUG,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',)
+
 def detect_url(command, client_ip):
     regex = r"(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))"
     result = re.findall(regex, command)
@@ -23,20 +37,6 @@ def detect_url(command, client_ip):
 
 class Telnet(protocol.Protocol):
 
-    day = datetime.today().weekday()+1 # saves current day (monday=0 & sunday=6)+1
-
-    #Create folders for seperate days
-    path = os.getcwd()
-    if not os.path.exists('Day1'):
-        for i in range(7):
-            os.mkdir(f'Day{i+1}')
-
-#code used for logging information about the attack
-    logging.basicConfig(
-        filename=f'{path}/Day{day}/telnetD{day}.log',    #D1 is a placeholder for day variable
-        level=logging.DEBUG,
-        format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',)
-
     PROMPT = ("/ # ").encode('utf-8')
     def dataReceived(self, data):
         data = data.strip()
@@ -54,6 +54,7 @@ class Telnet(protocol.Protocol):
         self.transport.write(Telnet.PROMPT)
 
         if data != "":
+            print("[*] Telnet command received")
             logging.info("New command from " + self.transport.getPeer().host + ": " + str(data))
             detect_url(data.decode(), self.transport.getPeer().host)
 
@@ -69,3 +70,9 @@ class TelnetFactory(protocol.Factory):
 print("[*] Telnet honeypot is listening on port 8023...")
 endpoints.serverFromString(reactor, "tcp:8023").listen(TelnetFactory())
 reactor.run()
+
+if __name__ == '__main__':
+    try:
+        Telnet()
+    except KeyboardInterrupt:
+        pass

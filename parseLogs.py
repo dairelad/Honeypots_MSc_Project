@@ -1,28 +1,50 @@
-#!/usr/bin/env python
+#!/usr/local/bin/env python
 import pandas as pd
 import numpy as np
 import datetime
 import geoip2.database
 import os
+import sys
 
-#day = datetime.datetime.today().weekday()+1 # saves current day (monday=0 & sunday=6)+1
-day = 4
+day = datetime.datetime.today().weekday() # saves current day (monday=0 & sunday=6)
 
 #Create folders for seperate days
 path = os.getcwd()
 if not os.path.exists('csv/Aggregate'):
+	os.mkdir('csv')
 	os.mkdir('csv/Aggregate')
 	os.mkdir('csv/Summary')
 
-# Open log files
-sshLog = open(f"/Users/admin/git/MSc_Project/SD_Project/ssh/Day{day}/sshD{day}.log",'r').read().split("\n")
-telnetLog = open(f"/Users/admin/git/MSc_Project/SD_Project/telnet/Day{day}/telnetD{day}.log",'r').read().split("\n")
-httpLog = open(f"/Users/admin/git/MSc_Project/SD_Project/http/Day{day}/httpD{day}.log",'r').read().split("\n")
-httpsLog = open(f"/Users/admin/git/MSc_Project/SD_Project/https/Day{day}/httpsD{day}.log",'r').read().split("\n")
+try:
+	# Read honeypot log files
+	sshLog = open(f"/usr/src/app/Day{day+1}/sshD{day+1}.log",'r').read().split("\n")
+	telnetLog = open(f"/usr/src/app/Day{day+1}/telnetD{day+1}.log",'r').read().split("\n")
+	httpLog = open(f"/usr/src/app/Day{day+1}/httpD{day+1}.log",'r').read().split("\n")
+	httpsLog = open(f"/usr/src/app/Day{day+1}/httpsD{day+1}.log",'r').read().split("\n")
+
+	# Read in summary csvs so that the correct row (day) can be updated
+	sshSumCsv = pd.read_csv("/usr/src/app/csv/Summary/sshSum.csv")
+	telnetSumCsv = pd.read_csv("/usr/src/app/csv/Summary/telnetSum.csv")
+	httpSumCsv = pd.read_csv("/usr/src/app/csv/Summary/httpSum.csv")
+	httpsSumCsv = pd.read_csv("/usr/src/app/csv/Summary/httpsSum.csv")
+
+	# Read number of current lines in aggregate files so they can be updated
+	sshAggCsv = pd.read_csv("/usr/src/app/csv/Aggregate/sshAgg.csv")
+	telnetAggCsv = pd.read_csv("/usr/src/app/csv/Aggregate/telnetAgg.csv")
+	httpAggCsv = pd.read_csv("/usr/src/app/csv/Aggregate/httpAgg.csv")
+	httpsAggCsv = pd.read_csv("/usr/src/app/csv/Aggregate/httpsAgg.csv")
+
+	sshAggCsv_lineCount = len(sshAggCsv.index)
+	telnetAggCsv_lineCount = len(telnetAggCsv.index)
+	httpAggCsv_lineCount = len(httpAggCsv.index)
+	httpsAggCsv_lineCount = len(httpsAggCsv.index)
+except IOError:
+	print('Could not open required files')
+	sys.exit()
 
 # Code used to find the location of an IP Address
 ip_reader = geoip2.database.Reader(
-		'/Users/admin/git/MSc_Project/SD_Project/GeoLite2-City_20211102/GeoLite2-City.mmdb')
+		'/usr/src/app/GeoLite2-City_20211102/GeoLite2-City.mmdb')
 
 # columns for the different tables
 column1 = "timestamp"
@@ -41,9 +63,9 @@ column13 = '# credentials'
 column14 = '# commands'
 column15 = '# urls'
 
-# Summary updates once a day
-start = datetime.time(13, 50, 0)
-end = datetime.time(15, 35, 0)
+# Code to run segment at a particular time of day
+start = datetime.time(23, 50, 0)
+end = datetime.time(0, 0, 0)
 now = datetime.datetime.now()
 hr = int(now.strftime("%H"))
 min = int(now.strftime("%M"))
@@ -59,52 +81,66 @@ def time_in_range(start, end, x):
 
 
 def parseLogsToCsv(ssh, telnet, http, https):
-		ssh.to_csv(f"/Users/admin/git/MSc_Project/SD_Project/csv/Day{day}/sshD{day}.csv", index=False) #index false to remove index or first column of data set
-		telnet.to_csv(f"/Users/admin/git/MSc_Project/SD_Project/csv/Day{day}/telnetD{day}.csv", index=False)
-		http.to_csv(f"/Users/admin/git/MSc_Project/SD_Project/csv/Day{day}/httpD{day}.csv", index=False)
-		https.to_csv(f"/Users/admin/git/MSc_Project/SD_Project/csv/Day{day}/httpsD{day}.csv", index=False)
+		ssh.to_csv(f"/usr/src/app/csv/Day{day}/sshD{day}.csv", index=False) #index false to remove index or first column of data set
+		telnet.to_csv(f"/usr/src/app/csv/Day{day}/telnetD{day}.csv", index=False)
+		http.to_csv(f"/usr/src/app/csv/Day{day}/httpD{day}.csv", index=False)
+		https.to_csv(f"/usr/src/app/csv/Day{day}/httpsD{day}.csv", index=False)
 
 
 def parseSumsToCsv(ssh, telnet, http, https):
-	if time_in_range(start,end,now):
-		# if file does not exist write header
-		if not os.path.isfile('/Users/admin/git/MSc_Project/SD_Project/csv/Summary/sshSum.csv'):
-			ssh.to_csv('/Users/admin/git/MSc_Project/SD_Project/csv/Summary/sshSum.csv', index=False)
-		else:  # else it exists so append without writing the header
-			ssh.to_csv('/Users/admin/git/MSc_Project/SD_Project/csv/Summary/sshSum.csv', mode='a', header=False, index=False)
-		if not os.path.isfile('/Users/admin/git/MSc_Project/SD_Project/csv/Summary/telnetSum.csv'):
-			telnet.to_csv('/Users/admin/git/MSc_Project/SD_Project/csv/Summary/telnetSum.csv', index=False)
-		else:
-			telnet.to_csv('/Users/admin/git/MSc_Project/SD_Project/csv/Summary/telnetSum.csv', mode='a', header=False, index=False)
-		if not os.path.isfile('/Users/admin/git/MSc_Project/SD_Project/csv/Summary/httpSum.csv'):
-			http.to_csv('/Users/admin/git/MSc_Project/SD_Project/csv/Summary/httpSum.csv', index=False)
-		else:
-			http.to_csv('/Users/admin/git/MSc_Project/SD_Project/csv/Summary/httpSum.csv', mode='a', header=False, index=False)
-		if not os.path.isfile('/Users/admin/git/MSc_Project/SD_Project/csv/Summary/httpsSum.csv'):
-			https.to_csv('/Users/admin/git/MSc_Project/SD_Project/csv/Summary/httpsSum.csv', index=False)
-		else:
-			https.to_csv('/Users/admin/git/MSc_Project/SD_Project/csv/Summary/httpsSum.csv', mode='a', header=False, index=False)
+	# if file does not exist write header
+	if not os.path.isfile('/usr/src/app/csv/Summary/sshSum.csv'):
+		ssh.to_csv('/usr/src/app/csv/Summary/sshSum.csv', index=False)
+	else:  # else it exists so append without writing the header
+		sshSumCsv.iloc[day,[0,1,2,3]] = ssh.iloc[0,[0,1,2,3]]
+		sshSumCsv.to_csv('/usr/src/app/csv/Summary/sshSum.csv', index=False)
+	if not os.path.isfile('/usr/src/app/csv/Summary/telnetSum.csv'):
+		telnet.to_csv('/usr/src/app/csv/Summary/telnetSum.csv', index=False)
+	else:
+		telnetSumCsv.iloc[day, [0, 1, 2]] = telnet.iloc[0, [0, 1, 2]]
+		telnetSumCsv.to_csv('/usr/src/app/csv/Summary/telnetSum.csv', index=False)
+	if not os.path.isfile('/usr/src/app/csv/Summary/httpSum.csv'):
+		http.to_csv('/usr/src/app/csv/Summary/httpSum.csv', index=False)
+	else:
+		httpSumCsv.iloc[day, [0]] = http.iloc[0, [0]]
+		httpSumCsv.to_csv('/usr/src/app/csv/Summary/httpSum.csv', index=False)
+	if not os.path.isfile('/usr/src/app/csv/Summary/httpsSum.csv'):
+		https.to_csv('/usr/src/app/csv/Summary/httpsSum.csv', index=False)
+	else:
+		httpsSumCsv.iloc[day, [0]] = https.iloc[0, [0]]
+		httpsSumCsv.to_csv('/usr/src/app/csv/Summary/httpsSum.csv', index=False)
 
 
 def parseCsvToAgg(ssh, telnet, http, https):
-	if time_in_range(start,end,now):
-		# if file does not exist write header
-		if not os.path.isfile('/Users/admin/git/MSc_Project/SD_Project/csv/Aggregate/sshAgg.csv'):
-			ssh.to_csv('/Users/admin/git/MSc_Project/SD_Project/csv/Aggregate/sshAgg.csv', index=False)
-		else:  # else it exists so append without writing the header
-			ssh.to_csv('/Users/admin/git/MSc_Project/SD_Project/csv/Aggregate/sshAgg.csv', mode='a', header=False, index=False)
-		if not os.path.isfile('/Users/admin/git/MSc_Project/SD_Project/csv/Aggregate/telnetAgg.csv'):
-			telnet.to_csv('/Users/admin/git/MSc_Project/SD_Project/csv/Aggregate/telnetAgg.csv', index=False)
-		else:
-			telnet.to_csv('/Users/admin/git/MSc_Project/SD_Project/csv/Aggregate/telnetAgg.csv', mode='a', header=False, index=False)
-		if not os.path.isfile('/Users/admin/git/MSc_Project/SD_Project/csv/Aggregate/httpAgg.csv'):
-			http.to_csv('/Users/admin/git/MSc_Project/SD_Project/csv/Aggregate/httpAgg.csv', index=False)
-		else:
-			http.to_csv('/Users/admin/git/MSc_Project/SD_Project/csv/Aggregate/httpAgg.csv', mode='a', header=False, index=False)
-		if not os.path.isfile('/Users/admin/git/MSc_Project/SD_Project/csv/Aggregate/httpsAgg.csv'):
-			https.to_csv('/Users/admin/git/MSc_Project/SD_Project/csv/Aggregate/httpsAgg.csv', index=False)
-		else:
-			https.to_csv('/Users/admin/git/MSc_Project/SD_Project/csv/Aggregate/httpsAgg.csv', mode='a', header=False, index=False)
+	# new line counts
+	sshAgg_lineCount = len(ssh.index)
+	telnetAgg_lineCount = len(telnet.index)
+	httpAgg_lineCount = len(http.index)
+	httpsAgg_lineCount = len(https.index)
+
+	# difference from old line counts
+	sshAgg_lineDiff = abs(sshAgg_lineCount - sshAggCsv_lineCount)
+	telnetAgg_lineDiff = abs(telnetAgg_lineCount - telnetAggCsv_lineCount)
+	httpAgg_lineDiff = abs(httpAgg_lineCount - httpAggCsv_lineCount)
+	httpsAgg_lineDiff = abs(httpsAgg_lineCount - httpsAggCsv_lineCount)
+
+	# if file does not exist write header
+	if not os.path.isfile('/usr/src/app/csv/Aggregate/sshAgg.csv'):
+		ssh.to_csv('/usr/src/app/csv/Aggregate/sshAgg.csv', index=False)
+	else:  # else it exists so append without writing the header
+		ssh.tail(sshAgg_lineDiff).to_csv('/usr/src/app/csv/Aggregate/sshAgg.csv', mode='a', header=False, index=False)
+	if not os.path.isfile('/usr/src/app/csv/Aggregate/telnetAgg.csv'):
+		telnet.to_csv('/usr/src/app/csv/Aggregate/telnetAgg.csv', index=False)
+	else:
+		telnet.tail(telnetAgg_lineDiff).to_csv('/usr/src/app/csv/Aggregate/telnetAgg.csv', mode='a', header=False, index=False)
+	if not os.path.isfile('/usr/src/app/csv/Aggregate/httpAgg.csv'):
+		http.to_csv('/usr/src/app/csv/Aggregate/httpAgg.csv', index=False)
+	else:
+		http.tail(httpAgg_lineDiff).to_csv('/usr/src/app/csv/Aggregate/httpAgg.csv', mode='a', header=False, index=False)
+	if not os.path.isfile('/usr/src/app/csv/Aggregate/httpsAgg.csv'):
+		https.to_csv('/usr/src/app/csv/Aggregate/httpsAgg.csv', index=False)
+	else:
+		https.tail(httpsAgg_lineDiff).to_csv('/usr/src/app/csv/Aggregate/httpsAgg.csv', mode='a', header=False, index=False)
 
 
 class Ssh():
@@ -160,7 +196,7 @@ class Ssh():
 					self.ssh_lats.append(response.location.latitude)
 					self.ssh_longs.append(response.location.longitude)
 				except Exception as e:
-					print("Ip address not found in geoip2 db: " + ip)
+					#print("Ip address not found in geoip2 db: " + ip)
 					pass
 
 			elif "New client credentials" in line:
@@ -193,7 +229,7 @@ class Ssh():
 					self.ssh_lats.append(response.location.latitude)
 					self.ssh_longs.append(response.location.longitude)
 				except Exception as e:
-					print("Ip address not found in geoip2 db: " + ip)
+					#print("Ip address not found in geoip2 db: " + ip)
 					pass
 
 			elif "URL detected" in line:
@@ -222,7 +258,7 @@ class Ssh():
 					self.ssh_lats.append(response.location.latitude)
 					self.ssh_longs.append(response.location.longitude)
 				except Exception as e:
-					print("Ip address not found in geoip2 db: " + ip)
+					#print("Ip address not found in geoip2 db: " + ip)
 					pass
 
 			elif "New command from" in line:
@@ -251,13 +287,13 @@ class Ssh():
 					self.ssh_lats.append(response.location.latitude)
 					self.ssh_longs.append(response.location.longitude)
 				except Exception as e:
-					print("Ip address not found in geoip2 db: " + ip)
+					#print("Ip address not found in geoip2 db: " + ip)
 					pass
 
-		print("\nTotal number of connectons: " + str(self.connection_count) + "\n"
-			  + "Total number of credentials tried: " + str(self.credentials_count) + "\n"
-			  + "Total number of urls: " + str(self.urls_count) + "\n"
-			  + "Total number of commands: " + str(self.commands_count) + "\n")
+		# print("\nTotal number of connectons: " + str(self.connection_count) + "\n"
+		# 	  + "Total number of credentials tried: " + str(self.credentials_count) + "\n"
+		# 	  + "Total number of urls: " + str(self.urls_count) + "\n"
+		# 	  + "Total number of commands: " + str(self.commands_count) + "\n")
 
 		# Find max column size
 		max_col = 0
@@ -330,7 +366,7 @@ class Ssh():
 		sshSum_table = pd.DataFrame(sshSum_dict)
 
 		ssh_table = pd.DataFrame(ssh_dict)
-		print(ssh_table)
+		#print(ssh_table)
 		return ssh_table, sshSum_table
 
 class Telnet():
@@ -377,7 +413,7 @@ class Telnet():
 					self.telnet_lats.append(response.location.latitude)
 					self.telnet_longs.append(response.location.longitude)
 				except Exception as e:
-					print("Ip address not found in geoip2 db: " + ip)
+					#print("Ip address not found in geoip2 db: " + ip)
 					pass
 
 			elif "URL detected" in line:
@@ -405,7 +441,7 @@ class Telnet():
 					self.telnet_lats.append(response.location.latitude)
 					self.telnet_longs.append(response.location.longitude)
 				except Exception as e:
-					print("Ip address not found in geoip2 db: " + ip)
+					#print("Ip address not found in geoip2 db: " + ip)
 					pass
 
 			elif "New command from" in line:
@@ -432,12 +468,12 @@ class Telnet():
 					self.telnet_longs.append(response.location.longitude)
 					self.telnet_lats.append(response.location.latitude)
 				except Exception as e:
-					print("Ip address not found in geoip2 db: " + ip)
+					#print("Ip address not found in geoip2 db: " + ip)
 					pass
 
-		print("\nTotal number of connectons: " + str(self.connection_count) + "\n"
-			  + "Total number of urls: " + str(self.urls_count) + "\n"
-			  + "Total number of commands: " + str(self.commands_count) + "\n")
+		# print("\nTotal number of connectons: " + str(self.connection_count) + "\n"
+		# 	  + "Total number of urls: " + str(self.urls_count) + "\n"
+		# 	  + "Total number of commands: " + str(self.commands_count) + "\n")
 
 		# Find max column size
 		max_col = 0
@@ -496,7 +532,7 @@ class Telnet():
 		telnetSum_table = pd.DataFrame(telnetSum_dict)
 
 		telnet_table = pd.DataFrame(telnet_dict)
-		print(telnet_table)
+		#print(telnet_table)
 		return telnet_table , telnetSum_table
 
 class Http_s():
@@ -548,7 +584,7 @@ class Http_s():
 					self.http_longs.append(response.location.longitude)
 					self.http_lats.append(response.location.latitude)
 				except Exception as e:
-					print("Ip address not found in geoip2 db: " + ip)
+					#print("Ip address not found in geoip2 db: " + ip)
 					self.http_countries.append(np.nan)
 					self.http_provinces.append(np.nan)
 					self.http_cities.append(np.nan)
@@ -575,7 +611,7 @@ class Http_s():
 					self.https_longs.append(response.location.longitude)
 					self.https_lats.append(response.location.latitude)
 				except Exception as e:
-					print("Ip address not found in geoip2 db: " + ip)
+					#print("Ip address not found in geoip2 db: " + ip)
 					self.https_countries.append(np.nan)
 					self.https_provinces.append(np.nan)
 					self.https_cities.append(np.nan)
@@ -622,13 +658,14 @@ class Http_s():
 		httpsSum_table = pd.DataFrame(httpsSum_dict)
 
 		http_table = pd.DataFrame(http_dict)
-		print(http_table)
+		#print(http_table)
 		https_table = pd.DataFrame(https_dict)
-		print(https_table)
+		#print(https_table)
 
 		return http_table, httpSum_table, https_table, httpsSum_table
 
 if __name__ == "__main__":
+	print('Parsing logs..')
 	ssh_list = Ssh(sshLog, ip_reader).parse()
 	telnet_list = Telnet(telnetLog, ip_reader).parse()
 	http_s = Http_s(httpLog, httpsLog, ip_reader).parse()
@@ -645,7 +682,6 @@ if __name__ == "__main__":
 	httpsSum_table = http_s[3]
 
 	parseLogsToCsv(ssh_table, telnet_table, http_table, https_table)
-
 	parseSumsToCsv(ssh_tableSum, telnet_tableSum, httpSum_table, httpsSum_table)
-
 	parseCsvToAgg(ssh_table, telnet_table, http_table, https_table)
+	print('Logs parsed.')

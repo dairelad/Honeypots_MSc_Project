@@ -5,3 +5,5 @@
 pandas
 dash
 wordcloud
+profanity-filter
+# gunicorn
