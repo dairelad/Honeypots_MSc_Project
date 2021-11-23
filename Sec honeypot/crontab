@@ -1,0 +1,4 @@
+*/10 * * * * /usr/local/bin/python3 /usr/src/app/parseLogs.py >> /usr/src/app/cron.log 2>&1
+*/10 * * * * /usr/local/bin/python3 /usr/src/app/sendFiles.py >> /usr/src/app/cron.log 2>&1
+# * * * * * /usr/src/app/trigger.sh
+# An empty line is required at the end of this file for a valid cron file.

@@ -1,0 +1,9 @@
+# paramiko
+# twisted
+# geoip2
+# geoip2.database
+pandas
+dash
+wordcloud
+profanity-filter
+# gunicorn

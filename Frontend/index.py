@@ -9,8 +9,9 @@ from wordcloud import WordCloud
 import base64
 from io import BytesIO
 from collections import Counter
-from profanity_filter import ProfanityFilter
-import spacy
+#from profanity_filter import ProfanityFilter
+#import spacy
+import time
 
 # Read in csv files
 ssh_data = pd.read_csv("/home/ubuntu/frontend/csv/Aggregate/sshAgg.csv")
@@ -23,22 +24,16 @@ telnet_sum = pd.read_csv("/home/ubuntu/frontend/csv/Summary/telnetSum.csv")
 http_sum = pd.read_csv("/home/ubuntu/frontend/csv/Summary/httpSum.csv")
 https_sum = pd.read_csv("/home/ubuntu/frontend/csv/Summary/httpsSum.csv")
 
-# data required for creating nice graphs
-blank = pd.read_csv("/home/ubuntu/frontend/csv/blank.csv")
-blank2 = pd.read_csv("/home/ubuntu/frontend/csv/blank2.csv")
-honeypots =['SSH', 'Telnet', 'HTTP', 'HTTPS', 'SSH_secure', 'Telnet_secure', 'HTTP_secure', 'HTTPS_secure']
 # fill nan values with 'Not available'
 ssh_data['province'] = ssh_data['province'].fillna('Not available')
 telnet_data['province'] = telnet_data['province'].fillna('Not available')
 http_data['province'] = http_data['province'].fillna('Not available')
 https_data['province'] = https_data['province'].fillna('Not available')
 
-weekdays = ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun']
-
 # Wordcloud pre-processing
 dfm = ssh_data['usernames'].append(ssh_data['passwords'])
-dfm=dfm.dropna()
-dfm=dfm.values.tolist()
+dfm = dfm.dropna()
+dfm = dfm.values.tolist()
 # pf = ProfanityFilter()
 # spacy.load('en')
 # dfm_filtered = []
@@ -46,13 +41,19 @@ dfm=dfm.values.tolist()
 #     filtered = pf.censor(value)
 #     dfm_filtered.append(filtered)
 
-dm = Counter(dfm)
+dfm = Counter(dfm)
 data = {
     "word": list(dfm.keys()),
     "count": list(dfm.values())
 }
 wordFreq = pd.DataFrame(data)
 wordFreq = wordFreq.sort_values(by=['count'], ascending=False)
+
+# data required for creating nice graphs
+blank = pd.read_csv("/home/ubuntu/frontend/csv/blank.csv")
+blank2 = pd.read_csv("/home/ubuntu/frontend/csv/blank2.csv")
+honeypots =['SSH', 'Telnet', 'HTTP', 'HTTPS', 'SSH_secure', 'Telnet_secure', 'HTTP_secure', 'HTTPS_secure']
+weekdays = ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun']
 
 app = dash.Dash(__name__, )
 
@@ -430,7 +431,6 @@ def update_graph(honeypot):
         vals = [num_connections, num_credentials, num_commands, num_urls]
     elif honeypot == 'Telnet':
         num_connections = telnet_sum['# connections'].sum()
-        num_credentials = 0
         num_commands = telnet_sum['# commands'].sum()
         num_urls = telnet_sum['# urls'].sum()
         honeypot_type = 'Telnet'
@@ -438,17 +438,11 @@ def update_graph(honeypot):
         vals = [num_connections, num_commands, num_urls]
     elif honeypot == 'HTTP':
         num_connections = http_sum['# connections'].sum()
-        num_credentials = 0
-        num_commands = 0
-        num_urls = 0
         honeypot_type = 'HTTP'
         legend = ['# connections']
         vals = [num_connections]
     elif honeypot == 'HTTPS':
         num_connections = https_sum['# connections'].sum()
-        num_credentials = 0
-        num_commands = 0
-        num_urls = 0
         honeypot_type = 'HTTPS'
         legend = ['# connections']
         vals = [num_connections]
@@ -493,6 +487,18 @@ def update_graph(honeypot):
         )
     }
 
-
 if __name__ == '__main__':
     app.run_server(debug=True, host='0.0.0.0')
+
+    # Update server data every 10.58mins using cron
+    # print out shows what is happening
+    a = time.time()
+    b = 0
+    while True:
+        if (b < 658):
+            b = time.time() - a
+        elif (b == 658):
+            print('restarting script to update with new data')
+            a = time.time()
+            b = 0
+            pass
