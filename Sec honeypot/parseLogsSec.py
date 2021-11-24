@@ -196,30 +196,43 @@ class Ssh():
 					self.ssh_lats.append(response.location.latitude)
 					self.ssh_longs.append(response.location.longitude)
 				except Exception as e:
-					#print("Ip address not found in geoip2 db: " + ip)
 					pass
 
 			elif "New client credentials" in line:
-				var = line.split(": user")
-				var = var[-1].replace("name: ", "")
-				var = var.replace("password: ", "")
-				var = var.split(",")
-				self.ssh_usernames.append(var[0])
-				self.ssh_passwords.append(var[1].replace(" ", ""))
-				self.credentials_count += 1
-				#print(var[0] + ' ' + var[1])
+				try:
+					var = line.split(": user")
+					var = var[-1].replace("name: ", "")
+					var = var.replace("password: ", "")
+					var = var.split(",")
+					self.ssh_usernames.append(var[0])
+					self.ssh_passwords.append(var[1].replace(" ", ""))
+					self.credentials_count += 1
 
-				var = line.split(" - ")
-				# Create datetime object and append to timestamp list
-				self.ssh_timestamps.append(datetime.datetime.strptime(var[0], "%Y-%m-%d %H:%M:%S,%f"))
-				# format ip address and add to list
-				var = var[-1].split(":")
-				ip = var[0].replace("New client credentials from ", "")
-				self.ssh_ips.append(ip)
+					var = line.split(" - ")
+					# Create datetime object and append to timestamp list
+					self.ssh_timestamps.append(datetime.datetime.strptime(var[0], "%Y-%m-%d %H:%M:%S,%f"))
+					# format ip address and add to list
+					var = var[-1].split(":")
+					ip = var[0].replace("New client credentials from ", "")
+					self.ssh_ips.append(ip)
 
-				# Append NaN to rest of values in row of table
-				self.ssh_urls.append(np.nan)
-				self.ssh_commands.append(np.nan)
+					# Append NaN to rest of values in row of table
+					self.ssh_urls.append(np.nan)
+					self.ssh_commands.append(np.nan)
+				except:
+					var = line.split(" - ")
+					# Create datetime object and append to timestamp list
+					self.ssh_timestamps.append(datetime.datetime.strptime(var[0], "%Y-%m-%d %H:%M:%S,%f"))
+					# format ip address and add to list
+					var = var[-1].split(":")
+					ip = var[0].replace("New client credentials from ", "")
+					self.ssh_ips.append(ip)
+
+					# Append NaN to rest of values in row of table
+					self.ssh_urls.append(np.nan)
+					self.ssh_commands.append(np.nan)
+					self.ssh_passwords.append(np.nan)
+					self.ssh_usernames.append(np.nan)
 
 				try:
 					response = self.ip_reader.city(ip)
@@ -229,26 +242,28 @@ class Ssh():
 					self.ssh_lats.append(response.location.latitude)
 					self.ssh_longs.append(response.location.longitude)
 				except Exception as e:
-					#print("Ip address not found in geoip2 db: " + ip)
 					pass
 
 			elif "URL detected" in line:
-				var = line.split(": ")
-				self.ssh_urls.append(var[-1])
-				self.urls_count += 1
+				try:
+					var = line.split(": ")
+					self.ssh_urls.append(var[-1])
+					self.urls_count += 1
 
-				var = line.split(" - ")
-				# Create datetime object and append to timestamp list
-				self.ssh_timestamps.append(datetime.datetime.strptime(var[0], "%Y-%m-%d %H:%M:%S,%f"))
-				# format ip address and add to list
-				var = var[-1].split(":")
-				ip = var[0].replace("New URL detected from ", "")
-				self.ssh_ips.append(ip)
+					var = line.split(" - ")
+					# Create datetime object and append to timestamp list
+					self.ssh_timestamps.append(datetime.datetime.strptime(var[0], "%Y-%m-%d %H:%M:%S,%f"))
+					# format ip address and add to list
+					var = var[-1].split(":")
+					ip = var[0].replace("New URL detected from ", "")
+					self.ssh_ips.append(ip)
 
-				# Append NaN to rest of values in row of table
-				self.ssh_usernames.append(np.nan)
-				self.ssh_passwords.append(np.nan)
-				self.ssh_commands.append(np.nan)
+					# Append NaN to rest of values in row of table
+					self.ssh_usernames.append(np.nan)
+					self.ssh_passwords.append(np.nan)
+					self.ssh_commands.append(np.nan)
+				except:
+					pass
 
 				try:
 					response = self.ip_reader.city(ip)
@@ -258,26 +273,28 @@ class Ssh():
 					self.ssh_lats.append(response.location.latitude)
 					self.ssh_longs.append(response.location.longitude)
 				except Exception as e:
-					#print("Ip address not found in geoip2 db: " + ip)
 					pass
 
 			elif "New command from" in line:
-				var = line.split(": ")
-				self.ssh_commands.append(var[-1])
-				self.commands_count += 1
+				try:
+					var = line.split(": ")
+					self.ssh_commands.append(var[-1])
+					self.commands_count += 1
 
-				var = line.split(" - ")
-				# Create datetime object and append to timestamp list
-				self.ssh_timestamps.append(datetime.datetime.strptime(var[0], "%Y-%m-%d %H:%M:%S,%f"))
-				# format ip address and add to list
-				var = var[-1].split(":")
-				ip = var[0].replace("New command from ", "")
-				self.ssh_ips.append(ip)
+					var = line.split(" - ")
+					# Create datetime object and append to timestamp list
+					self.ssh_timestamps.append(datetime.datetime.strptime(var[0], "%Y-%m-%d %H:%M:%S,%f"))
+					# format ip address and add to list
+					var = var[-1].split(":")
+					ip = var[0].replace("New command from ", "")
+					self.ssh_ips.append(ip)
 
-				# Append NaN to rest of values in row of table
-				self.ssh_usernames.append(np.nan)
-				self.ssh_passwords.append(np.nan)
-				self.ssh_urls.append(np.nan)
+					# Append NaN to rest of values in row of table
+					self.ssh_usernames.append(np.nan)
+					self.ssh_passwords.append(np.nan)
+					self.ssh_urls.append(np.nan)
+				except:
+					pass
 
 				try:
 					response = self.ip_reader.city(ip)
@@ -287,13 +304,7 @@ class Ssh():
 					self.ssh_lats.append(response.location.latitude)
 					self.ssh_longs.append(response.location.longitude)
 				except Exception as e:
-					#print("Ip address not found in geoip2 db: " + ip)
 					pass
-
-		# print("\nTotal number of connectons: " + str(self.connection_count) + "\n"
-		# 	  + "Total number of credentials tried: " + str(self.credentials_count) + "\n"
-		# 	  + "Total number of urls: " + str(self.urls_count) + "\n"
-		# 	  + "Total number of commands: " + str(self.commands_count) + "\n")
 
 		# Find max column size
 		max_col = 0
@@ -366,7 +377,7 @@ class Ssh():
 		sshSum_table = pd.DataFrame(sshSum_dict)
 
 		ssh_table = pd.DataFrame(ssh_dict)
-		#print(ssh_table)
+
 		return ssh_table, sshSum_table
 
 class Telnet():
@@ -413,24 +424,26 @@ class Telnet():
 					self.telnet_lats.append(response.location.latitude)
 					self.telnet_longs.append(response.location.longitude)
 				except Exception as e:
-					#print("Ip address not found in geoip2 db: " + ip)
 					pass
 
 			elif "URL detected" in line:
-				var = line.split(": ")
-				self.telnet_urls.append(var[-1])
-				self.urls_count += 1
+				try:
+					var = line.split(": ")
+					self.telnet_urls.append(var[-1])
+					self.urls_count += 1
 
-				var = line.split(" - ")
-				# Create datetime object and append to timestamp list
-				self.telnet_timestamps.append(datetime.datetime.strptime(var[0], "%Y-%m-%d %H:%M:%S,%f"))
-				# format ip address and add to list
-				var = var[-1].split(":")
-				ip = var[0].replace("New URL detected from ", "")
-				self.telnet_ips.append(ip)
+					var = line.split(" - ")
+					# Create datetime object and append to timestamp list
+					self.telnet_timestamps.append(datetime.datetime.strptime(var[0], "%Y-%m-%d %H:%M:%S,%f"))
+					# format ip address and add to list
+					var = var[-1].split(":")
+					ip = var[0].replace("New URL detected from ", "")
+					self.telnet_ips.append(ip)
 
-				# Append NaN to rest of values in row of table
-				self.telnet_commands.append(np.nan)
+					# Append NaN to rest of values in row of table
+					self.telnet_commands.append(np.nan)
+				except:
+					pass
 
 
 				try:
@@ -441,24 +454,26 @@ class Telnet():
 					self.telnet_lats.append(response.location.latitude)
 					self.telnet_longs.append(response.location.longitude)
 				except Exception as e:
-					#print("Ip address not found in geoip2 db: " + ip)
 					pass
 
 			elif "New command from" in line:
-				var = line.split(": ")
-				self.telnet_commands.append(var[-1])
-				self.commands_count += 1
+				try:
+					var = line.split(": ")
+					self.telnet_commands.append(var[-1])
+					self.commands_count += 1
 
-				var = line.split(" - ")
-				# Create datetime object and append to timestamp list
-				self.telnet_timestamps.append(datetime.datetime.strptime(var[0], "%Y-%m-%d %H:%M:%S,%f"))
-				# format ip address and add to list
-				var = var[-1].split(":")
-				ip = var[0].replace("New command from ", "")
-				self.telnet_ips.append(ip)
+					var = line.split(" - ")
+					# Create datetime object and append to timestamp list
+					self.telnet_timestamps.append(datetime.datetime.strptime(var[0], "%Y-%m-%d %H:%M:%S,%f"))
+					# format ip address and add to list
+					var = var[-1].split(":")
+					ip = var[0].replace("New command from ", "")
+					self.telnet_ips.append(ip)
 
-				# Append NaN to rest of values in row of table
-				self.telnet_urls.append(np.nan)
+					# Append NaN to rest of values in row of table
+					self.telnet_urls.append(np.nan)
+				except:
+					pass
 
 				try:
 					response = self.ip_reader.city(ip)
@@ -468,12 +483,7 @@ class Telnet():
 					self.telnet_longs.append(response.location.longitude)
 					self.telnet_lats.append(response.location.latitude)
 				except Exception as e:
-					#print("Ip address not found in geoip2 db: " + ip)
 					pass
-
-		# print("\nTotal number of connectons: " + str(self.connection_count) + "\n"
-		# 	  + "Total number of urls: " + str(self.urls_count) + "\n"
-		# 	  + "Total number of commands: " + str(self.commands_count) + "\n")
 
 		# Find max column size
 		max_col = 0
@@ -532,7 +542,6 @@ class Telnet():
 		telnetSum_table = pd.DataFrame(telnetSum_dict)
 
 		telnet_table = pd.DataFrame(telnet_dict)
-		#print(telnet_table)
 		return telnet_table , telnetSum_table
 
 class Http_s():
@@ -584,7 +593,6 @@ class Http_s():
 					self.http_longs.append(response.location.longitude)
 					self.http_lats.append(response.location.latitude)
 				except Exception as e:
-					#print("Ip address not found in geoip2 db: " + ip)
 					self.http_countries.append(np.nan)
 					self.http_provinces.append(np.nan)
 					self.http_cities.append(np.nan)
@@ -611,7 +619,6 @@ class Http_s():
 					self.https_longs.append(response.location.longitude)
 					self.https_lats.append(response.location.latitude)
 				except Exception as e:
-					#print("Ip address not found in geoip2 db: " + ip)
 					self.https_countries.append(np.nan)
 					self.https_provinces.append(np.nan)
 					self.https_cities.append(np.nan)

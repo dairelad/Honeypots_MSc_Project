@@ -490,15 +490,15 @@ def update_graph(honeypot):
 if __name__ == '__main__':
     app.run_server(debug=True, host='0.0.0.0')
 
-    # Update server data every 10.58mins using cron
-    # print out shows what is happening
-    a = time.time()
-    b = 0
-    while True:
-        if (b < 658):
-            b = time.time() - a
-        elif (b == 658):
-            print('restarting script to update with new data')
-            a = time.time()
-            b = 0
-            pass
+    # # Update server data every 10.58mins using cron
+    # # print out shows what is happening
+    # a = time.time()
+    # b = 0
+    # while True:
+    #     if (b < 658):
+    #         b = time.time() - a
+    #     elif (b == 658):
+    #         print('restarting script to update with new data')
+    #         a = time.time()
+    #         b = 0
+    #         pass

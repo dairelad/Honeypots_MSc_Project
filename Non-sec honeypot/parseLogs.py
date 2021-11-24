@@ -8,12 +8,24 @@ import sys
 
 day = datetime.datetime.today().weekday() # saves current day (monday=0 & sunday=6)
 
-#Create folders for seperate days
+#Create folders for csv files
 path = os.getcwd()
 if not os.path.exists('csv/Aggregate'):
 	os.mkdir('csv')
 	os.mkdir('csv/Aggregate')
 	os.mkdir('csv/Summary')
+	os.mkdir('csv/Day1')
+	os.mkdir('csv/Day2')
+	os.mkdir('csv/Day3')
+	os.mkdir('csv/Day4')
+	os.mkdir('csv/Day5')
+	os.mkdir('csv/Day6')
+	os.mkdir('csv/Day7')
+	for x in range(7):
+		f = open(f"{path}/Day{x+1}/httpD{x+1}.csv", "x")
+		f = open(f"{path}/Day{x+1}/httpD{x+1}.csv", "x")
+		f = open(f"{path}/Day{x+1}/httpD{x+1}.csv", "x")
+		f = open(f"{path}/Day{x+1}/httpD{x+1}.csv", "x")
 
 try:
 	# Read honeypot log files
@@ -81,10 +93,10 @@ def time_in_range(start, end, x):
 
 
 def parseLogsToCsv(ssh, telnet, http, https):
-		ssh.to_csv(f"/usr/src/app/csv/Day{day}/sshD{day}.csv", index=False) #index false to remove index or first column of data set
-		telnet.to_csv(f"/usr/src/app/csv/Day{day}/telnetD{day}.csv", index=False)
-		http.to_csv(f"/usr/src/app/csv/Day{day}/httpD{day}.csv", index=False)
-		https.to_csv(f"/usr/src/app/csv/Day{day}/httpsD{day}.csv", index=False)
+		ssh.to_csv(f"/usr/src/app/csv/Day{day+1}/sshD{day+1}.csv", index=False) #index false to remove index or first column of data set
+		telnet.to_csv(f"/usr/src/app/csv/Day{day+1}/telnetD{day+1}.csv", index=False)
+		http.to_csv(f"/usr/src/app/csv/Day{day+1}/httpD{day+1}.csv", index=False)
+		https.to_csv(f"/usr/src/app/csv/Day{day+1}/httpsD{day+1}.csv", index=False)
 
 
 def parseSumsToCsv(ssh, telnet, http, https):
@@ -113,34 +125,57 @@ def parseSumsToCsv(ssh, telnet, http, https):
 
 def parseCsvToAgg(ssh, telnet, http, https):
 	# new line counts
-	sshAgg_lineCount = len(ssh.index)
-	telnetAgg_lineCount = len(telnet.index)
-	httpAgg_lineCount = len(http.index)
-	httpsAgg_lineCount = len(https.index)
+	# sshAgg_lineCount = len(ssh.index)
+	# telnetAgg_lineCount = len(telnet.index)
+	# httpAgg_lineCount = len(http.index)
+	# httpsAgg_lineCount = len(https.index)
+	#
+	# # difference from old line counts
+	# sshAgg_lineDiff = abs(sshAgg_lineCount - sshAggCsv_lineCount)
+	# telnetAgg_lineDiff = abs(telnetAgg_lineCount - telnetAggCsv_lineCount)
+	# httpAgg_lineDiff = abs(httpAgg_lineCount - httpAggCsv_lineCount)
+	# httpsAgg_lineDiff = abs(httpsAgg_lineCount - httpsAggCsv_lineCount)
 
-	# difference from old line counts
-	sshAgg_lineDiff = abs(sshAgg_lineCount - sshAggCsv_lineCount)
-	telnetAgg_lineDiff = abs(telnetAgg_lineCount - telnetAggCsv_lineCount)
-	httpAgg_lineDiff = abs(httpAgg_lineCount - httpAggCsv_lineCount)
-	httpsAgg_lineDiff = abs(httpsAgg_lineCount - httpsAggCsv_lineCount)
+	ssh_parsed = pd.concat([sshAggCsv,ssh])
+	telnet_parsed = pd.concat([telnetAggCsv, telnet])
+	http_parsed = pd.concat([httpAggCsv, http])
+	https_parsed = pd.concat([httpsAggCsv, https])
+
+	ssh_parsed = ssh_parsed[~ssh_parsed.index.duplicated()] # remove duplicates (this way because datetime)
+	telnet_parsed = telnet_parsed[~telnet_parsed.index.duplicated()]
+	http_parsed = http_parsed[~http_parsed.index.duplicated()]
+	https_parsed = https_parsed[~https_parsed.index.duplicated()]
+
+	ssh_parsed['ip'].replace('', np.nan, inplace=True)
+	telnet_parsed['ip'].replace('', np.nan, inplace=True)
+	http_parsed['ip'].replace('', np.nan, inplace=True)
+	https_parsed['ip'].replace('', np.nan, inplace=True)
+
+	ssh_parsed.dropna(subset=['ip'], inplace=True)
+	telnet_parsed.dropna(subset=['ip'], inplace=True)
+	http_parsed.dropna(subset=['ip'], inplace=True)
+	https_parsed.dropna(subset=['ip'], inplace=True)
 
 	# if file does not exist write header
 	if not os.path.isfile('/usr/src/app/csv/Aggregate/sshAgg.csv'):
 		ssh.to_csv('/usr/src/app/csv/Aggregate/sshAgg.csv', index=False)
 	else:  # else it exists so append without writing the header
-		ssh.tail(sshAgg_lineDiff).to_csv('/usr/src/app/csv/Aggregate/sshAgg.csv', mode='a', header=False, index=False)
+		ssh_parsed.to_csv('/usr/src/app/csv/Aggregate/sshAgg.csv', index=False)
+
 	if not os.path.isfile('/usr/src/app/csv/Aggregate/telnetAgg.csv'):
 		telnet.to_csv('/usr/src/app/csv/Aggregate/telnetAgg.csv', index=False)
 	else:
-		telnet.tail(telnetAgg_lineDiff).to_csv('/usr/src/app/csv/Aggregate/telnetAgg.csv', mode='a', header=False, index=False)
+		telnet_parsed.to_csv('/usr/src/app/csv/Aggregate/telnetAgg.csv', index=False)
+
 	if not os.path.isfile('/usr/src/app/csv/Aggregate/httpAgg.csv'):
 		http.to_csv('/usr/src/app/csv/Aggregate/httpAgg.csv', index=False)
 	else:
-		http.tail(httpAgg_lineDiff).to_csv('/usr/src/app/csv/Aggregate/httpAgg.csv', mode='a', header=False, index=False)
+		http_parsed.to_csv('/usr/src/app/csv/Aggregate/httpAgg.csv', index=False)
+
 	if not os.path.isfile('/usr/src/app/csv/Aggregate/httpsAgg.csv'):
 		https.to_csv('/usr/src/app/csv/Aggregate/httpsAgg.csv', index=False)
 	else:
-		https.tail(httpsAgg_lineDiff).to_csv('/usr/src/app/csv/Aggregate/httpsAgg.csv', mode='a', header=False, index=False)
+		https_parsed.to_csv('/usr/src/app/csv/Aggregate/httpsAgg.csv', index=False)
 
 
 class Ssh():
@@ -196,30 +231,43 @@ class Ssh():
 					self.ssh_lats.append(response.location.latitude)
 					self.ssh_longs.append(response.location.longitude)
 				except Exception as e:
-					#print("Ip address not found in geoip2 db: " + ip)
 					pass
 
 			elif "New client credentials" in line:
-				var = line.split(": user")
-				var = var[-1].replace("name: ", "")
-				var = var.replace("password: ", "")
-				var = var.split(",")
-				self.ssh_usernames.append(var[0])
-				self.ssh_passwords.append(var[1].replace(" ", ""))
-				self.credentials_count += 1
-				#print(var[0] + ' ' + var[1])
+				try:
+					var = line.split(": user")
+					var = var[-1].replace("name: ", "")
+					var = var.replace("password: ", "")
+					var = var.split(",")
+					self.ssh_usernames.append(var[0])
+					self.ssh_passwords.append(var[1].replace(" ", ""))
+					self.credentials_count += 1
 
-				var = line.split(" - ")
-				# Create datetime object and append to timestamp list
-				self.ssh_timestamps.append(datetime.datetime.strptime(var[0], "%Y-%m-%d %H:%M:%S,%f"))
-				# format ip address and add to list
-				var = var[-1].split(":")
-				ip = var[0].replace("New client credentials from ", "")
-				self.ssh_ips.append(ip)
+					var = line.split(" - ")
+					# Create datetime object and append to timestamp list
+					self.ssh_timestamps.append(datetime.datetime.strptime(var[0], "%Y-%m-%d %H:%M:%S,%f"))
+					# format ip address and add to list
+					var = var[-1].split(":")
+					ip = var[0].replace("New client credentials from ", "")
+					self.ssh_ips.append(ip)
 
-				# Append NaN to rest of values in row of table
-				self.ssh_urls.append(np.nan)
-				self.ssh_commands.append(np.nan)
+					# Append NaN to rest of values in row of table
+					self.ssh_urls.append(np.nan)
+					self.ssh_commands.append(np.nan)
+				except:
+					var = line.split(" - ")
+					# Create datetime object and append to timestamp list
+					self.ssh_timestamps.append(datetime.datetime.strptime(var[0], "%Y-%m-%d %H:%M:%S,%f"))
+					# format ip address and add to list
+					var = var[-1].split(":")
+					ip = var[0].replace("New client credentials from ", "")
+					self.ssh_ips.append(ip)
+
+					# Append NaN to rest of values in row of table
+					self.ssh_urls.append(np.nan)
+					self.ssh_commands.append(np.nan)
+					self.ssh_passwords.append(np.nan)
+					self.ssh_usernames.append(np.nan)
 
 				try:
 					response = self.ip_reader.city(ip)
@@ -229,26 +277,28 @@ class Ssh():
 					self.ssh_lats.append(response.location.latitude)
 					self.ssh_longs.append(response.location.longitude)
 				except Exception as e:
-					#print("Ip address not found in geoip2 db: " + ip)
 					pass
 
 			elif "URL detected" in line:
-				var = line.split(": ")
-				self.ssh_urls.append(var[-1])
-				self.urls_count += 1
+				try:
+					var = line.split(": ")
+					self.ssh_urls.append(var[-1])
+					self.urls_count += 1
 
-				var = line.split(" - ")
-				# Create datetime object and append to timestamp list
-				self.ssh_timestamps.append(datetime.datetime.strptime(var[0], "%Y-%m-%d %H:%M:%S,%f"))
-				# format ip address and add to list
-				var = var[-1].split(":")
-				ip = var[0].replace("New URL detected from ", "")
-				self.ssh_ips.append(ip)
+					var = line.split(" - ")
+					# Create datetime object and append to timestamp list
+					self.ssh_timestamps.append(datetime.datetime.strptime(var[0], "%Y-%m-%d %H:%M:%S,%f"))
+					# format ip address and add to list
+					var = var[-1].split(":")
+					ip = var[0].replace("New URL detected from ", "")
+					self.ssh_ips.append(ip)
 
-				# Append NaN to rest of values in row of table
-				self.ssh_usernames.append(np.nan)
-				self.ssh_passwords.append(np.nan)
-				self.ssh_commands.append(np.nan)
+					# Append NaN to rest of values in row of table
+					self.ssh_usernames.append(np.nan)
+					self.ssh_passwords.append(np.nan)
+					self.ssh_commands.append(np.nan)
+				except:
+					pass
 
 				try:
 					response = self.ip_reader.city(ip)
@@ -258,26 +308,28 @@ class Ssh():
 					self.ssh_lats.append(response.location.latitude)
 					self.ssh_longs.append(response.location.longitude)
 				except Exception as e:
-					#print("Ip address not found in geoip2 db: " + ip)
 					pass
 
 			elif "New command from" in line:
-				var = line.split(": ")
-				self.ssh_commands.append(var[-1])
-				self.commands_count += 1
+				try:
+					var = line.split(": ")
+					self.ssh_commands.append(var[-1])
+					self.commands_count += 1
 
-				var = line.split(" - ")
-				# Create datetime object and append to timestamp list
-				self.ssh_timestamps.append(datetime.datetime.strptime(var[0], "%Y-%m-%d %H:%M:%S,%f"))
-				# format ip address and add to list
-				var = var[-1].split(":")
-				ip = var[0].replace("New command from ", "")
-				self.ssh_ips.append(ip)
+					var = line.split(" - ")
+					# Create datetime object and append to timestamp list
+					self.ssh_timestamps.append(datetime.datetime.strptime(var[0], "%Y-%m-%d %H:%M:%S,%f"))
+					# format ip address and add to list
+					var = var[-1].split(":")
+					ip = var[0].replace("New command from ", "")
+					self.ssh_ips.append(ip)
 
-				# Append NaN to rest of values in row of table
-				self.ssh_usernames.append(np.nan)
-				self.ssh_passwords.append(np.nan)
-				self.ssh_urls.append(np.nan)
+					# Append NaN to rest of values in row of table
+					self.ssh_usernames.append(np.nan)
+					self.ssh_passwords.append(np.nan)
+					self.ssh_urls.append(np.nan)
+				except:
+					pass
 
 				try:
 					response = self.ip_reader.city(ip)
@@ -287,13 +339,7 @@ class Ssh():
 					self.ssh_lats.append(response.location.latitude)
 					self.ssh_longs.append(response.location.longitude)
 				except Exception as e:
-					#print("Ip address not found in geoip2 db: " + ip)
 					pass
-
-		# print("\nTotal number of connectons: " + str(self.connection_count) + "\n"
-		# 	  + "Total number of credentials tried: " + str(self.credentials_count) + "\n"
-		# 	  + "Total number of urls: " + str(self.urls_count) + "\n"
-		# 	  + "Total number of commands: " + str(self.commands_count) + "\n")
 
 		# Find max column size
 		max_col = 0
@@ -366,7 +412,9 @@ class Ssh():
 		sshSum_table = pd.DataFrame(sshSum_dict)
 
 		ssh_table = pd.DataFrame(ssh_dict)
-		#print(ssh_table)
+		ssh_table.drop(ssh_table.loc[ssh_table['ip']==''].index, inplace=True)#remove any blank rows (hackers feeding in junk)
+		ssh_table =  ssh_table[:-1]# remove last row (hackers feeding in junk)
+
 		return ssh_table, sshSum_table
 
 class Telnet():
@@ -413,24 +461,26 @@ class Telnet():
 					self.telnet_lats.append(response.location.latitude)
 					self.telnet_longs.append(response.location.longitude)
 				except Exception as e:
-					#print("Ip address not found in geoip2 db: " + ip)
 					pass
 
 			elif "URL detected" in line:
-				var = line.split(": ")
-				self.telnet_urls.append(var[-1])
-				self.urls_count += 1
+				try:
+					var = line.split(": ")
+					self.telnet_urls.append(var[-1])
+					self.urls_count += 1
 
-				var = line.split(" - ")
-				# Create datetime object and append to timestamp list
-				self.telnet_timestamps.append(datetime.datetime.strptime(var[0], "%Y-%m-%d %H:%M:%S,%f"))
-				# format ip address and add to list
-				var = var[-1].split(":")
-				ip = var[0].replace("New URL detected from ", "")
-				self.telnet_ips.append(ip)
+					var = line.split(" - ")
+					# Create datetime object and append to timestamp list
+					self.telnet_timestamps.append(datetime.datetime.strptime(var[0], "%Y-%m-%d %H:%M:%S,%f"))
+					# format ip address and add to list
+					var = var[-1].split(":")
+					ip = var[0].replace("New URL detected from ", "")
+					self.telnet_ips.append(ip)
 
-				# Append NaN to rest of values in row of table
-				self.telnet_commands.append(np.nan)
+					# Append NaN to rest of values in row of table
+					self.telnet_commands.append(np.nan)
+				except:
+					pass
 
 
 				try:
@@ -441,24 +491,26 @@ class Telnet():
 					self.telnet_lats.append(response.location.latitude)
 					self.telnet_longs.append(response.location.longitude)
 				except Exception as e:
-					#print("Ip address not found in geoip2 db: " + ip)
 					pass
 
 			elif "New command from" in line:
-				var = line.split(": ")
-				self.telnet_commands.append(var[-1])
-				self.commands_count += 1
+				try:
+					var = line.split(": ")
+					self.telnet_commands.append(var[-1])
+					self.commands_count += 1
 
-				var = line.split(" - ")
-				# Create datetime object and append to timestamp list
-				self.telnet_timestamps.append(datetime.datetime.strptime(var[0], "%Y-%m-%d %H:%M:%S,%f"))
-				# format ip address and add to list
-				var = var[-1].split(":")
-				ip = var[0].replace("New command from ", "")
-				self.telnet_ips.append(ip)
+					var = line.split(" - ")
+					# Create datetime object and append to timestamp list
+					self.telnet_timestamps.append(datetime.datetime.strptime(var[0], "%Y-%m-%d %H:%M:%S,%f"))
+					# format ip address and add to list
+					var = var[-1].split(":")
+					ip = var[0].replace("New command from ", "")
+					self.telnet_ips.append(ip)
 
-				# Append NaN to rest of values in row of table
-				self.telnet_urls.append(np.nan)
+					# Append NaN to rest of values in row of table
+					self.telnet_urls.append(np.nan)
+				except:
+					pass
 
 				try:
 					response = self.ip_reader.city(ip)
@@ -468,12 +520,7 @@ class Telnet():
 					self.telnet_longs.append(response.location.longitude)
 					self.telnet_lats.append(response.location.latitude)
 				except Exception as e:
-					#print("Ip address not found in geoip2 db: " + ip)
 					pass
-
-		# print("\nTotal number of connectons: " + str(self.connection_count) + "\n"
-		# 	  + "Total number of urls: " + str(self.urls_count) + "\n"
-		# 	  + "Total number of commands: " + str(self.commands_count) + "\n")
 
 		# Find max column size
 		max_col = 0
@@ -532,7 +579,6 @@ class Telnet():
 		telnetSum_table = pd.DataFrame(telnetSum_dict)
 
 		telnet_table = pd.DataFrame(telnet_dict)
-		#print(telnet_table)
 		return telnet_table , telnetSum_table
 
 class Http_s():
@@ -584,7 +630,6 @@ class Http_s():
 					self.http_longs.append(response.location.longitude)
 					self.http_lats.append(response.location.latitude)
 				except Exception as e:
-					#print("Ip address not found in geoip2 db: " + ip)
 					self.http_countries.append(np.nan)
 					self.http_provinces.append(np.nan)
 					self.http_cities.append(np.nan)
@@ -611,7 +656,6 @@ class Http_s():
 					self.https_longs.append(response.location.longitude)
 					self.https_lats.append(response.location.latitude)
 				except Exception as e:
-					#print("Ip address not found in geoip2 db: " + ip)
 					self.https_countries.append(np.nan)
 					self.https_provinces.append(np.nan)
 					self.https_cities.append(np.nan)
