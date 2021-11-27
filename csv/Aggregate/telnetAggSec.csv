@@ -1,0 +1,6 @@
+timestamp,ip,url,commands,country,province,city,long,lat
+2021-11-11 14:22:08.676,86.6.128.47,,b'wget www.funky.com',United Kingdom,Glasgow City,Glasgow,-4.2351,55.8892
+2021-11-11 14:22:11.702,86.6.128.47,www.funky.com,,United Kingdom,Glasgow City,Glasgow,-4.2351,55.8892
+2021-11-11 14:22:35.562,86.6.128.47,,b'1.2.3.4:90/ht',United Kingdom,Glasgow City,Glasgow,-4.2351,55.8892
+2021-11-11 14:22:42.797,86.6.128.47,,b'\x1b[A\x1b[B',United Kingdom,Glasgow City,Glasgow,-4.2351,55.8892
+2021-11-11 14:22:42.797,86.6.128.47,,b'ZG\x00\x00\x00\x05\x00+\x0e\x01\x00',United Kingdom,Glasgow City,Glasgow,-4.2351,55.8892
