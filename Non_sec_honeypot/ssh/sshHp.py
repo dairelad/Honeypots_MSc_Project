@@ -140,7 +140,7 @@ class BasicSshHoneypot(paramiko.ServerInterface):
         logger_set[str(day)].info('New command from {}: {}'.format(self.client_ip, command))
         return True
 
-#class sends SSH banner to client during connection and logs important client data
+#SSH banner to client during connection and logs important client data
 def handle_connection(client, addr):
     client_ip = addr[0]
     day = datetime.today().weekday() + 1  # saves current day (monday=0 & sunday=6)+1
@@ -168,18 +168,6 @@ def handle_connection(client, addr):
             raise Exception("No channel")
         
         chan.settimeout(10)
-
-        # if transport.remote_mac != '':
-        #     logging.info('Client mac ({}): {}'.format(client_ip, transport.remote_mac))
-        #
-        # if transport.remote_compression != '':
-        #     logging.info('Client compression ({}): {}'.format(client_ip, transport.remote_compression))
-        #
-        # if transport.remote_version != '':
-        #     logging.info('Client SSH version ({}): {}'.format(client_ip, transport.remote_version))
-        #
-        # if transport.remote_cipher != '':
-        #     logging.info('Client SSH cipher ({}): {}'.format(client_ip, transport.remote_cipher))
 
         server.event.wait(10)
         if not server.event.is_set():
@@ -257,11 +245,10 @@ def start_server(port, bind):
             print('*** Listen/accept failed: {}'.format(err))
             traceback.print_exc()
 
+        # creates a new thread for each connection to the honeypot
         new_thread = threading.Thread(target=handle_connection, args=(client, addr))
         new_thread.start()
         threads.append(new_thread)
-
-        # creates a new thread for each connection to the honeypot
         for thread in threads:
             thread.join()
 

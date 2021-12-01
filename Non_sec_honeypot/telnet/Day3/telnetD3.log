@@ -1,0 +1,6 @@
+2021-12-01 23:34:06,065 - Day3 - INFO - New connection from: 127.0.0.1
+2021-12-01 23:34:17,585 - Day3 - INFO - New command from 127.0.0.1: b''
+2021-12-01 23:35:53,676 - Day3 - INFO - New connection from: 127.0.0.1
+2021-12-01 23:35:54,539 - Day3 - INFO - New command from 127.0.0.1: b''
+2021-12-01 23:35:55,393 - Day3 - INFO - New command from 127.0.0.1: b''
+2021-12-01 23:36:03,746 - Day3 - INFO - New command from 127.0.0.1: b'uname'

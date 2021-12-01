@@ -22,10 +22,10 @@ if not os.path.exists('csv/Aggregate'):
 	os.mkdir('csv/Day6')
 	os.mkdir('csv/Day7')
 	for x in range(7):
+		f = open(f"{path}/Day{x+1}/sshD{x+1}.csv", "x")
+		f = open(f"{path}/Day{x+1}/telnetD{x+1}.csv", "x")
 		f = open(f"{path}/Day{x+1}/httpD{x+1}.csv", "x")
-		f = open(f"{path}/Day{x+1}/httpD{x+1}.csv", "x")
-		f = open(f"{path}/Day{x+1}/httpD{x+1}.csv", "x")
-		f = open(f"{path}/Day{x+1}/httpD{x+1}.csv", "x")
+		f = open(f"{path}/Day{x+1}/httpsD{x+1}.csv", "x")
 
 try:
 	# Read honeypot log files
@@ -71,30 +71,14 @@ column13 = '# credentials'
 column14 = '# commands'
 column15 = '# urls'
 
-# Code to run segment at a particular time of day
-start = datetime.time(23, 50, 0)
-end = datetime.time(0, 0, 0)
-now = datetime.datetime.now()
-hr = int(now.strftime("%H"))
-min = int(now.strftime("%M"))
-sec = int(now.strftime("%S"))
-now = datetime.time(hr,min,sec)
-
-def time_in_range(start, end, x):
-	"""Return true if x is in the range [start, end]"""
-	if start <= end:
-		return start <= x <= end
-	else:
-		return start <= x or x <= end
-
-def parseLogsToCsv(ssh, telnet, http, https):
+def logsToCsv(ssh, telnet, http, https):
 		ssh.to_csv(f"/usr/src/app/csv/Day{day+1}/sshD{day+1}.csv", index=False) #index false to remove index or first column of data set
 		telnet.to_csv(f"/usr/src/app/csv/Day{day+1}/telnetD{day+1}.csv", index=False)
 		http.to_csv(f"/usr/src/app/csv/Day{day+1}/httpD{day+1}.csv", index=False)
 		https.to_csv(f"/usr/src/app/csv/Day{day+1}/httpsD{day+1}.csv", index=False)
 
 
-def parseSumsToCsv(ssh, telnet, http, https):
+def sumToCsv(ssh, telnet, http, https):
 	# if file does not exist write header
 	if not os.path.isfile('/usr/src/app/csv/Summary/sshSum.csv'):
 		ssh.to_csv('/usr/src/app/csv/Summary/sshSum.csv', index=False)
@@ -118,7 +102,7 @@ def parseSumsToCsv(ssh, telnet, http, https):
 		httpsSumCsv.to_csv('/usr/src/app/csv/Summary/httpsSum.csv', index=False)
 
 
-def parseCsvToAgg(ssh, telnet, http, https):
+def aggToCsv(ssh, telnet, http, https):
 
 	ssh_parsed = pd.concat([sshAggCsv,ssh])
 	telnet_parsed = pd.concat([telnetAggCsv, telnet])
@@ -724,6 +708,6 @@ if __name__ == "__main__":
 	httpsSum_table = http_s[3]
 
 	#parseLogsToCsv(ssh_table, telnet_table, http_table, https_table)
-	parseSumsToCsv(ssh_tableSum, telnet_tableSum, httpSum_table, httpsSum_table)
-	parseCsvToAgg(ssh_table, telnet_table, http_table, https_table)
+	sumToCsv(ssh_tableSum, telnet_tableSum, httpSum_table, httpsSum_table)
+	aggToCsv(ssh_table, telnet_table, http_table, https_table)
 	print('Logs parsed.')

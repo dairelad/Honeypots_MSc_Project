@@ -174,8 +174,8 @@ html.Div([
     ], className='two-third column'),
 
 html.Div([
-    html.P("This set of honeypots are configured with the fail2ban and geoip2 security features. fail2ban is configured to permanently ban "
-           "an IP address after 3 unsuccessful authentication attempts with the SSH server. Furthermore, geoip2 is configured to block any IP "
+    html.P("These honeypots are configured with the fail2ban and geoip2 security features. fail2ban is configured to permanently ban "
+           "an IP address after 3 unsuccessful SSH login attempts. Furthermore, geoip2 is configured to block any IP "
            "addresses attempting to connect to the honeypots from outside of the UK.", #paragraph
            style={'textAlign': 'left',
             'color': 'white',
@@ -186,17 +186,24 @@ html.Div([
     #Second row first column
     html.Div([
         html.Div([
-            html.H6(children='Total SSH connections attempts:',
+            html.H6(children='Total SSH connection attempts:',
                     style={'textAlign': 'center',
                     'color': 'white'}),
             html.P(f"{ssh_sumSec['# connections'].sum()}",  #paragraph
                    style={'textAlign': 'center',
                     'color': '#dd1e35',
                           'fontSize': 30}),
+            html.H6(children='Total SSH connections blocked (geoip2):',
+                    style={'textAlign': 'center',
+                    'color': 'white'}),
+            html.P(f"{telnet_sumSec['# blocked'].sum()}", #paragraph
+                   style={'textAlign': 'center',
+                    'color': '#dd1e35',
+                          'fontSize': 30}),
             html.H6(children='Total IPs banned (fail2ban):',
                     style={'textAlign': 'center',
                     'color': 'white'}),
-            html.P(f"{ssh_sumSec['# blocked'].sum()}",  #paragraph
+            html.P(f"{ssh_sumSec['# banned'].sum()}",  #paragraph
                    style={'textAlign': 'center',
                     'color': '#dd1e35',
                           'fontSize': 30}),
@@ -366,7 +373,7 @@ def update_graph(honeypot):
         'data': [go.Scattermapbox(
             lon=geo_data['long'],
             lat=geo_data['lat'],
-            marker=go.scattermapbox.Marker(size=8,
+            marker=go.scattermapbox.Marker(size=6,
                                             color=colour,
                                             colorscale='HSV',
                                             showscale=False,

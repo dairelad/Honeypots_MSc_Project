@@ -66,13 +66,14 @@ column13 = '# credentials'
 column14 = '# commands'
 column15 = '# urls'
 column16 = '# blocked'
+column17 = '# banned'
 
 def parseSumsToCsv(ssh, telnet, http, https):
     # if file does not exist write header
     if not os.path.isfile('/usr/src/app/csv/Summary/sshSumSec.csv'):
         ssh.to_csv('/usr/src/app/csv/Summary/sshSumSec.csv', index=False)
     else:  # else it exists so append without writing the header
-        sshSumCsv.iloc[0, [0, 1]] = ssh.iloc[0, [0, 1]]
+        sshSumCsv.iloc[0, [0, 1, 2]] = ssh.iloc[0, [0, 1, 2]]
         sshSumCsv.to_csv('/usr/src/app/csv/Summary/sshSumSec.csv', index=False)
     if not os.path.isfile('/usr/src/app/csv/Summary/telnetSumSec.csv'):
         telnet.to_csv('/usr/src/app/csv/Summary/telnetSumSec.csv', index=False)
@@ -168,9 +169,11 @@ class Ssh():
     ssh_lats = []
     ssh_found = []
     ssh_ban = []
+    ssh_blocked = []
 
     found_count = 0
     ban_count = 0
+    blocked_count = 0
 
     def parse(self):
         # Code for parsing sshLog to csv
@@ -191,6 +194,8 @@ class Ssh():
                         self.ssh_cities.append(response.city.name)
                         self.ssh_lats.append(response.location.latitude)
                         self.ssh_longs.append(response.location.longitude)
+                    else:
+                        self.blocked_count += 1
                 except Exception as e:
                     pass
 
@@ -267,11 +272,13 @@ class Ssh():
 
         self.ssh_found.append(self.found_count)
         self.ssh_ban.append(self.ban_count)
+        self.ssh_blocked.append(self.blocked_count)
 
         # Add data to dictionary
         sshSum_dict = {
             column12: self.ssh_found,
-            column16: self.ssh_ban,
+            column17: self.ssh_ban,
+            column16: self.ssh_blocked
         }
 
         sshSum_table = pd.DataFrame(sshSum_dict)
