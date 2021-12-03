@@ -5,7 +5,7 @@ from dash.dependencies import Input, Output
 import plotly.graph_objs as go
 import pandas as pd
 import datetime as datetime
-from wordcloud import WordCloud
+# from wordcloud import WordCloud
 import base64
 from io import BytesIO
 from collections import Counter
@@ -321,18 +321,18 @@ html.H6(children='Most frequent usernames/passwords',
 
 ], id = 'mainContainer', style={'display': 'flex', 'flex-direction': 'column'})
 
-def plot_wordcloud(data):
-    d = {a: x for a, x in data.values}
-    wc = WordCloud(background_color='#003366', width=400, height=450)
-    wc.fit_words(d)
-    return wc.to_image()
+# def plot_wordcloud(data):
+#     d = {a: x for a, x in data.values}
+#     wc = WordCloud(background_color='#003366', width=400, height=450)
+#     wc.fit_words(d)
+#     return wc.to_image()
 
-@app.callback(Output('image_wc', 'src'),
-              [Input('image_wc', 'id')])
-def make_image(b):
-    img = BytesIO()
-    plot_wordcloud(data=wordFreq.head(50)).save(img, format='PNG')
-    return 'data:image/png;base64,{}'.format(base64.b64encode(img.getvalue()).decode())
+# @app.callback(Output('image_wc', 'src'),
+#               [Input('image_wc', 'id')])
+# def make_image(b):
+#     img = BytesIO()
+#     plot_wordcloud(data=wordFreq.head(50)).save(img, format='PNG')
+#     return 'data:image/png;base64,{}'.format(base64.b64encode(img.getvalue()).decode())
 
 @app.callback(Output('map_chart', 'figure'),
               [Input('honeypot','value')])
@@ -422,22 +422,6 @@ def update_graph(honeypot):
         daily_data = https_sum
         colour = '#66ff66'
         honeypot_type = 'HTTPS'
-    # elif honeypot == 'SSH_secure':
-    #     daily_data = ssh_sumSec
-    #     colour = 'red'
-    #     honeypot_type = 'SSH_secure'
-    # elif honeypot == 'Telnet':
-    #     daily_data = telnet_sumSec
-    #     colour = 'orange'
-    #     honeypot_type = 'Telnet_secure'
-    # elif honeypot == 'HTTP_secure':
-    #     daily_data = http_sumSec
-    #     colour = 'yellow'
-    #     honeypot_type = 'HTTP_secure'
-    # elif honeypot == 'HTTPS_secure':
-    #     daily_data = https_sumSec
-    #     colour = '#66ff66'
-    #     honeypot_type = 'HTTPS_secure'
     else:
         daily_data = blank2
         colour = 'blue'
@@ -596,16 +580,3 @@ def update_graph(honeypot):
 
 if __name__ == '__main__':
     app.run_server(debug=True, host='0.0.0.0')
-
-    # # Update server data every 10.58mins using cron
-    # # print out shows what is happening
-    # a = time.time()
-    # b = 0
-    # while True:
-    #     if (b < 658):
-    #         b = time.time() - a
-    #     elif (b == 658):
-    #         print('restarting script to update with new data')
-    #         a = time.time()
-    #         b = 0
-    #         pass

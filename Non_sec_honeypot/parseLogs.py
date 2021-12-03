@@ -21,7 +21,7 @@ if not os.path.exists('csv/Aggregate'):
 	os.mkdir('csv/Day5')
 	os.mkdir('csv/Day6')
 	os.mkdir('csv/Day7')
-	for x in range(7):
+	for x in range(7): # create csv files for containing daily data
 		f = open(f"{path}/Day{x+1}/sshD{x+1}.csv", "x")
 		f = open(f"{path}/Day{x+1}/telnetD{x+1}.csv", "x")
 		f = open(f"{path}/Day{x+1}/httpD{x+1}.csv", "x")
@@ -50,7 +50,7 @@ except IOError:
 	print('Could not open required files')
 	sys.exit()
 
-# Code used to find the location of an IP Address
+# load db for finding locations of IPs
 ip_reader = geoip2.database.Reader(
 		'/usr/src/app/GeoLite2-City_20211102/GeoLite2-City.mmdb')
 
@@ -71,8 +71,10 @@ column13 = '# credentials'
 column14 = '# commands'
 column15 = '# urls'
 
+# function logs daily data
+# index false to remove index or first column of data set
 def logsToCsv(ssh, telnet, http, https):
-		ssh.to_csv(f"/usr/src/app/csv/Day{day+1}/sshD{day+1}.csv", index=False) #index false to remove index or first column of data set
+		ssh.to_csv(f"/usr/src/app/csv/Day{day+1}/sshD{day+1}.csv", index=False)
 		telnet.to_csv(f"/usr/src/app/csv/Day{day+1}/telnetD{day+1}.csv", index=False)
 		http.to_csv(f"/usr/src/app/csv/Day{day+1}/httpD{day+1}.csv", index=False)
 		https.to_csv(f"/usr/src/app/csv/Day{day+1}/httpsD{day+1}.csv", index=False)
@@ -104,41 +106,31 @@ def sumToCsv(ssh, telnet, http, https):
 
 def aggToCsv(ssh, telnet, http, https):
 
+	# concatenate old data with new data
 	ssh_parsed = pd.concat([sshAggCsv,ssh])
 	telnet_parsed = pd.concat([telnetAggCsv, telnet])
 	http_parsed = pd.concat([httpAggCsv, http])
 	https_parsed = pd.concat([httpsAggCsv, https])
-
-	ssh_parsed['timestamp'] = ssh_parsed['timestamp'].astype(str).str.slice(0,23)
-	telnet_parsed['timestamp'] = telnet_parsed['timestamp'].astype(str).str.slice(0, 23)
-	http_parsed['timestamp'] = http_parsed['timestamp'].astype(str).str.slice(0, 23)
-	https_parsed['timestamp'] = https_parsed['timestamp'].astype(str).str.slice(0, 23)
-
+	# change timestamps from datetime object to strings so that duplicates can be removed
 	ssh_parsed = ssh_parsed.astype(str)
 	telnet_parsed = telnet_parsed.astype(str)
 	http_parsed = http_parsed.astype(str)
 	https_parsed = https_parsed.astype(str)
-	
+	# format timestamp column because changing to string added unnecessary 0's
+	ssh_parsed['timestamp'] = ssh_parsed['timestamp'].str.slice(0,23)
+	telnet_parsed['timestamp'] = telnet_parsed['timestamp'].str.slice(0, 23)
+	http_parsed['timestamp'] = http_parsed['timestamp'].str.slice(0, 23)
+	https_parsed['timestamp'] = https_parsed['timestamp'].str.slice(0, 23)
+
 	ssh_parsed = ssh_parsed.drop_duplicates(subset = None, keep = "first", inplace = False)
 	telnet_parsed = telnet_parsed.drop_duplicates(subset=None, keep="first", inplace=False)
 	http_parsed = http_parsed.drop_duplicates(subset=None, keep="first", inplace=False)
 	https_parsed = https_parsed.drop_duplicates(subset=None, keep="first", inplace=False)
-
-	ssh_parsed['ip'].replace('', np.nan, inplace=True)
-	telnet_parsed['ip'].replace('', np.nan, inplace=True)
-	http_parsed['ip'].replace('', np.nan, inplace=True)
-	https_parsed['ip'].replace('', np.nan, inplace=True)
-
-	ssh_parsed.dropna(subset=['ip'], inplace=True)
-	telnet_parsed.dropna(subset=['ip'], inplace=True)
-	http_parsed.dropna(subset=['ip'], inplace=True)
-	https_parsed.dropna(subset=['ip'], inplace=True)
-
-	ssh_parsed = ssh_parsed.sort_values(by=['timestamp'], ascending=True)
-	telnet_parsed = telnet_parsed.sort_values(by=['timestamp'], ascending=True)
-	http_parsed = http_parsed.sort_values(by=['timestamp'], ascending=True)
-	https_parsed = https_parsed.sort_values(by=['timestamp'], ascending=True)
-
+	# remove any rows which have no value for the IP address
+	ssh_parsed[ssh_parsed["ip"].str.contains("") == False]
+	telnet_parsed[telnet_parsed["ip"].str.contains("") == False]
+	http_parsed[https_parsed["ip"].str.contains("") == False]
+	https_parsed[https_parsed["ip"].str.contains("") == False]
 
 	# if file does not exist write header
 	if not os.path.isfile('/usr/src/app/csv/Aggregate/sshAgg.csv'):
@@ -168,21 +160,9 @@ class Ssh():
 		self.ip_reader = ip_reader
 
 	# lists
-	ssh_ips = []
-	ssh_timestamps = []
-	ssh_urls = []
-	ssh_commands = []
-	ssh_usernames = []
-	ssh_passwords = []
-	ssh_countries = []
-	ssh_provinces = []
-	ssh_cities = []
-	ssh_longs = []
-	ssh_lats = []
-	ssh_sum1 = []
-	ssh_sum2 = []
-	ssh_sum3 = []
-	ssh_sum4 = []
+	ssh_ips = [], ssh_timestamps = [], ssh_urls = [], ssh_commands = [], ssh_usernames = [], ssh_passwords = []
+	ssh_countries = [], ssh_provinces = [], ssh_cities = [], ssh_longs = [], ssh_lats = []
+	ssh_sum1 = [], ssh_sum2 = [], ssh_sum3 = [], ssh_sum4 = []
 
 	connection_count = 0
 	credentials_count = 0
@@ -408,18 +388,9 @@ class Telnet():
 		self.ip_reader = ip_reader
 
 	# lists
-	telnet_ips = []
-	telnet_timestamps = []
-	telnet_urls = []
-	telnet_commands = []
-	telnet_countries = []
-	telnet_provinces = []
-	telnet_cities = []
-	telnet_longs = []
-	telnet_lats = []
-	telnet_sum1 = []
-	telnet_sum2 = []
-	telnet_sum3 = []
+	telnet_ips = [], telnet_timestamps = [], telnet_urls = [], telnet_commands = []
+	telnet_countries = [], telnet_provinces = [], telnet_cities = [], telnet_longs = [], telnet_lats = []
+	telnet_sum1 = [], telnet_sum2 = [], telnet_sum3 = []
 
 	connection_count = 0
 	urls_count = 0
@@ -573,22 +544,12 @@ class Http_s():
 		self.ip_reader = ip_reader
 
 	# lists
-	http_ips = []
-	http_timestamps = []
-	http_countries = []
-	http_provinces = []
-	http_cities = []
-	http_longs = []
-	http_lats = []
+	http_ips = [], http_timestamps = []
+	http_countries = [], http_provinces = [], http_cities = [], http_longs = [], http_lats = []
 	http_sum = []
 
-	https_ips = []
-	https_timestamps = []
-	https_countries = []
-	https_provinces = []
-	https_cities = []
-	https_longs = []
-	https_lats = []
+	https_ips = [], https_timestamps = []
+	https_countries = [], https_provinces = [], https_cities = [], https_longs = [], https_lats = []
 	https_sum = []
 
 	connection_count1 = 0
@@ -698,16 +659,14 @@ if __name__ == "__main__":
 
 	ssh_table = ssh_list[0]
 	ssh_tableSum = ssh_list[1]
-
 	telnet_table = telnet_list[0]
 	telnet_tableSum = telnet_list[1]
-
 	http_table = http_s[0]
 	httpSum_table = http_s[1]
 	https_table = http_s[2]
 	httpsSum_table = http_s[3]
 
-	#parseLogsToCsv(ssh_table, telnet_table, http_table, https_table)
+	logsToCsv(ssh_table, telnet_table, http_table, https_table)
 	sumToCsv(ssh_tableSum, telnet_tableSum, httpSum_table, httpsSum_table)
 	aggToCsv(ssh_table, telnet_table, http_table, https_table)
 	print('Logs parsed.')

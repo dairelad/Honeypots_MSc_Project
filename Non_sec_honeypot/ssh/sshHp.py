@@ -9,7 +9,6 @@ import re
 import logging
 import paramiko
 from datetime import datetime
-import datetime as dt
 from binascii import hexlify
 from paramiko.py3compat import b, u, decodebytes
 
@@ -89,7 +88,6 @@ def handle_cmd(cmd, chan, ip):
         response = "no crontab for root"
 
     if response != '':
-        #logging.info('Response from honeypot ({}): '.format(ip, response))
         response = response + "\r\n"
     chan.send(response)
 
@@ -103,20 +101,14 @@ class BasicSshHoneypot(paramiko.ServerInterface):
         self.event = threading.Event()
 
     def check_channel_request(self, kind, chanid):
-        # logging.info('client called check_channel_request ({}): {}'.format(
-        #             self.client_ip, kind))
         if kind == 'session':
             return paramiko.OPEN_SUCCEEDED
 
     def get_allowed_auths(self, username):
-        # logging.info('client called get_allowed_auths ({}) with username {}'.format(
-        #             self.client_ip, username))
         return "publickey,password"
 
     def check_auth_publickey(self, username, key):
         fingerprint = u(hexlify(key.get_fingerprint()))
-        # logging.info('client public key ({}): username: {}, key name: {}, md5 fingerprint: {}, base64: {}, bits: {}'.format(
-        #             self.client_ip, username, key.get_name(), fingerprint, key.get_base64(), key.get_bits()))
         return paramiko.AUTH_PARTIALLY_SUCCESSFUL        
 
     def check_auth_password(self, username, password):
@@ -171,7 +163,6 @@ def handle_connection(client, addr):
 
         server.event.wait(10)
         if not server.event.is_set():
-            #logging.info('** Client ({}): never asked for a shell'.format(client_ip))
             raise Exception("No shell request")
      
         try:
@@ -200,7 +191,6 @@ def handle_connection(client, addr):
                 logger_set[str(day)].info('New command from {}: {}'.format(client_ip, command))
 
                 if command == "exit":
-                    #logging.info('Connection closed (via exit command): {}'.format(client_ip))
                     run = False
 
                 else:
