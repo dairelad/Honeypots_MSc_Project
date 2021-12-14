@@ -59,7 +59,7 @@ data = {
 }
 country_freq = pd.DataFrame(data)
 country_freq = country_freq.sort_values(by=['count'], ascending=False)
-country_freq.to_csv('/Users/admin/git/MSc_Project/SD_Project/Frontend/countries.csv', index=False)
+country_freq.to_csv('/Users/admin/git/MSc_Project/SD_Project/Frontend/attacksPerCountry.csv', index=False)
 
 # Wordcloud pre-processing
 dfm = ssh_data['usernames'].append(ssh_data['passwords'])
