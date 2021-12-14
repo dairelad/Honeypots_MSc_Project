@@ -5,7 +5,7 @@ from dash.dependencies import Input, Output
 import plotly.graph_objs as go
 import pandas as pd
 import datetime as datetime
-# from wordcloud import WordCloud
+from wordcloud import WordCloud
 import base64
 from io import BytesIO
 from collections import Counter
@@ -47,6 +47,19 @@ ssh_data['province'] = ssh_data['province'].fillna('Not available')
 telnet_data['province'] = telnet_data['province'].fillna('Not available')
 http_data['province'] = http_data['province'].fillna('Not available')
 https_data['province'] = https_data['province'].fillna('Not available')
+
+# pie-chart of most commonly appearing countries
+country_freq = ssh_data['country'].append(telnet_data['country']).append(http_data['country']).append(https_data['country'])
+country_freq = country_freq.dropna()
+country_freq = country_freq.values.tolist()
+country_freq = Counter(country_freq)
+data = {
+    "word": list(country_freq.keys()),
+    "count": list(country_freq.values())
+}
+country_freq = pd.DataFrame(data)
+country_freq = country_freq.sort_values(by=['count'], ascending=False)
+country_freq.to_csv('/Users/admin/git/MSc_Project/SD_Project/Frontend/countries.csv', index=False)
 
 # Wordcloud pre-processing
 dfm = ssh_data['usernames'].append(ssh_data['passwords'])
@@ -321,18 +334,18 @@ html.H6(children='Most frequent usernames/passwords',
 
 ], id = 'mainContainer', style={'display': 'flex', 'flex-direction': 'column'})
 
-# def plot_wordcloud(data):
-#     d = {a: x for a, x in data.values}
-#     wc = WordCloud(background_color='#003366', width=400, height=450)
-#     wc.fit_words(d)
-#     return wc.to_image()
+def plot_wordcloud(data):
+    d = {a: x for a, x in data.values}
+    wc = WordCloud(background_color='#003366', width=400, height=450)
+    wc.fit_words(d)
+    return wc.to_image()
 
-# @app.callback(Output('image_wc', 'src'),
-#               [Input('image_wc', 'id')])
-# def make_image(b):
-#     img = BytesIO()
-#     plot_wordcloud(data=wordFreq.head(50)).save(img, format='PNG')
-#     return 'data:image/png;base64,{}'.format(base64.b64encode(img.getvalue()).decode())
+@app.callback(Output('image_wc', 'src'),
+              [Input('image_wc', 'id')])
+def make_image(b):
+    img = BytesIO()
+    plot_wordcloud(data=wordFreq.head(50)).save(img, format='PNG')
+    return 'data:image/png;base64,{}'.format(base64.b64encode(img.getvalue()).decode())
 
 @app.callback(Output('map_chart', 'figure'),
               [Input('honeypot','value')])
