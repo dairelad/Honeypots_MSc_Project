@@ -11,7 +11,7 @@ from io import BytesIO
 from collections import Counter
 #from profanity_filter import ProfanityFilter
 #import spacy
-#import time
+
 
 # Secure HP
 ssh_dataSec = pd.read_csv("/home/ubuntu/frontend/csv/Aggregate/sshAggSec.csv")
@@ -70,6 +70,7 @@ for value in dfm:
     if len(str(value)) < 15: #filters out garbage
         dfm_filtered.append(value)
 
+# code takes too long when refreshing dashboard - commenting out
 # pf = ProfanityFilter()
 # spacy.load('en')
 # dfm_filtered = []
@@ -334,6 +335,7 @@ html.H6(children='Most frequent usernames/passwords',
 
 ], id = 'mainContainer', style={'display': 'flex', 'flex-direction': 'column'})
 
+# code for generating word cloud
 def plot_wordcloud(data):
     d = {a: x for a, x in data.values}
     wc = WordCloud(background_color='#003366', width=400, height=450)
@@ -347,6 +349,7 @@ def make_image(b):
     plot_wordcloud(data=wordFreq.head(50)).save(img, format='PNG')
     return 'data:image/png;base64,{}'.format(base64.b64encode(img.getvalue()).decode())
 
+# dropdown used to determine which data scatter plot illustrates
 @app.callback(Output('map_chart', 'figure'),
               [Input('honeypot','value')])
 def update_graph(honeypot):
@@ -415,7 +418,7 @@ def update_graph(honeypot):
         )
     }
 
-
+# bar chart code
 @app.callback(Output('bar_chart', 'figure'),
               [Input('honeypot','value')])
 def update_graph(honeypot):
@@ -497,6 +500,7 @@ def update_graph(honeypot):
         )
     }
 
+# pie chart code
 @app.callback(Output('pie_chart', 'figure'),
               [Input('honeypot','value')])
 def update_graph(honeypot):
