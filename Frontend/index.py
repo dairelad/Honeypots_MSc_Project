@@ -14,6 +14,7 @@ from collections import Counter
 
 
 # Secure HP
+# Read in csv files
 ssh_dataSec = pd.read_csv("/home/ubuntu/frontend/csv/Aggregate/sshAggSec.csv")
 telnet_dataSec = pd.read_csv("/home/ubuntu/frontend/csv/Aggregate/telnetAggSec.csv")
 http_dataSec = pd.read_csv("/home/ubuntu/frontend/csv/Aggregate/httpAggSec.csv")
@@ -48,7 +49,7 @@ telnet_data['province'] = telnet_data['province'].fillna('Not available')
 http_data['province'] = http_data['province'].fillna('Not available')
 https_data['province'] = https_data['province'].fillna('Not available')
 
-# pie-chart of most commonly appearing countries
+# pie-chart of most commonly appearing countries for report
 country_freq = ssh_data['country'].append(telnet_data['country']).append(http_data['country']).append(https_data['country'])
 country_freq = country_freq.dropna()
 country_freq = country_freq.values.tolist()
@@ -78,6 +79,7 @@ for value in dfm:
 #     filtered = pf.censor(value)
 #     dfm_filtered.append(filtered)
 
+# frequency of usernames, passwords
 dfm = Counter(dfm_filtered)
 data = {
     "word": list(dfm.keys()),
@@ -94,6 +96,7 @@ weekdays = ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun']
 
 app = dash.Dash(__name__, )
 
+# code for first row of dashboard, logo, title etc and last refreshed
 app.layout = html.Div([
     html.Div([
         html.Div([
@@ -113,7 +116,7 @@ app.layout = html.Div([
         ], className='one-half column', id = 'title'),
 
         html.Div([
-            html.H6('Most recent attack on ' + str(datetime.datetime.now().strftime("%B %d, %Y at %H:%M (BST)")),
+            html.H6('Last updated on ' + str(datetime.datetime.now().strftime("%B %d, %Y at %H:%M (BST)")),
                     style={'color': 'orange'})
 
         ], className='one-third column', id = 'title1')
@@ -293,7 +296,6 @@ html.Div([
 #Sixth row
     html.Div([
         html.Div([
-            #html.P('Select honeypot:', className='fix_label', style={'color':'white'}),
             dcc.Dropdown(id = 'honeypot',
                          multi =  False,
                          searchable=True,
@@ -349,7 +351,7 @@ def make_image(b):
     plot_wordcloud(data=wordFreq.head(50)).save(img, format='PNG')
     return 'data:image/png;base64,{}'.format(base64.b64encode(img.getvalue()).decode())
 
-# dropdown used to determine which data scatter plot illustrates
+# dropdown uses call back to determine which data scatter plot illustrates
 @app.callback(Output('map_chart', 'figure'),
               [Input('honeypot','value')])
 def update_graph(honeypot):
@@ -384,7 +386,7 @@ def update_graph(honeypot):
     zoom=1
     zoom_lat = 25
     zoom_long = 1
-
+# threat map configuration
     return {
         'data': [go.Scattermapbox(
             lon=geo_data['long'],
@@ -451,7 +453,7 @@ def update_graph(honeypot):
             marker=dict(color='#666699'),
             hoverinfo='text',
         )],
-
+# bar chart configuration
         'layout': go.Layout(
             title={'text': 'Connections per day to ' + honeypot_type + ' honeypot : ',
                    'y': 0.93,
@@ -505,7 +507,7 @@ def update_graph(honeypot):
               [Input('honeypot','value')])
 def update_graph(honeypot):
     colors = ['orange', '#dd1e35', 'green', '#e55467']
-
+# code determines which honeypot data to show
     if honeypot == 'SSH':
         num_connections = ssh_sum['# connections'].sum()
         num_credentials = ssh_sum['# credentials'].sum()
@@ -574,7 +576,7 @@ def update_graph(honeypot):
             hole=.7,
             rotation=45,
         )],
-
+# pie chart configuration
         'layout': go.Layout(
             title={'text': 'Showing details for ' + honeypot_type + ' honeypot:',
                    'y': 0.93,

@@ -27,6 +27,7 @@ BANNER = "HTTP/1.1 403 Forbidden \n" \
          "Content-Length: 199\n" \
          "Content-Type: text/html; charset=iso-8859-1\n"
 
+# logger method for logging to correct day
 def setup_logger(logger_name, log_file, level=logging.INFO):
     l = logging.getLogger(logger_name)
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -40,7 +41,6 @@ def setup_logger(logger_name, log_file, level=logging.INFO):
 
 logger_set = {}
 NUM_DAYS_IN_WEEK = 7
-
 for i in range(NUM_DAYS_IN_WEEK):
     day_name = f"Day{str(i+1)}"
     setup_logger(day_name, f'{path}/{day_name}/httpsD{str(i+1)}.log')

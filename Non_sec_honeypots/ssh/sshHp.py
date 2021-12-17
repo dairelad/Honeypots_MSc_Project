@@ -15,6 +15,7 @@ from paramiko.py3compat import b, u, decodebytes
 HOST_KEY = paramiko.RSAKey(filename='server.key')
 SSH_BANNER = "SSH-2.0-OpenSSH_8.2p1 Ubuntu-4ubuntu0.1"
 
+# code for recognising client key presses
 UP_KEY = '\x1b[A'.encode()
 DOWN_KEY = '\x1b[B'.encode()
 RIGHT_KEY = '\x1b[C'.encode()
@@ -27,6 +28,7 @@ if not os.path.exists('Day1'):
     for i in range(7):
         os.mkdir(f'Day{i+1}')
 
+# logger method for logging to correct day
 def setup_logger(logger_name, log_file, level=logging.INFO):
     l = logging.getLogger(logger_name)
     formatter = logging.Formatter('%(asctime)s - %(name)s - %(levelname)s - %(message)s')
@@ -38,14 +40,15 @@ def setup_logger(logger_name, log_file, level=logging.INFO):
     l.addHandler(fileHandler)
     l.addHandler(streamHandler)
 
+# create correct folder hierarchy
 logger_set = {}
 NUM_DAYS_IN_WEEK = 7
-
 for i in range(NUM_DAYS_IN_WEEK):
     day_name = f"Day{str(i+1)}"
     setup_logger(day_name, f'{path}/{day_name}/sshD{str(i+1)}.log')
     logger_set[str(i+1)] = logging.getLogger(day_name)
 
+# code detects any URLs input by the client
 def detect_url(command, client_ip):
     regex = r"(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))"
     result = re.findall(regex, command)
@@ -64,7 +67,7 @@ def detect_url(command, client_ip):
                 day = datetime.today().weekday() + 1  # saves current day (monday=0 & sunday=6)+1
                 logger_set[str(day)].info('New IP-based URL detected from {}: {}'.format(client_ip, ip_url))
 
-#code handles basic/common terminal commands
+#code handles basic/common terminal commands and gives appropriate reponses
 def handle_cmd(cmd, chan, ip):
 
     detect_url(cmd, ip)
@@ -93,9 +96,7 @@ def handle_cmd(cmd, chan, ip):
 
 #class accepts any credentials and logs every username, password and ip address
 class BasicSshHoneypot(paramiko.ServerInterface):
-
     client_ip = None
-
     def __init__(self, client_ip):
         self.client_ip = client_ip
         self.event = threading.Event()
@@ -132,7 +133,7 @@ class BasicSshHoneypot(paramiko.ServerInterface):
         logger_set[str(day)].info('New command from {}: {}'.format(self.client_ip, command))
         return True
 
-#SSH banner to client during connection and logs important client data
+#SSH banner sent to client after connection and logs important client data
 def handle_connection(client, addr):
     client_ip = addr[0]
     day = datetime.today().weekday() + 1  # saves current day (monday=0 & sunday=6)+1

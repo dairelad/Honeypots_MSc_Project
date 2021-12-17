@@ -6,7 +6,7 @@ import os
 import re
 import geoip2.database
 
-#get folder path
+#get current folder path
 path = os.getcwd()
 
 #code used for logging information about the attack
@@ -15,31 +15,16 @@ logging.basicConfig(
     level=logging.DEBUG,
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',)
 
-def detect_url(command, client_ip):
-    regex = r"(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))+(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'\".,<>?«»“”‘’]))"
-    result = re.findall(regex, command)
-    if result:
-        for ar in result:
-            for url in ar:
-                if url != '':
-                    logging.info('New URL detected from {}: {}'.format(client_ip, url))
-
-    ip_regex = r"([0-9]+(?:\.[0-9]+){3}\/\S*)"
-    ip_result = re.findall(ip_regex, command)
-    if ip_result:
-        for ip_url in ip_result:
-            if ip_url != '':
-                logging.info('New IP-based URL detected from {}: {}'.format(client_ip, ip_url))
-
 class Telnet(protocol.Protocol):
     # Code used to find the location of an IP Address
     ip_reader = geoip2.database.Reader(
         '/usr/src/app/GeoLite2-City_20211102/GeoLite2-City.mmdb')
 
-    PROMPT = ("/ # ").encode('utf-8')
+    PROMPT = ("/ # ").encode('utf-8') # encode prompt to be sent to client
     def dataReceived(self, data):
-        data = data.strip()
+        data = data.strip() # process input sent from client
 
+        # reponses for certain client input
         if data == "id".encode('utf-8'):
             self.transport.write(("uid=0(root) gid=0(root) groups=0(root)\n").encode('utf-8')) #highlighted because of type mismatch (looking for a bytes-like object is required, not 'str')
         elif data == "uname".encode('utf-8'):
@@ -55,10 +40,10 @@ class Telnet(protocol.Protocol):
         if data != "":
             print("[*] Telnet command received")
             logging.info("New command from " + self.transport.getPeer().host + ": " + str(data))
-            detect_url(data.decode(), self.transport.getPeer().host)
 
+    # create connection, send prompt and log connection for correct day
     def connectionMade(self):
-        try:
+        try: # deny any connection made from outside of the UK
             response = self.ip_reader.city(str(self.transport.getPeer().host))
             if response.country.name != 'United Kingdom':
                 self.transport.loseConnection()

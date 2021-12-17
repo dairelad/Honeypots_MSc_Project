@@ -93,36 +93,41 @@ def parseSumsToCsv(ssh, telnet, http, https):
 
 
 def parseCsvToAgg(ssh, telnet, http, https):
+    # concatenate new data with old data
     ssh_parsed = pd.concat([sshAggCsv, ssh])
     telnet_parsed = pd.concat([telnetAggCsv, telnet])
     http_parsed = pd.concat([httpAggCsv, http])
     https_parsed = pd.concat([httpsAggCsv, https])
 
+    # change timestamp objects to string and format to correct length
     ssh_parsed['timestamp'] = ssh_parsed['timestamp'].astype(str).str.slice(0, 23)
     telnet_parsed['timestamp'] = telnet_parsed['timestamp'].astype(str).str.slice(0, 23)
     http_parsed['timestamp'] = http_parsed['timestamp'].astype(str).str.slice(0, 23)
     https_parsed['timestamp'] = https_parsed['timestamp'].astype(str).str.slice(0, 23)
-
     ssh_parsed = ssh_parsed.astype(str)
     telnet_parsed = telnet_parsed.astype(str)
     http_parsed = http_parsed.astype(str)
     https_parsed = https_parsed.astype(str)
 
+    # now that timestamps objects are string, duplicates are dropped
     ssh_parsed = ssh_parsed.drop_duplicates(subset=None, keep="first", inplace=False)
     telnet_parsed = telnet_parsed.drop_duplicates(subset=None, keep="first", inplace=False)
     http_parsed = http_parsed.drop_duplicates(subset=None, keep="first", inplace=False)
     https_parsed = https_parsed.drop_duplicates(subset=None, keep="first", inplace=False)
 
+    # replace empty values with NaN
     ssh_parsed['ip'].replace('', np.nan, inplace=True)
     telnet_parsed['ip'].replace('', np.nan, inplace=True)
     http_parsed['ip'].replace('', np.nan, inplace=True)
     https_parsed['ip'].replace('', np.nan, inplace=True)
 
+    # drop rows which do not contain an ip address (caused if attacked enters some crazy input)
     ssh_parsed.dropna(subset=['ip'], inplace=True)
     telnet_parsed.dropna(subset=['ip'], inplace=True)
     http_parsed.dropna(subset=['ip'], inplace=True)
     https_parsed.dropna(subset=['ip'], inplace=True)
 
+    # sort data
     ssh_parsed = ssh_parsed.sort_values(by=['timestamp'], ascending=True)
     telnet_parsed = telnet_parsed.sort_values(by=['timestamp'], ascending=True)
     http_parsed = http_parsed.sort_values(by=['timestamp'], ascending=True)
@@ -634,22 +639,22 @@ class Http_s():
 
 if __name__ == "__main__":
     print('Parsing logs..')
+    # parse logs for all honeypots
     ssh_list = Ssh(sshLog, ip_reader).parse()
     telnet_list = Telnet(telnetLog, ip_reader).parse()
     http_s = Http_s(httpLog, httpsLog, ip_reader).parse()
 
+    # aggregate and summary of parsed data
     ssh_table = ssh_list[0]
     ssh_tableSum = ssh_list[1]
-
     telnet_table = telnet_list[0]
     telnet_tableSum = telnet_list[1]
-
     http_table = http_s[0]
     httpSum_table = http_s[1]
     https_table = http_s[2]
     httpsSum_table = http_s[3]
 
-    # parseLogsToCsv(ssh_table, telnet_table, http_table, https_table)
+    # output the parsed data to csv
     parseSumsToCsv(ssh_tableSum, telnet_tableSum, httpSum_table, httpsSum_table)
     parseCsvToAgg(ssh_table, telnet_table, http_table, https_table)
     print('Logs parsed.')
