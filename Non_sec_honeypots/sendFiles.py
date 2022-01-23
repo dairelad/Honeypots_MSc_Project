@@ -1,7 +1,7 @@
 #!/usr/local/bin/env python
 import paramiko
-
-key = '2591168o'
+# enter correct key below (GUID)
+key = ''
 # connect to client
 ssh = paramiko.SSHClient()
 ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
