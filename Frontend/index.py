@@ -12,7 +12,6 @@ from collections import Counter
 #from profanity_filter import ProfanityFilter
 #import spacy
 
-
 # Secure HP
 # Read in csv files
 ssh_dataSec = pd.read_csv("/home/ubuntu/frontend/csv/Aggregate/sshAggSec.csv")
@@ -71,7 +70,8 @@ for value in dfm:
     if len(str(value)) < 15: #filters out garbage
         dfm_filtered.append(value)
 
-# code takes too long when refreshing dashboard - commenting out
+# code takes too long to load when refreshing dashboard
+# todo: look into quicker way of loading this
 # pf = ProfanityFilter()
 # spacy.load('en')
 # dfm_filtered = []
@@ -455,7 +455,7 @@ def update_graph(honeypot):
         )],
 # bar chart configuration
         'layout': go.Layout(
-            title={'text': 'Connections per day to ' + honeypot_type + ' honeypot : ',
+            title={'text': 'Connections per day to ' + honeypot_type + ' honeypot: ',
                    'y': 0.93,
                    'x': 0.5,
                    'xanchor': 'center',
@@ -507,7 +507,7 @@ def update_graph(honeypot):
               [Input('honeypot','value')])
 def update_graph(honeypot):
     colors = ['orange', '#dd1e35', 'green', '#e55467']
-# code determines which honeypot data to show
+# code determines which honeypot data to show from drop-down
     if honeypot == 'SSH':
         num_connections = ssh_sum['# connections'].sum()
         num_credentials = ssh_sum['# credentials'].sum()

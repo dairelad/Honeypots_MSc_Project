@@ -13,7 +13,7 @@ RUN mkdir https
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
-#Copy files into docker container
+#Copy relevant files into docker container
 #COPY /ssh/sshHp.py /usr/src/app/ssh
 #COPY /telnet/telnetHp.py /usr/src/app/telnet
 #COPY /http/httpHp.py /usr/src/app/http
@@ -22,6 +22,9 @@ ENV PYTHONUNBUFFERED 1
 #COPY GeoLite2-City_20211102 /usr/src/app
 #COPY crontab_file /usr/src/app
 #COPY run.sh /usr/src/app
+
+#Copy all contents from host working directory
+#to docker working directory
 COPY . .
 
 #Install dependencies
@@ -30,9 +33,11 @@ RUN apt-get -y install cron
 RUN pip3 install --upgrade pip
 COPY ./requirements.txt .
 RUN pip3 install -r requirements.txt
-# Give execution rights to the cron job
+
+#Give execution rights to the cron job
+
 RUN chmod 0644 /usr/src/app/crontab_file
-# Create the log file to be able to run tail
+#Create the log file to be able to run tail
 RUN crontab /usr/src/app/crontab_file
 
 #Made script executeable
@@ -43,6 +48,3 @@ RUN chmod a+x /usr/src/app/sendFiles.py
 #CMD instruction should be used to run the software
 #contained by your image, along with any arguments.
 CMD ["./run.sh"]
-
-#Copy all contents from host working directory to docker working directory
-#COPY . .

@@ -1,7 +1,9 @@
+# requirements for honeypots server
 paramiko
 twisted
 geoip2
 pandas
+# requirements for dashboard server
 #dash
 #wordcloud
 #profanity-filter
