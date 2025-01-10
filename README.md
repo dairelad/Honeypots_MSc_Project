@@ -1,7 +1,7 @@
 # SD_Project
 ## MSC in Software Development Project at the University of Glasgow 2021.
 
-- The project code comprises of 7 honeypots, parsing scripts, shell scripts for running inside Docker and a front-end dashboard developed in Python. The honeypots mimic the SSH, Telnet, HTTP and HTTPs services.
+- The project code comprises of 8 honeypots, parsing scripts, shell scripts for running inside Docker and a front-end dashboard developed in Python. The honeypots mimic the SSH, Telnet, HTTP and HTTPs services.
 
 - 4 honeypots are not secure (1 SSH, 1 Telnet, 1 HTTP, 1 HTTPS) and accept incomming connections from anywhere.
 
